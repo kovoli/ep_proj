@@ -1,0 +1,481 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<!-- Breadcumb area Start -->
+<div class="breadcumb-area section-padding bg--gray">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <ul class="breadcumb">
+                    <li class="breadcumb__list"><a class="breadcumb__link" href="../base.html">Home</a></li>
+                    <li class="breadcumb__list"><a class="breadcumb__link current" href="category_product_list.html">Shop</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcumb area End -->
+<!-- Main content wrapper Start -->
+<div class="main-content-wrapper">
+    <div class="shop-area section-padding">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 order-lg-1 order-2">
+                    <!-- Sidebar Start -->
+                    <aside class="sidebar shop-sidebar">
+                        <div class="search-filter">
+                            <div class="search-filter__single section-title section-title--3 mb--30">
+                                <h2>Filter By</h2>
+                            </div>
+
+                            <div class="search-filter__single search-filter__clear mb--30">
+                                <a class="clear-btn" href=""><i class="fa fa-times"></i> clear all</a>
+                            </div>
+
+                            <!-- Category Search filter Start -->
+                            <div class="search-filter__single search-filter__category mb--30">
+                                <div class="section-title section-title--3">
+                                    <h2>Categories</h2>
+                                </div>
+                                <ul class="search-filter__list">
+                                    <li class="custom-checkbox">
+                                        <input type="checkbox" name="bookandboardgame" id="bookandboardgame" class="custom-checkbox__input" checked>
+                                        <label for="bookandboardgame" class="custom-checkbox__label">Book &amp; Board games (8)</label>
+                                    </li>
+                                    <li class="custom-checkbox">
+                                        <input type="checkbox" name="babydols" id="babydols" class="custom-checkbox__input">
+                                        <label for="babydols" class="custom-checkbox__label">Baby Dolls (8)</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Category Search filter End -->
+
+                            <!-- Price Search filter Start -->
+                            <div class="search-filter__single search-filter__price mb--30">
+                                <div class="section-title section-title--3">
+                                    <h2>Price</h2>
+                                </div>
+                                <ul class="search-filter__list">
+                                    <li class="custom-radio">
+                                        <input type="radio" name="price" id="sixtentoeighteen" class="custom-radio__input">
+                                        <label for="sixtentoeighteen" class="custom-radio__label"><span></span> &dollar;16.00 - &dollar;18.00 (3) </label>
+                                    </li>
+                                    <li class="custom-radio">
+                                        <input type="radio" name="price" id="twentyfivetothirtytwo" class="custom-radio__input">
+                                        <label for="twentyfivetothirtytwo" class="custom-radio__label"><span></span> &dollar;25.00 - &dollar;32.00 (3)</label>
+                                    </li>
+                                    <li class="custom-radio">
+                                        <input type="radio" name="price" id="fiftytofiftythree" class="custom-radio__input">
+                                        <label for="fiftytofiftythree" class="custom-radio__label"><span></span> &dollar;50.00 - &dollar;53.00 (3)</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Price Search filter End -->
+
+                            <!-- Size Search filter Start -->
+                            <div class="search-filter__single search-filter__size mb--30">
+                                <div class="section-title section-title--3">
+                                    <h2>Size</h2>
+                                </div>
+                                <ul class="search-filter__list">
+                                    <li class="custom-checkbox">
+                                        <input type="checkbox" name="size_s" id="sizesmall" class="custom-checkbox__input">
+                                        <label for="sizesmall" class="custom-checkbox__label">S (4)</label>
+                                    </li>
+                                    <li class="custom-checkbox">
+                                        <input type="checkbox" name="size_l" id="sizelarge" class="custom-checkbox__input">
+                                        <label class="custom-checkbox__label" for="sizelarge">L (4)</label>
+                                    </li>
+                                    <li class="custom-checkbox">
+                                        <input type="checkbox" name="size_m" id="sizemed" class="custom-checkbox__input">
+                                        <label for="sizemed" class="custom-checkbox__label">M (4)</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Size Search filter End -->
+
+                            <!-- Color Search filter Start -->
+                            <div class="search-filter__single search-filter__color mb--30">
+                                <div class="section-title section-title--3">
+                                    <h2>Color</h2>
+                                </div>
+                                <ul class="search-filter__list">
+                                    <li class="custom-radio__color custom-radio__color--black">
+                                        <input type="radio" name="color" id="sidebar_black" class="custom-radio__color__input">
+                                        <label for="sidebar_black" class="custom-radio__color__label">Black (2)</label>
+                                    </li>
+                                    <li class="custom-radio__color custom-radio__color--orange">
+                                        <input type="radio" name="color" id="sidebar_orange" class="custom-radio__color__input">
+                                        <label for="sidebar_orange" class="custom-radio__color__label">Orange (2)</label>
+                                    </li>
+                                    <li class="custom-radio__color custom-radio__color--blue">
+                                        <input type="radio" name="color" id="sidebar_blue" class="custom-radio__color__input">
+                                        <label for="sidebar_blue" class="custom-radio__color__label">Blue (2)</label>
+                                    </li>
+                                    <li class="custom-radio__color custom-radio__color--green">
+                                        <input type="radio" name="color" id="sidebar_green" class="custom-radio__color__input">
+                                        <label for="sidebar_green" class="custom-radio__color__label">Green (2)</label>
+                                    </li>
+                                    <li class="custom-radio__color custom-radio__color--yellow">
+                                        <input type="radio" name="color" id="sidebar_yellow" class="custom-radio__color__input">
+                                        <label for="sidebar_yellow" class="custom-radio__color__label">Yellow (4)</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Color Search filter End -->
+
+                            <!-- Compositions Search filter Start -->
+                            <div class="search-filter__single search-filter__compositions mb--30">
+                                <div class="section-title section-title--3">
+                                    <h2>Compositions</h2>
+                                </div>
+                                <ul class="search-filter__list">
+                                    <li class="custom-checkbox">
+                                        <input type="checkbox" name="cotton" id="cotton" class="custom-checkbox__input">
+                                        <label for="cotton" class="custom-checkbox__label">Cotton (5)</label>
+                                    </li>
+                                    <li class="custom-checkbox">
+                                        <input type="checkbox" name="polyester" id="polyester" class="custom-checkbox__input">
+                                        <label for="polyester" class="custom-checkbox__label">Polyester (4)</label>
+                                    </li>
+                                    <li class="custom-checkbox">
+                                        <input type="checkbox" name="viscose" id="viscose" class="custom-checkbox__input">
+                                        <label for="viscose" class="custom-checkbox__label">Viscose (4)</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Compositions Search filter End -->
+
+                            <!-- Styles Search filter Start -->
+                            <div class="search-filter__single search-filter__styles mb--30">
+                                <div class="section-title section-title--3">
+                                    <h2>Styles</h2>
+                                </div>
+                                <ul class="search-filter__list">
+                                    <li class="custom-checkbox">
+                                        <input type="checkbox" name="casual" id="casual" class="custom-checkbox__input">
+                                        <label for="casual" class="custom-checkbox__label">Casual (5)</label>
+                                    </li>
+                                    <li class="custom-checkbox">
+                                        <input type="checkbox" name="dressy" id="dressy" class="custom-checkbox__input">
+                                        <label for="dressy" class="custom-checkbox__label">Dressy (2)</label>
+                                    </li>
+                                    <li class="custom-checkbox">
+                                        <input type="checkbox" name="girly" id="girly" class="custom-checkbox__input">
+                                        <label for="girly" class="custom-checkbox__label">Girly (4)</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Styles Search filter End -->
+
+                            <!-- Properties Search filter Start -->
+                            <div class="search-filter__single search-filter__properties mb--30">
+                                <div class="section-title section-title--3">
+                                    <h2>Properties</h2>
+                                </div>
+                                <ul class="search-filter__list">
+                                    <li class="custom-checkbox">
+                                        <input type="checkbox" name="colorfull" id="colorfull" class="custom-checkbox__input">
+                                        <label for="colorfull" class="custom-checkbox__label">Colorfull Dress (5)</label>
+                                    </li>
+                                    <li class="custom-checkbox">
+                                        <input type="checkbox" name="maxi" id="maxi" class="custom-checkbox__input">
+                                        <label for="maxi" class="custom-checkbox__label">Maxi Dress (2)</label>
+                                    </li>
+                                    <li class="custom-checkbox">
+                                        <input type="checkbox" name="midi" id="midi" class="custom-checkbox__input">
+                                        <label for="midi" class="custom-checkbox__label">Midi Dress (4)</label>
+                                    </li>
+                                    <li class="custom-checkbox">
+                                        <input type="checkbox" name="short" id="short" class="custom-checkbox__input">
+                                        <label for="short" class="custom-checkbox__label">Short Dress (4)</label>
+                                    </li>
+                                    <li class="custom-checkbox">
+                                        <input type="checkbox" name="shortsleeve" id="shortsleeve" class="custom-checkbox__input">
+                                        <label for="shortsleeve" class="custom-checkbox__label">Short Sleeve (4)</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Properties Search filter End -->
+                        </div>
+                    </aside>
+                    <!-- Sidebar End -->
+                </div>
+                <div class="col-lg-9 order-lg-2 order-1 mb-md--30">
+                    <div class="shop-toolbar d-flex flex-md-row flex-column justify-content-between align-items-md-center">
+                        <div class="shop-toolbar__shorter">
+                            <label>Short By:</label>
+                            <select class="short-select">
+                                <option value="1">Relevance</option>
+                                <option value="2">Name, A to Z</option>
+                                <option value="3">Name, Z to A</option>
+                                <option value="4">Price, low to high</option>
+                                <option value="5">Price, high to low</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Shop Layout Start -->
+                    <div class="main-shop-wrapper">
+                                <div class="product-grid-view">
+                                    <div class="row no-gutters">
+                                        <div class="col-xl-3 col-md-6">
+                                            <!-- Product Box Start -->
+                                            <div class="product-box variable-product">
+                                                <a href="#">
+                                                <div class="product-box__image">
+                                                    <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
+                                                </div>
+                                                <div class="product-box__footer">
+                                                    <div class="product-box__desc">
+                                                        <a href="single-product.html" class="product-box__title">Printed Summer Dress</a>
+                                                        <p class="product-box__price">
+                                                            <span class="sale-price">&dollar;17.43</span>
+                                                            <span class="regular-price">&dollar;20.50</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                </a>
+                                            </div>
+                                            <!-- Product Box End -->
+                                        </div>
+                                        <div class="col-xl-3 col-md-6">
+                                            <!-- Product Box Start -->
+                                            <div class="product-box variable-product">
+                                                <a href="#">
+                                                <div class="product-box__image">
+                                                    <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
+                                                </div>
+                                                <div class="product-box__footer">
+                                                    <div class="product-box__desc">
+                                                        <a href="single-product.html" class="product-box__title">Printed Summer Dress</a>
+                                                        <p class="product-box__price">
+                                                            <span class="sale-price">&dollar;17.43</span>
+                                                            <span class="regular-price">&dollar;20.50</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                </a>
+                                            </div>
+                                            <!-- Product Box End -->
+                                        </div>
+                                        <div class="col-xl-3 col-md-6">
+                                            <!-- Product Box Start -->
+                                            <div class="product-box variable-product">
+                                                <a href="#">
+                                                <div class="product-box__image">
+                                                    <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
+                                                </div>
+                                                <div class="product-box__footer">
+                                                    <div class="product-box__desc">
+                                                        <a href="single-product.html" class="product-box__title">Printed Summer Dress</a>
+                                                        <p class="product-box__price">
+                                                            <span class="sale-price">&dollar;17.43</span>
+                                                            <span class="regular-price">&dollar;20.50</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                </a>
+                                            </div>
+                                            <!-- Product Box End -->
+                                        </div>
+                                        <div class="col-xl-3 col-md-6">
+                                            <!-- Product Box Start -->
+                                            <div class="product-box variable-product">
+                                                <a href="#">
+                                                <div class="product-box__image">
+                                                    <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
+                                                </div>
+                                                <div class="product-box__footer">
+                                                    <div class="product-box__desc">
+                                                        <a href="single-product.html" class="product-box__title">Printed Summer Dress</a>
+                                                        <p class="product-box__price">
+                                                            <span class="sale-price">&dollar;17.43</span>
+                                                            <span class="regular-price">&dollar;20.50</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                </a>
+                                            </div>
+                                            <!-- Product Box End -->
+                                        </div>
+                                        <div class="col-xl-3 col-md-6">
+                                            <!-- Product Box Start -->
+                                            <div class="product-box variable-product">
+                                                <a href="#">
+                                                <div class="product-box__image">
+                                                    <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
+                                                </div>
+                                                <div class="product-box__footer">
+                                                    <div class="product-box__desc">
+                                                        <a href="single-product.html" class="product-box__title">Printed Summer Dress</a>
+                                                        <p class="product-box__price">
+                                                            <span class="sale-price">&dollar;17.43</span>
+                                                            <span class="regular-price">&dollar;20.50</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                </a>
+                                            </div>
+                                            <!-- Product Box End -->
+                                        </div>
+                                        <div class="col-xl-3 col-md-6">
+                                            <!-- Product Box Start -->
+                                            <div class="product-box variable-product">
+                                                <a href="#">
+                                                <div class="product-box__image">
+                                                    <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
+                                                </div>
+                                                <div class="product-box__footer">
+                                                    <div class="product-box__desc">
+                                                        <a href="single-product.html" class="product-box__title">Printed Summer Dress</a>
+                                                        <p class="product-box__price">
+                                                            <span class="sale-price">&dollar;17.43</span>
+                                                            <span class="regular-price">&dollar;20.50</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                </a>
+                                            </div>
+                                            <!-- Product Box End -->
+                                        </div>
+                                        <div class="col-xl-3 col-md-6">
+                                            <!-- Product Box Start -->
+                                            <div class="product-box variable-product">
+                                                <a href="#">
+                                                <div class="product-box__image">
+                                                    <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
+                                                </div>
+                                                <div class="product-box__footer">
+                                                    <div class="product-box__desc">
+                                                        <a href="single-product.html" class="product-box__title">Printed Summer Dress</a>
+                                                        <p class="product-box__price">
+                                                            <span class="sale-price">&dollar;17.43</span>
+                                                            <span class="regular-price">&dollar;20.50</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                </a>
+                                            </div>
+                                            <!-- Product Box End -->
+                                        </div>
+                                        <div class="col-xl-3 col-md-6">
+                                            <!-- Product Box Start -->
+                                            <div class="product-box variable-product">
+                                                <a href="#">
+                                                <div class="product-box__image">
+                                                    <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
+                                                </div>
+                                                <div class="product-box__footer">
+                                                    <div class="product-box__desc">
+                                                        <a href="single-product.html" class="product-box__title">Printed Summer Dress</a>
+                                                        <p class="product-box__price">
+                                                            <span class="sale-price">&dollar;17.43</span>
+                                                            <span class="regular-price">&dollar;20.50</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                </a>
+                                            </div>
+                                            <!-- Product Box End -->
+                                        </div>
+                                        <div class="col-xl-3 col-md-6">
+                                            <!-- Product Box Start -->
+                                            <div class="product-box variable-product">
+                                                <a href="#">
+                                                <div class="product-box__image">
+                                                    <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
+                                                </div>
+                                                <div class="product-box__footer">
+                                                    <div class="product-box__desc">
+                                                        <a href="single-product.html" class="product-box__title">Printed Summer Dress</a>
+                                                        <p class="product-box__price">
+                                                            <span class="sale-price">&dollar;17.43</span>
+                                                            <span class="regular-price">&dollar;20.50</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                </a>
+                                            </div>
+                                            <!-- Product Box End -->
+                                        </div>
+                                        <div class="col-xl-3 col-md-6">
+                                            <!-- Product Box Start -->
+                                            <div class="product-box variable-product">
+                                                <a href="#">
+                                                <div class="product-box__image">
+                                                    <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
+                                                </div>
+                                                <div class="product-box__footer">
+                                                    <div class="product-box__desc">
+                                                        <a href="single-product.html" class="product-box__title">Printed Summer Dress</a>
+                                                        <p class="product-box__price">
+                                                            <span class="sale-price">&dollar;17.43</span>
+                                                            <span class="regular-price">&dollar;20.50</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                </a>
+                                            </div>
+                                            <!-- Product Box End -->
+                                        </div>
+                                        <div class="col-xl-3 col-md-6">
+                                            <!-- Product Box Start -->
+                                            <div class="product-box variable-product">
+                                                <a href="#">
+                                                <div class="product-box__image">
+                                                    <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
+                                                </div>
+                                                <div class="product-box__footer">
+                                                    <div class="product-box__desc">
+                                                        <a href="single-product.html" class="product-box__title">Printed Summer Dress</a>
+                                                        <p class="product-box__price">
+                                                            <span class="sale-price">&dollar;17.43</span>
+                                                            <span class="regular-price">&dollar;20.50</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                </a>
+                                            </div>
+                                            <!-- Product Box End -->
+                                        </div>
+                                        <div class="col-xl-3 col-md-6">
+                                            <!-- Product Box Start -->
+                                            <div class="product-box variable-product">
+                                                <a href="#">
+                                                <div class="product-box__image">
+                                                    <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
+                                                </div>
+                                                <div class="product-box__footer">
+                                                    <div class="product-box__desc">
+                                                        <a href="single-product.html" class="product-box__title">Printed Summer Dress</a>
+                                                        <p class="product-box__price">
+                                                            <span class="sale-price">&dollar;17.43</span>
+                                                            <span class="regular-price">&dollar;20.50</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                </a>
+                                            </div>
+                                            <!-- Product Box End -->
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Shop Layout End -->
+                    <div class="product-pagintaion d-flex flex-column justify-content-between align-items-md-center">
+                            <ul class="page-list">
+                                <li class="prev"><a href=""><i class="fa fa-angle-left"></i> Previous</a></li>
+                                <li class="current"><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li class="next"><a href="">Next <i class="fa fa-angle-right"></i> </a></li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Main content wrapper End -->
+{% endblock content %}
+
