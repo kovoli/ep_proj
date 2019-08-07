@@ -1,0 +1,16 @@
+Django==2.2.4
+django-appconf==1.0.3
+django-ckeditor==5.7.1
+django-cleanup==4.0.0
+django-imagekit==4.0.2
+django-js-asset==1.2.2
+django-mptt==0.10.0
+django-recaptcha==2.0.4
+django-watson==1.5.2
+pilkit==2.0
+Pillow==6.1.0
+psycopg2-binary==2.8.3
+pytz==2019.2
+six==1.12.0
+sqlparse==0.3.0
+Unidecode==1.1.1
