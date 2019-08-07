@@ -54,13 +54,13 @@
 		$(".hidden-in-default").hide();
 
 		$("#js-cat-nav-title").on('click',function(){
-			$("#js-cat-nav").slideToggle(500);
+			$("#js-cat-nav").slideToggle(200);
 		});
 
 		$(".hidden-menu-item").hide();
 		$(".js-expand-hidden-menu").on('click',function(e){
 			e.preventDefault();
-			$(".hidden-menu-item").toggle(500);
+			$(".hidden-menu-item").toggle(200);
 			var htmlAfter = "Close Categories";
 			var htmlBefore = "More Categories";
 			
