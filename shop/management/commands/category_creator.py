@@ -6,7 +6,7 @@ from unidecode import unidecode
 
 
 def open_cat_xml(file):
-    tree = ET.parse(f'./shop/management/category_xml/{file}')
+    tree = ET.parse(f'./shop/management/import_xml/{file}')
     get_root = tree.getroot()
     return get_root
 

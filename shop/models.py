@@ -139,7 +139,6 @@ class Product(models.Model):
                    models.Index(fields=['barcode']),
                    models.Index(fields=['vendorCode'])]
 
-
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(unidecode(self.name))
@@ -186,3 +185,6 @@ class Comment(models.Model):
 
     def __str__(self):
         return 'Комментарий от {} {}'.format(self.name, self.product)
+
+# TODO: Добавить ID к модели продуктов
+# TODO: Сделать Slug + ArticleID
