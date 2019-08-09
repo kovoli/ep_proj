@@ -96,6 +96,7 @@ class Vendor(models.Model):
 # ------------ PRODUCT -------------
 class Product(models.Model):
     name = models.CharField(max_length=255)
+    offer_id = models.CharField(max_length=255, blank=True, null=True)
     slug = models.SlugField(max_length=255, unique=True)
     create = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -141,7 +142,7 @@ class Product(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(unidecode(self.name))
+            self.slug = slugify(unidecode(self.name) + f'-{self.offer_id}')
         super(Product, self).save(*args, **kwargs)
 
 

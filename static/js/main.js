@@ -477,7 +477,7 @@
 	$('.js-related-product').owlCarousel({
 		items: 6,
 		margin: 30,
-	    loop:false,
+	    loop: true,
 	    nav: true,
 	    dots: false,
 	    autoplay: false,

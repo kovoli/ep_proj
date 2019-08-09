@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Купить [{{ product.name }}], сравнить цену - www.pricerace.ru
+{% endblock title %}
+
+{% block description %}{{ product.description|truncatechars:150|striptags }}{% endblock description %}
+
+
+{% block content %}
+<!-- Breadcumb area Start -->
+<div class="breadcumb-area section-padding bg--gray">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <ul class="breadcumb">
+                    <li class="breadcumb__list"><a class="breadcumb__link" href="../base.html">Home</a></li>
+                    <li class="breadcumb__list"><a class="breadcumb__link" href="category_product_list.html">Shop</a></li>
+                    <li class="breadcumb__list"><a class="breadcumb__link current" href="single_product.html"> Printed Summer Dress  </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcumb area End -->
+<!-- Main Content Wrapper Start -->
+<div class="main-content-wrapper">
+    <div class="single-products-area section-padding">
+        <!-- Single Product Start -->
+        <section class="single-product pb--40">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <!-- Tab Content Start -->
+                        <div class="tab-content product-thumb-large" id="myTabContent-3">
+                            <div class="tab-pane fade show active" id="product-large-one">
+                                <div class="single-product__img">
+                                    <img src="{% if product.product_image %}
+                                                                     {{ product.product_image.url }}
+                                                                     {% else %}
+                                                                     {% static 'images/zaglushka_big.png' %}
+                                                                     {% endif %}" alt="{{ product.name }}">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab Content End -->
+                    </div>
+                    <div class="col-lg-5">
+                        <!-- Single Product Content Start -->
+                        <div class="single-product__content">
+                            <h1 class="single-product__name">{{ product.name }}</h1>
+                            <p class="single-product__referance">Категория: <a href="#">{{ product.category.name }}</a></p>
+                            <p class="single-product__referance">Бренд: <a href="#">{{ product.vendor.name|upper }}</a></p>
+                            <a class="single-product__review-btn" data-toggle="modal" data-target="#reviewModal"><i class="fa fa-pencil"></i> Write a review</a>
+                            <p class="single-product__short-desc">Long printed dress with thin adjustable straps. V-neckline and wiring under the bust with ruffles at the bottom of the dress.</p>
+                        </div>
+                        <!-- Single Product Content End -->
+                    </div>
+                    <div class="col-lg-3 cheapest-price">
+                        <!-- Tab Content Start -->
+                        <div>
+                            <h3>Самая низкая цена</h3>
+                            {% for min_price_shop in product.prices.all|slice:":1" %}
+                            <div class="single-product__price mt--20">
+                                <span class="sale-price">{{ min_price_shop.price }} &#8381;</span>
+                            </div>
+                            <figure class="figure-img d-flex mx-auto align-items-center compare-pro-card float-left pr-2 mb-0">
+                                <a href="{{ min_price_shop.url }}" target="_blank"><img class="d-block img-fluid" src="assets/pleer_ru.jpg" alt="Электрогриль Tefal GC306012"></a>
+                            </figure>
+                            <a href="{{ min_price_shop.url }}">
+                            <div class="btn btn-style-1 btn-lg btn-block btn--fullwidth mt-3">
+                            В магазин
+                            <div class="to-shop float-right"><i class="fas fa-caret-right"></i></div>
+                            </div>
+                            </a>
+                            {% endfor %}
+                            <div class="mt--20" >
+                                {% if min_max_price.max != min_max_price.min %}
+                                <strong>Количество цен: {{ min_max_price.shops }} от {{ min_max_price.min }} &#8381; - {{ min_max_price.max }} &#8381;</strong>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <!-- Tab Content End -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Single Product End -->
+
+        <!-- Single Product Tab Start -->
+        <section class="single-product-tab pt--30 pb--30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="single-product-tab__head nav nav-tab" id="singleProductTab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-desc-tab" data-toggle="tab" href="#nav-desc" role="tab" aria-controls="nav-desc" aria-selected="true">Description</a>
+                            <a class="nav-item nav-link" id="nav-details-tab" data-toggle="tab" href="#nav-details" role="tab" aria-controls="nav-details" aria-selected="true">Product Details</a>
+                            <a class="nav-item nav-link" id="nav-review-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="true">review Details</a>
+                        </div>
+                        <div class="single-product-tab__content tab-content">
+                            <div class="tab-pane fade show active" id="nav-desc" role="tabpanel" aria-labelledby="nav-desc-tab">
+                                <p class="product-description">
+                                    {{ product.description|safe }}
+                                </p>
+                            </div>
+                            <div class="tab-pane" role="tabpanel" id="nav-details" aria-labelledby="nav-details-tab">
+                                <div class="product-details">
+
+                                </div>
+                            </div>
+                            <div class="tab-pane" role="tabpanel" id="nav-review" aria-labelledby="nav-review-tab">
+                                <a class="review-btn" data-toggle="modal" data-target="#reviewModal">Be the first to write your review !</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Single Product Tab End -->
+        {% if semilar_products %}
+        <!-- Related Product Area Start -->
+        <section class="related-product pt--30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h2>Похожие товары</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="related-product__carousel owl-carousel js-related-product">
+                            <!-- Product Box Start -->
+                            {% for semilar_pro in semilar_products %}
+                            <div class="product-box variable-product">
+                                <a href="{{ semilar_pro.get_absolute_url }}">
+                                <div class="product-box__image">
+                                    <img src="{% if semilar_pro.product_image %}{{ semilar_pro.product_image_grid.url }}{% endif %}" alt="{{ semilar_pro.name }}" alt="{{ semilar_pro.name }}" class="primary_image">
+                                </div>
+                                <div class="product-box__footer">
+                                    <div class="product-box__desc">
+                                        <p class="product-box__title">{{ semilar_pro.name|truncatechars:60 }}</p>
+                                        <p class="product-box__price">
+                                            <span class="sale-price">от {{ semilar_pro.min_price }} &#8381;</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            {% endfor %}
+                            <!-- Product Box End -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Related Product Area End -->
+        {% endif %}
+    </div>
+</div>
+<!-- Main Content Wrapper End -->
+{% endblock content %}
