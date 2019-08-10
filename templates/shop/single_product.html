@@ -50,7 +50,11 @@
                         <!-- Single Product Content Start -->
                         <div class="single-product__content">
                             <h1 class="single-product__name">{{ product.name }}</h1>
-                            <p class="single-product__referance">Категория: <a href="#">{{ product.category.name }}</a></p>
+                            <p class="single-product__referance">Категория: <a href="#">{{ product.category.name }}</a>
+                                {% if product.category.short_description %}
+                                    <i class="far fa-question-circle cat_short_description ml-2" data-container="body" data-toggle="popover" data-placement="top" data-content="{{ product.category.short_description }}"></i>
+                                {% endif %}
+                            </p>
                             <p class="single-product__referance">Бренд: <a href="#">{{ product.vendor.name|upper }}</a></p>
                             <a class="single-product__review-btn" data-toggle="modal" data-target="#reviewModal"><i class="fa fa-pencil"></i> Write a review</a>
                             <p class="single-product__short-desc">Long printed dress with thin adjustable straps. V-neckline and wiring under the bust with ruffles at the bottom of the dress.</p>
@@ -65,9 +69,7 @@
                             <div class="single-product__price mt--20">
                                 <span class="sale-price">{{ min_price_shop.price }} &#8381;</span>
                             </div>
-                            <figure class="figure-img d-flex mx-auto align-items-center compare-pro-card float-left pr-2 mb-0">
-                                <a href="{{ min_price_shop.url }}" target="_blank"><img class="d-block img-fluid" src="{% if min_price_shop.shop.image_store %}{{ min_price_shop.shop.image_store.url }}{% endif %}" alt="{{ min_price_shop.name }}"></a>
-                            </figure>
+                            <img src="{% if min_price_shop.shop.image_store %}{{ min_price_shop.shop.image_store.url }}{% endif %}" alt="{{ min_price_shop.name }} - Сравнить цену, характеристики, отзывы" class="primary_image" width="100">
                             <a href="{{ min_price_shop.url }}">
                             <div class="btn btn-style-1 btn-lg btn-block btn--fullwidth mt-3">
                             В магазин
@@ -88,21 +90,47 @@
             </div>
         </section>
         <!-- Single Product End -->
+        <section class="single-product my-4 bg--gray sticky-top">
+            <div class="container-fluid ">
+                <ul class="nav nav-pills nav-fill py-5">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#prices">Цены и магазины</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#characteristics">Характеристики</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#rewiew">Отзывы</a>
+                  </li>
+                </ul>
+            </div>
+        </section>
+
         <!-- Price compare Start -->
         <section class="single-product my-4">
         <div class="container-fluid ">
+            <div class="section-title" id="prices">
+                <h2>Цены</h2>
+            </div>
             <ul class="list-group list-group-flush col-12 px-0 ">
                 {% for price_list in product.prices.all %}
                   <li class="list-group-item px-0">
                       <div class="compare-price">
                           <div class="row align-items-center">
-                              <div class="col-sm-12 col-lg-6 my-2">
-                                  <figure class="figure-img d-flex mx-auto align-items-center compare-pro-card float-left pr-2 mb-0">
-                                    <a href="{{ price_list.url }}" target="_blank"><img class="d-block img-fluid" src="{% if price_list.shop.image_store %}{{ price_list.shop.image_store.url }}{% endif %}" alt="{{ price_list.name }}"></a>
-                                  </figure>
+                              <div class="col-sm-12 col-lg-5 my-2">
+                              <img src="{% if price_list.shop.image_store %}{{ price_list.shop.image_store.url }}{% endif %}" alt="{{ price_list.name }} - Сравнить цену, характеристики, отзывы" class="primary_image float-left pr-2" width="100">
                                   <p class="title-compare mb-0 font-weight-bolder">{{ price_list.name|truncatechars:60 }}</p>
                                   <span>в <a href="{{ price_list.url }}" rel="nofollow" target="_blank">{{ price_list.shop.name }}</a></span>
                               </div>
+
+                              <div class="col-sm-12 col-lg-1 my-2">
+                                  {% if price_list.sales_notes %}
+                                  <span class="info_icon_price">
+                                      <i tabindex="0" class="fas fa-info-circle" data-container="body" data-trigger="focus" data-toggle="popover" data-placement="top" data-content="{{ price_list.sales_notes }}"></i>
+                                  </span>
+                                  {% endif %}
+                              </div>
+
                               <div class="col-sm-6 col-lg-3 my-2">
                                   <div class="single-product__price my-2 float-right">
                                       {% if price_list.oldprice %}
@@ -128,7 +156,7 @@
         </section>
         <!-- Price compare End -->
         <!-- Single Product Tab Start -->
-        <section class="single-product-tab pt--30 pb--30">
+        <section class="single-product-tab pt--30 pb--30" id="characteristics">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">

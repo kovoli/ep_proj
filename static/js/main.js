@@ -12,7 +12,7 @@
 
 	$('#js-cat-nav').slicknav({
 		label: '',
-		duration: 1000,
+		duration: 500,
 		label: 'Category',
 		showChildren: 'false',
 		prependTo:'.category-moble-menu'
@@ -38,7 +38,7 @@
 
 	function dropdownAnimation(){
 		$('.dropdown').on('show.bs.dropdown', function(e){
-		  $(this).find('.dropdown-menu').first().stop(true, true).slideDown(300);
+		  $(this).find('.dropdown-menu').first().stop(true, true).slideDown(200);
 		});
 
 		$('.dropdown').on('hide.bs.dropdown', function(e){
@@ -76,7 +76,7 @@
 	function categoryMenuExpandInMobile(){
 		$('.has-children').on('click', function(e){
 			e.preventDefault();
-			$(this).find('.category-nav__submenu').slideToggle('500');
+			$(this).find('.category-nav__submenu').slideToggle('200');
 		});
 	}
 
@@ -828,6 +828,12 @@
 	     	}
 	    }
 	});
+
+	$(function () {
+	  $('[data-toggle="popover"]').popover({
+		  trigger: 'focus'
+	  })
+	})
 	
 	dropdownAnimation();
 	categoryMenuExpand();

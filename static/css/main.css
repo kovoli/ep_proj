@@ -6662,3 +6662,15 @@ Blog Pagination
 .cheapest-price {
   border-left: 2px solid #929292;
 }
+.info_icon_price {
+    font-size: 2rem;
+    color: #2873ef;
+}
+.cat_short_description {
+    font-size: 2rem;
+    color: #2c2e3c;
+}
+.popover-body {
+    font-size: 1rem;
+    font-weight: 700;
+}

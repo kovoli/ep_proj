@@ -20,6 +20,7 @@ class Category(MPTTModel):
     slug = models.SlugField(max_length=100, unique=True)
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
     description = RichTextField(blank=True, null=True)
+    short_description = RichTextField(blank=True, null=True)
     favorites = models.BooleanField(default=False)
     category_image = ProcessedImageField(upload_to='category_images/%Y/%m',
                                          processors=[ResizeToFit(None, 250)],
