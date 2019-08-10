@@ -57,7 +57,7 @@
                         </div>
                         <!-- Single Product Content End -->
                     </div>
-                    <div class="col-lg-3 cheapest-price">
+                    <div class="col-lg-3 cheapest-price d-none d-sm-block">
                         <!-- Tab Content Start -->
                         <div>
                             <h3>Самая низкая цена</h3>
@@ -66,7 +66,7 @@
                                 <span class="sale-price">{{ min_price_shop.price }} &#8381;</span>
                             </div>
                             <figure class="figure-img d-flex mx-auto align-items-center compare-pro-card float-left pr-2 mb-0">
-                                <a href="{{ min_price_shop.url }}" target="_blank"><img class="d-block img-fluid" src="assets/pleer_ru.jpg" alt="Электрогриль Tefal GC306012"></a>
+                                <a href="{{ min_price_shop.url }}" target="_blank"><img class="d-block img-fluid" src="{% if min_price_shop.shop.image_store %}{{ min_price_shop.shop.image_store.url }}{% endif %}" alt="{{ min_price_shop.name }}"></a>
                             </figure>
                             <a href="{{ min_price_shop.url }}">
                             <div class="btn btn-style-1 btn-lg btn-block btn--fullwidth mt-3">
@@ -88,7 +88,45 @@
             </div>
         </section>
         <!-- Single Product End -->
-
+        <!-- Price compare Start -->
+        <section class="single-product my-4">
+        <div class="container-fluid ">
+            <ul class="list-group list-group-flush col-12 px-0 ">
+                {% for price_list in product.prices.all %}
+                  <li class="list-group-item px-0">
+                      <div class="compare-price">
+                          <div class="row align-items-center">
+                              <div class="col-sm-12 col-lg-6 my-2">
+                                  <figure class="figure-img d-flex mx-auto align-items-center compare-pro-card float-left pr-2 mb-0">
+                                    <a href="{{ price_list.url }}" target="_blank"><img class="d-block img-fluid" src="{% if price_list.shop.image_store %}{{ price_list.shop.image_store.url }}{% endif %}" alt="{{ price_list.name }}"></a>
+                                  </figure>
+                                  <p class="title-compare mb-0 font-weight-bolder">{{ price_list.name|truncatechars:60 }}</p>
+                                  <span>в <a href="{{ price_list.url }}" rel="nofollow" target="_blank">{{ price_list.shop.name }}</a></span>
+                              </div>
+                              <div class="col-sm-6 col-lg-3 my-2">
+                                  <div class="single-product__price my-2 float-right">
+                                      {% if price_list.oldprice %}
+                                            <span class="regular-price">{{ price_list.oldprice }} &#8381;</span>
+                                      {% endif %}
+                                      <span class="sale-price">{{ price_list.price }} &#8381;</span>
+                                  </div>
+                              </div>
+                              <div class="col-sm-12 col-lg-3">
+                                <a href="{{ price_list.url }}" target="_blank">
+                                    <div class="btn btn-style-1 btn-lg btn-block btn--fullwidth">
+                                    В магазин
+                                    <div class="to-shop float-right"><i class="fas fa-caret-right"></i></div>
+                                    </div>
+                                </a>
+                              </div>
+                          </div>
+                      </div>
+                  </li>
+                {% endfor %}
+                </ul>
+        </div>
+        </section>
+        <!-- Price compare End -->
         <!-- Single Product Tab Start -->
         <section class="single-product-tab pt--30 pb--30">
             <div class="container-fluid">

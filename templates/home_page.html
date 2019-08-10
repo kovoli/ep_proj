@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load static %}
+
 
 {% block content %}
 <!-- Populate Area Start -->
@@ -15,137 +17,23 @@
             <div class="col-12">
                 <div class="related-product__carousel owl-carousel js-popular-product">
                     <!-- Product Box Start -->
+                    {% for prod in list_pro %}
                     <div class="product-box variable-product">
-                    <a href="shop/single_product.html">
+                    <a href="{{ prod.get_absolute_url }}">
                         <div class="product-box__image">
-                            <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
-                            <img src="assets/img/printed-summer-dress-1.jpg" alt="product image" class="secondary_image">
+                            <img src="{{ prod.product_image_grid.url }}" alt="{{ prod.name }} - Сравнить цену, характеристики, отзывы" class="primary_image">
                         </div>
                         <div class="product-box__footer">
                             <div class="product-box__desc">
-                                <p class="product-box__title">Printed Summer Dress ddada dvasd aasdfasd asdga dgvada adasfa</p>
+                                <p class="product-box__title">{{ prod.name|truncatechars:60 }}</p>
                                 <p class="product-box__price">
-                                    <span class="sale-price">&dollar;17.43</span>
-                                    <span class="regular-price">&dollar;20.50</span>
+                                    <span class="sale-price">от {{ prod.min_price }} &#8381;</span>
                                 </p>
                             </div>
                         </div>
                     </a>
                     </div>
-                    <!-- Product Box End -->
-                    <!-- Product Box Start -->
-                    <div class="product-box variable-product">
-                    <a href="shop/single_product.html">
-                        <div class="product-box__image">
-                            <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
-                            <img src="assets/img/printed-summer-dress-1.jpg" alt="product image" class="secondary_image">
-                        </div>
-                        <div class="product-box__footer">
-                            <div class="product-box__desc">
-                                <p class="product-box__title">Printed Summer Dress</p>
-                                <p class="product-box__price">
-                                    <span class="sale-price">&dollar;17.43</span>
-                                    <span class="regular-price">&dollar;20.50</span>
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <!-- Product Box End -->
-                    <!-- Product Box Start -->
-                    <div class="product-box variable-product">
-                    <a href="shop/single_product.html">
-                        <div class="product-box__image">
-                            <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
-                            <img src="assets/img/printed-summer-dress-1.jpg" alt="product image" class="secondary_image">
-                        </div>
-                        <div class="product-box__footer">
-                            <div class="product-box__desc">
-                                <p class="product-box__title">Printed Summer Dress</p>
-                                <p class="product-box__price">
-                                    <span class="sale-price">&dollar;17.43</span>
-                                    <span class="regular-price">&dollar;20.50</span>
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <!-- Product Box End -->
-                    <!-- Product Box Start -->
-                    <div class="product-box variable-product">
-                    <a href="shop/single_product.html">
-                        <div class="product-box__image">
-                            <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
-                            <img src="assets/img/printed-summer-dress-1.jpg" alt="product image" class="secondary_image">
-                        </div>
-                        <div class="product-box__footer">
-                            <div class="product-box__desc">
-                                <p class="product-box__title">Printed Summer Dress</p>
-                                <p class="product-box__price">
-                                    <span class="sale-price">&dollar;17.43</span>
-                                    <span class="regular-price">&dollar;20.50</span>
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <!-- Product Box End -->
-                    <!-- Product Box Start -->
-                    <div class="product-box variable-product">
-                    <a href="shop/single_product.html">
-                        <div class="product-box__image">
-                            <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
-                            <img src="assets/img/printed-summer-dress-1.jpg" alt="product image" class="secondary_image">
-                        </div>
-                        <div class="product-box__footer">
-                            <div class="product-box__desc">
-                                <p class="product-box__title">Printed Summer Dress</p>
-                                <p class="product-box__price">
-                                    <span class="sale-price">&dollar;17.43</span>
-                                    <span class="regular-price">&dollar;20.50</span>
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <!-- Product Box End -->
-                    <!-- Product Box Start -->
-                    <div class="product-box variable-product">
-                    <a href="shop/single_product.html">
-                        <div class="product-box__image">
-                            <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
-                            <img src="assets/img/printed-summer-dress-1.jpg" alt="product image" class="secondary_image">
-                        </div>
-                        <div class="product-box__footer">
-                            <div class="product-box__desc">
-                                <p class="product-box__title">Printed Summer Dress</p>
-                                <p class="product-box__price">
-                                    <span class="sale-price">&dollar;17.43</span>
-                                    <span class="regular-price">&dollar;20.50</span>
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <!-- Product Box End -->
-                    <!-- Product Box Start -->
-                    <div class="product-box variable-product">
-                    <a href="shop/single_product.html">
-                        <div class="product-box__image">
-                            <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
-                            <img src="assets/img/printed-summer-dress-1.jpg" alt="product image" class="secondary_image">
-                        </div>
-                        <div class="product-box__footer">
-                            <div class="product-box__desc">
-                                <p class="product-box__title">Printed Summer Dress</p>
-                                <p class="product-box__price">
-                                    <span class="sale-price">&dollar;17.43</span>
-                                    <span class="regular-price">&dollar;20.50</span>
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
+                    {% endfor %}
                     <!-- Product Box End -->
                 </div>
             </div>
@@ -167,111 +55,24 @@
         <div class="row">
             <div class="col-12">
                 <div class="related-product__carousel owl-carousel js-popular-product">
-                    <!-- Product Box Start -->
+                    <!-- Category Box Start -->
+                    {% for cat in favorites_cat %}
                     <div class="product-box variable-product">
                     <a href="shop/single_product.html">
+
                         <div class="product-box__image">
-                            <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
-                            <img src="assets/img/printed-summer-dress-1.jpg" alt="product image" class="secondary_image">
+                            <img src="{% if cat.category_image %}{{ cat.category_image.url }}{% endif %}" alt="product image" class="primary_image">
                         </div>
+
                         <div class="product-box__footer">
                             <div class="product-box__desc">
-                                <p class="product-box__title">Printed Summer Dress</p>
+                                <p class="product-box__title font-weight-bolder">{{ cat.name }}</p>
                             </div>
                         </div>
                     </a>
                     </div>
-                    <!-- Product Box End -->
-                    <!-- Product Box Start -->
-                    <div class="product-box variable-product">
-                    <a href="shop/single_product.html">
-                        <div class="product-box__image">
-                            <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
-                            <img src="assets/img/printed-summer-dress-1.jpg" alt="product image" class="secondary_image">
-                        </div>
-                        <div class="product-box__footer">
-                            <div class="product-box__desc">
-                                <p class="product-box__title">Printed Summer Dress</p>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <!-- Product Box End -->
-                    <!-- Product Box Start -->
-                    <div class="product-box variable-product">
-                    <a href="shop/single_product.html">
-                        <div class="product-box__image">
-                            <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
-                            <img src="assets/img/printed-summer-dress-1.jpg" alt="product image" class="secondary_image">
-                        </div>
-                        <div class="product-box__footer">
-                            <div class="product-box__desc">
-                                <p class="product-box__title">Printed Summer Dress</p>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <!-- Product Box End -->
-                    <!-- Product Box Start -->
-                    <div class="product-box variable-product">
-                    <a href="shop/single_product.html">
-                        <div class="product-box__image">
-                            <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
-                            <img src="assets/img/printed-summer-dress-1.jpg" alt="product image" class="secondary_image">
-                        </div>
-                        <div class="product-box__footer">
-                            <div class="product-box__desc">
-                                <p class="product-box__title">Printed Summer Dress</p>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <!-- Product Box End -->
-                    <!-- Product Box Start -->
-                    <div class="product-box variable-product">
-                    <a href="shop/single_product.html">
-                        <div class="product-box__image">
-                            <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
-                            <img src="assets/img/printed-summer-dress-1.jpg" alt="product image" class="secondary_image">
-                        </div>
-                        <div class="product-box__footer">
-                            <div class="product-box__desc">
-                                <p class="product-box__title">Printed Summer Dress</p>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <!-- Product Box End -->
-                    <!-- Product Box Start -->
-                    <div class="product-box variable-product">
-                    <a href="shop/single_product.html">
-                        <div class="product-box__image">
-                            <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
-                            <img src="assets/img/printed-summer-dress-1.jpg" alt="product image" class="secondary_image">
-                        </div>
-                        <div class="product-box__footer">
-                            <div class="product-box__desc">
-                                <p class="product-box__title">Printed Summer Dress</p>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <!-- Product Box End -->
-                    <!-- Product Box Start -->
-                    <div class="product-box variable-product">
-                    <a href="shop/single_product.html">
-                        <div class="product-box__image">
-                            <img src="assets/img/printed-summer-dress.jpg" alt="product image" class="primary_image">
-                            <img src="assets/img/printed-summer-dress-1.jpg" alt="product image" class="secondary_image">
-                        </div>
-                        <div class="product-box__footer">
-                            <div class="product-box__desc">
-                                <p class="product-box__title">Printed Summer Dress</p>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <!-- Product Box End -->
+                    {% endfor %}
+                    <!-- Category Box End -->
                 </div>
             </div>
         </div>

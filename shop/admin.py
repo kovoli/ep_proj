@@ -22,7 +22,7 @@ class CommentAdmin(admin.ModelAdmin):
 @admin.register(Price)
 class CommentAdmin(admin.ModelAdmin):
     list_display = ['shop', 'name']
-    #readonly_fields = ['product']
+    readonly_fields = ['product']
     search_fields = ['name']
     list_filter = ('shop', )
 
@@ -38,6 +38,7 @@ class CategoryAdmin(MPTTModelAdmin):
     mptt_level_indent = 20
     readonly_fields = ('slug',)
     search_fields = ['name']
+    list_filter = ['favorites',]
 
 
 @admin.register(Vendor)

@@ -7,8 +7,11 @@ from watson import search as watson
 from django.db.models import F
 
 def home_page(request):
+    favorites_cat = Category.objects.filter(favorites=True)
+    list_pro = Product.objects.all().annotate(min_price=Min('prices__price')).order_by('views')[:12]
 
-    return render(request, 'home_page.html')
+    return render(request, 'home_page.html', {'favorites_cat': favorites_cat,
+                                              'list_pro': list_pro})
 
 
 def product_detail(request, slug):
