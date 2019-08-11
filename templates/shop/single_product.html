@@ -89,7 +89,7 @@
                 </div>
             </div>
         </section>
-        <!-- Single Product End -->
+        <!-- Tab Product End -->
         <section class="single-product my-4 bg--gray sticky-top">
             <div class="container-fluid ">
                 <ul class="nav nav-pills nav-fill py-5">
@@ -105,7 +105,7 @@
                 </ul>
             </div>
         </section>
-
+        <!-- Tab End -->
         <!-- Price compare Start -->
         <section class="single-product my-4">
         <div class="container-fluid ">
@@ -226,6 +226,43 @@
         </section>
         <!-- Related Product Area End -->
         {% endif %}
+        <!-- Reviews Tab Start -->
+        <section class="single-product-tab pt--30 pb--30" id="reviews">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+
+                          <div class="single-product-tab__head nav nav-tab" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
+                                {% with comments.count as total_comments %}Отзывы ({{ total_comments }}){% endwith %}
+                            </a>
+                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Оставить отзыв</a>
+                          </div>
+                        <div class="single-product-tab__content tab-content" id="nav-tabContent">
+                          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                              Tab1
+                          </div>
+                          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                              <div class="form-comment">
+                              <form action="." method="post">
+                                {{ comment_form.as_p }}
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-yellow" id="button1">Оставить отзыв</button>
+                                <script>
+                                    document.getElementById("button1").disabled = true;
+                                    function enableBtn(){
+                                        document.getElementById("button1").disabled = false;
+                                        }
+                                </script>
+                              </form>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Reviews Tab End -->
     </div>
 </div>
 <!-- Main Content Wrapper End -->
