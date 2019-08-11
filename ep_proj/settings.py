@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'mptt',
     'ckeditor',
     'imagekit',
-    #'captcha',
+    'captcha',
     'watson',
     'django_cleanup.apps.CleanupConfig',
 ]
@@ -147,3 +147,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+RECAPTCHA_PUBLIC_KEY = '6LeuXH4UAAAAAD6-GNH98rPyhJkMWu_1nX8TU93O'
+RECAPTCHA_PRIVATE_KEY = '6LeuXH4UAAAAAFzxW4nsWceGiD_hkG1Lso3llz11'
+NOCAPTCHA = True

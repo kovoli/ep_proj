@@ -40,7 +40,7 @@ def product_detail(request, slug):
         comment_form = CommentForm()
 
     return render(request, 'shop/single_product.html', {'product': product,
-                                                        #'breadcrumbs': breadcrumbs,
+                                                        'breadcrumbs': breadcrumbs,
                                                         'comments': comments,
                                                         'new_comment': new_comment,
                                                         'comment_form': comment_form,

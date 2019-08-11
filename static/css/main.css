@@ -68,7 +68,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-family: "Libre Franklin", sans-serif;
   color: #2c2e3d;
   line-height: 1.4rem;
@@ -6674,3 +6674,8 @@ Blog Pagination
     font-size: 1rem;
     font-weight: 700;
 }
+.form-comment {
+    max-width: 900px;
+    margin: auto;
+}
+

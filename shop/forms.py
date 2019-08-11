@@ -1,12 +1,13 @@
 from .models import Comment
 from django import forms
 from captcha.fields import ReCaptchaField
+from captcha.widgets import ReCaptchaV2Checkbox
 from .models import Vendor
 
 
 class CommentForm(forms.ModelForm):
-    #captcha = ReCaptchaField(label='Проверка, что вы настоящий человек',
-                             #attrs={'theme': 'clean', 'callback': "enableBtn"}, required=True, )
+    #captcha = ReCaptchaField(label='Проверка, что вы настоящий человек', attrs={'theme': 'clean', 'callback': "enableBtn"}, required=True)
+    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox(attrs={'theme': 'clean', 'data-callback': "enableBtn"}), label='Проверка, что вы настоящий человек', required=True)
 
     class Meta:
         model = Comment

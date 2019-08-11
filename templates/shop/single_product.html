@@ -14,11 +14,22 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <ul class="breadcumb">
-                    <li class="breadcumb__list"><a class="breadcumb__link" href="../base.html">Home</a></li>
-                    <li class="breadcumb__list"><a class="breadcumb__link" href="category_product_list.html">Shop</a></li>
-                    <li class="breadcumb__list"><a class="breadcumb__link current" href="single_product.html"> Printed Summer Dress  </a></li>
-                </ul>
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item px-1"><a href="{% url 'shop:home' %}">Главная</a></li>
+                    {% for bc in breadcrumbs %}
+                        <li class="breadcrumb-item dropdown"><a  href="{{ bc.get_absolute_url }}">{{ bc.name }}</a>
+                              <a class=" dropdown-toggle mx-1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                {% for bc_siblings in bc.get_siblings %}
+                                    <a class="dropdown-item" href="{{ bc_siblings.get_absolute_url }}">{{ bc_siblings.name }}</a>
+                                {% endfor %}
+                              </div>
+                        </li>
+                    {% endfor %}
+                  </ol>
+                </nav>
             </div>
         </div>
     </div>
@@ -56,7 +67,7 @@
                                 {% endif %}
                             </p>
                             <p class="single-product__referance">Бренд: <a href="#">{{ product.vendor.name|upper }}</a></p>
-                            <a class="single-product__review-btn" data-toggle="modal" data-target="#reviewModal"><i class="fa fa-pencil"></i> Write a review</a>
+                            <a class="single-product__review-btn" href="#reviews"><i class="fa fa-pencil"></i> Оставить отзыв</a>
                             <p class="single-product__short-desc">Long printed dress with thin adjustable straps. V-neckline and wiring under the bust with ruffles at the bottom of the dress.</p>
                         </div>
                         <!-- Single Product Content End -->
@@ -70,11 +81,12 @@
                                 <span class="sale-price">{{ min_price_shop.price }} &#8381;</span>
                             </div>
                             <img src="{% if min_price_shop.shop.image_store %}{{ min_price_shop.shop.image_store.url }}{% endif %}" alt="{{ min_price_shop.name }} - Сравнить цену, характеристики, отзывы" class="primary_image" width="100">
-                            <a href="{{ min_price_shop.url }}">
-                            <div class="btn btn-style-1 btn-lg btn-block btn--fullwidth mt-3">
-                            В магазин
-                            <div class="to-shop float-right"><i class="fas fa-caret-right"></i></div>
-                            </div>
+                            <a href="{{ min_price_shop.url }}" target="_blank">
+                                <div class="btn btn-style-1 btn-lg btn-block btn--fullwidth mt-3">В магазин
+                                    <div class="to-shop float-right">
+                                        <i class="fas fa-caret-right"></i>
+                                    </div>
+                                </div>
                             </a>
                             {% endfor %}
                             <div class="mt--20" >
@@ -90,7 +102,7 @@
             </div>
         </section>
         <!-- Tab Product End -->
-        <section class="single-product my-4 bg--gray sticky-top">
+        <section class="single-product my-4 bg--gray">
             <div class="container-fluid ">
                 <ul class="nav nav-pills nav-fill py-5">
                   <li class="nav-item">
@@ -100,21 +112,24 @@
                     <a class="nav-link" href="#characteristics">Характеристики</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#rewiew">Отзывы</a>
+                    <a class="nav-link" href="#reviews">Отзывы</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#related_prod">Похожие товары</a>
                   </li>
                 </ul>
             </div>
         </section>
         <!-- Tab End -->
         <!-- Price compare Start -->
-        <section class="single-product my-4">
+        <section class="single-product mt--50">
         <div class="container-fluid ">
             <div class="section-title" id="prices">
                 <h2>Цены</h2>
             </div>
             <ul class="list-group list-group-flush col-12 px-0 ">
                 {% for price_list in product.prices.all %}
-                  <li class="list-group-item px-0">
+                  <li class="list-group-item px-0 py-5">
                       <div class="compare-price">
                           <div class="row align-items-center">
                               <div class="col-sm-12 col-lg-5 my-2">
@@ -131,7 +146,7 @@
                                   {% endif %}
                               </div>
 
-                              <div class="col-sm-6 col-lg-3 my-2">
+                              <div class="col-sm-12 col-lg-3 my-2">
                                   <div class="single-product__price my-2 float-right">
                                       {% if price_list.oldprice %}
                                             <span class="regular-price">{{ price_list.oldprice }} &#8381;</span>
@@ -155,6 +170,20 @@
         </div>
         </section>
         <!-- Price compare End -->
+        <!-- Video Rewiew -->
+        {% if product.video %}
+        <section class="single-product mt--50">
+            <div class="container-fluid ">
+                <div class="section-title" id="prices">
+                    <h2>Видео обзор</h2>
+                </div>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="{{ product.video }}" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        <!-- End Video Rewiew -->
         <!-- Single Product Tab Start -->
         <section class="single-product-tab pt--30 pb--30" id="characteristics">
             <div class="container-fluid">
@@ -187,7 +216,7 @@
         <!-- Single Product Tab End -->
         {% if semilar_products %}
         <!-- Related Product Area Start -->
-        <section class="related-product pt--30">
+        <section class="related-product pt--30" id="related_prod">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
@@ -231,7 +260,6 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-
                           <div class="single-product-tab__head nav nav-tab" id="nav-tab" role="tablist">
                             <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
                                 {% with comments.count as total_comments %}Отзывы ({{ total_comments }}){% endwith %}
@@ -240,15 +268,41 @@
                           </div>
                         <div class="single-product-tab__content tab-content" id="nav-tabContent">
                           <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                              Tab1
+                              <div class="blog-comments">
+                              <ul class="comment-list">
+                              {% for comment in comments %}
+                                    <li class="border-bottom">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-lg-2 my-2 border-right">
+                                                <p class="author_name">{{ comment.name }}</p>
+                                                <p class="created_comment">{{ comment.created|date:"d.m.Y" }}</p>
+                                            </div>
+                                            <div class="col-sm-12 col-lg-10 my-2">
+                                            <p>{{ comment.body|linebreaks }}</p>
+                                            <div>
+                                                <p>Позитивные аспекты:</p>
+                                                <p>{{ comment.positiv }}</p>
+                                            </div>
+                                            <div>
+                                                <p>Негативные аспекты:</p>
+                                                <p>{{ comment.positiv }}</p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                              {% empty %}
+                                <p>Отзывов пока нет. Станьте первым кто оставит отзыв.</p>
+                              {% endfor %}
+                              </ul>
+                              </div>
                           </div>
                           <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                               <div class="form-comment">
-                              <form action="." method="post">
+                              <form action="." method="post" id="demo-form">
                                 {{ comment_form.as_p }}
                                 {% csrf_token %}
                                 <button type="submit" class="btn btn-yellow" id="button1">Оставить отзыв</button>
-                                <script>
+                                <script type="application/javascript">
                                     document.getElementById("button1").disabled = true;
                                     function enableBtn(){
                                         document.getElementById("button1").disabled = false;

@@ -9,5 +9,5 @@ urlpatterns = [
     path('', views.home_page, name='home'),
     # ------ SHOP URLS -------
     path('product/<slug:slug>/', views.product_detail, name='product_detail'),
-    path('catalog/', views.category_catalog, name='category_catalog'),
+    path('catalog/<slug:slug>/', views.category_catalog, name='category_catalog'),
 ]
