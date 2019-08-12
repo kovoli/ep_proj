@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load mptt_tags %}
+{% load static %}
+
+{% block title %}
+    Сравнение цен и покупка товаров [{{ category.name }}] - www.pricerace.ru
+{% endblock title %}
+
+{% block description %}{{ category.description|safe|truncatechars:150|striptags }}{% endblock description %}
+
+{% block content %}
+<!-- Breadcumb area Start -->
+<div class="breadcumb-area section-padding bg--gray">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item px-1"><a href="{% url 'shop:home' %}">Главная</a></li>
+                    {% for bc in breadcrumbs %}
+                        <li class="breadcrumb-item dropdown"><a  href="{{ bc.get_absolute_url }}">{{ bc.name }}</a>
+                              <a class=" dropdown-toggle mx-1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                {% for bc_siblings in bc.get_siblings %}
+                                    <a class="dropdown-item" href="{{ bc_siblings.get_absolute_url }}">{{ bc_siblings.name }}</a>
+                                {% endfor %}
+                              </div>
+                        </li>
+                    {% endfor %}
+                  </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcumb area End -->
+<div class="main-content-wrapper">
+    <div class="shop-area section-padding">
+        <div class="container-fluid">
+        <div class="section-title" id="prices">
+            <h2>{{ category.name }}</h2>
+        </div>
+            <div class="row">
+                <div class="col-12">
+                    <!-- Shop Layout Start -->
+                    <div class="main-shop-wrapper">
+                        <div class="product-grid-view">
+                            <div class="row no-gutters d-flex justify-content-center">
+                                {% recursetree cat %}
+                                <div class="col-xl-2 col-lg-4 col-md-6">
+                                    <!-- Product Box Start -->
+                                    <a href="{{ node.get_absolute_url }}">
+                                    <div class="product-box variable-product">
+                                        <div class="product-box__image">
+                                            <img src="{% if node.category_image %}{{ node.category_image.url }}{% else %}{% static 'images/zaglushka_cat.png' %}{% endif %}" alt="Сравнение цен на {{ node.name }}" class="primary_image">
+                                        </div>
+                                        <div class="product-box__footer">
+                                            <div class="product-box__desc">
+                                                <p class="product-box__title font-weight-bolder">{{ node.name }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    {% if not node.get_level == 2 %}
+                                    <div class="scroll_cat scrollbar-ripe-malinka" data-spy="scroll" data-offset="0">
+                                    <ul class="cat_child_list">
+                                        {% for child_node in node.get_children %}
+                                            <li class="child_li"><a class="" href="{{ child_node.get_absolute_url }}">{{ child_node.name }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                    </div>
+                                    {% endif %}
+                                    <!-- Product Box End -->
+                                </div>
+                                {% endrecursetree %}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Shop Layout End -->
+                </div>
+            </div>
+            {% if category.description %}
+            <div class="my-5">
+                {{ category.description|safe}}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

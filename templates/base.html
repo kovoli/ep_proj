@@ -51,12 +51,12 @@
                                     {% for cat in categories %}
                                         {% if cat.is_root_node %}
                                         <li class="category-nav__menu__item has-children">
-                                            <a href="../category_product_list.html">{{ cat.name }}</a>
+                                            <a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>
                                             <div class="category-nav__submenu">
                                                 <div class="category-nav__submenu--inner">
                                                     {% for cat_child in cat.get_children %}
                                                     <ul>
-                                                        <li><a href="../category_product_list.html">{{ cat_child.name }}</a></li>
+                                                        <li><a href="{{ cat_child.get_absolute_url }}">{{ cat_child.name }}</a></li>
                                                     </ul>
                                                     {% endfor %}
                                                 </div>

@@ -132,7 +132,6 @@ p {
   .section-title h2 {
     position: relative;
     display: inline-block;
-    text-transform: capitalize;
     line-height: 3rem;
     padding: 0 2.5rem 0 0;
     font-size: 2.4rem;
@@ -220,7 +219,7 @@ p {
   display: block; }
 
 .section-padding {
-  padding: 4rem 0; }
+  padding: 2rem 0; }
 
 .owl-carousel .owl-item img {
   width: auto; }
@@ -511,7 +510,7 @@ a, button, .category-list li, .category-list li:before, .custom-checkbox__label:
   text-decoration: line-through; }
 
 .header-cart__item--content p, .header-cart--1 .header-cart__item---content p, .product-box .sale-price, .product-price .sale-price, .compare-table table td .price .sale-price, .single-product__price .sale-price {
-  color: #ea4a30; }
+  color: #ff6414; }
 
 .header-cart--2 .header-cart__item--content p, .product-box--small-2 .sale-price, .product-box--2 .product-box__price .sale-price {
   color: #ff6a00; }
@@ -4571,7 +4570,6 @@ Product Box
     color: #2c2e3d;
     font-weight: 400;
     display: block;
-    text-transform: capitalize;
     margin-bottom: 1.5rem; }
   .product-box .sale-price {
     font-size: 1.6rem; }
@@ -6658,7 +6656,25 @@ Blog Pagination
 /*****************************
 51. Coustom css
 *****************************/
-
+a {
+  color: #003c7b;
+}
+.form-btn {
+  background: #FFA200;
+  color: #FFFFFF;
+}
+.form-btn:hover {
+  background: #e89109;
+}
+.btn {
+  background: #FFA200;
+}
+.btn:hover {
+  background: #e89109;
+}
+.btn-style-1:hover {
+  color: #FFFFFF;
+}
 .cheapest-price {
   border-left: 2px solid #929292;
 }
@@ -6678,4 +6694,41 @@ Blog Pagination
     max-width: 900px;
     margin: auto;
 }
+.breadcrumb {
+  background-color: #f5f5f5;
+}
+.dropdown-menu {
+  font-size: 1.5rem;
+}
+.dropdown-item {
+  padding: 0.5rem 1.5rem;
+}
+.form-control {
+  font-size: 1.8rem;
+}
+ul.cat_child_list {
+    margin: 1rem;
+}
+li.child_li {
+    margin: 1rem 0;
+}
+.scroll_cat {
+    height: 150px;
+    position: relative;
+    overflow-y: scroll;
+}
 
+.scrollbar-ripe-malinka::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #F5F5F5;
+border-radius: 10px; }
+
+.scrollbar-ripe-malinka::-webkit-scrollbar {
+width: 10px;
+background-color: #F5F5F5; }
+
+.scrollbar-ripe-malinka::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #2873ef;
+}

@@ -59,11 +59,9 @@
                     {% for cat in favorites_cat %}
                     <div class="product-box variable-product">
                     <a href="shop/single_product.html">
-
                         <div class="product-box__image">
                             <img src="{% if cat.category_image %}{{ cat.category_image.url }}{% endif %}" alt="product image" class="primary_image" height="230">
                         </div>
-
                         <div class="product-box__footer">
                             <div class="product-box__desc">
                                 <p class="product-box__title font-weight-bolder">{{ cat.name }}</p>
