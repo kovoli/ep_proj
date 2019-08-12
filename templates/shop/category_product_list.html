@@ -60,7 +60,7 @@
                                 <ul class="search-filter__list">
                                     {% for ven in vendors %}
                                     <li class="custom-checkbox">
-                                        <input type="checkbox" value="{{ ven.id }}" name="vendors_get" id="{{ ven.id }}" class="custom-checkbox__input" onchange="document.getElementById('brands').submit()" {% ifequal request.get.vendors_get '{{ ven.id }}' %}checked{% endifequal %}>
+                                        <input type="checkbox" value="{{ ven.id }}" name="vendors_get" id="{{ ven.id }}" class="custom-checkbox__input" onchange="document.getElementById('brands').submit()">
                                         <label for="{{ ven.id }}" class="custom-checkbox__label">{{ ven.name }}</label>
                                     </li>
                                     {% endfor %}

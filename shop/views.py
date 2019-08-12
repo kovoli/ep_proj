@@ -76,18 +76,18 @@ def category_catalog(request, slug=None):
 
         ven = request.GET.get('vendors_get')
 
-        print(type(ven))
+        #all_param = {'van': ven}
+        #qer = QueryDict.fromkeys(['van'], value=ven)
+        print(ven)
+        a = request.GET.values()
 
-        all_param = {'van': ven}
-        qer = QueryDict.fromkeys(['van'], value=ven)
-        print(qer)
-        print(request.GET)
 
         return render(request, 'shop/category_product_list.html', {'products_list': products_list,
                                                                    'category': category,
                                                                    'vendors': vendors,
                                                                    'cat': cat,
                                                                    'last_node': last_node,
+                                                                   'a': a,
 
                                                                    'breadcrumbs': breadcrumbs,
                                                                    #'filter_brand': filter_brand,
