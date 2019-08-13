@@ -43,29 +43,25 @@
                     <aside class="sidebar shop-sidebar">
                         <div class="search-filter">
                             <div class="search-filter__single section-title section-title--3 mb--30">
-                                <h2>Filter By</h2>
+                                <h2>Сортировка по фильтрам</h2>
                             </div>
 
                             <div class="search-filter__single search-filter__clear mb--30">
-                                <a class="clear-btn" href=""><i class="fa fa-times"></i> clear all</a>
+                                <a class="clear-btn" href="{{ category.get_absolute_url }}"><i class="fa fa-times"></i> Отчистить</a>
                             </div>
 
                             <!-- Category Search filter Start -->
-
+                            <form action="." method="GET" id="filter_form">
                             <div class="search-filter__single search-filter__category mb--30">
                                 <div class="section-title section-title--3">
-                                    <h2>Categories</h2>
+                                    <h2>Бренды</h2>
                                 </div>
-                                <form action="." method="GET" id="brands">
-                                <ul class="search-filter__list">
-                                    {% for ven in vendors %}
-                                    <li class="custom-checkbox">
-                                        <input type="checkbox" value="{{ ven.id }}" name="vendors_get" id="{{ ven.id }}" class="custom-checkbox__input" onchange="document.getElementById('brands').submit()">
-                                        <label for="{{ ven.id }}" class="custom-checkbox__label">{{ ven.name }}</label>
-                                    </li>
-                                    {% endfor %}
-                                </ul>
-                                </form>
+                                <div class="input-group m-3">
+                                    <input id="brand_list_input" type="text"  class="form-control" placeholder="Поиск бренда">
+                                </div>
+                                    <div class="sidebar-brand position-relative"  id="brand_liste">
+                                        {{ filter_form.brand }}
+                                    </div>
                             </div>
 
                             <!-- Category Search filter End -->
@@ -73,150 +69,21 @@
                             <!-- Price Search filter Start -->
                             <div class="search-filter__single search-filter__price mb--30">
                                 <div class="section-title section-title--3">
-                                    <h2>Price</h2>
+                                    <h2>Цена</h2>
                                 </div>
-                                <ul class="search-filter__list">
-                                    <li class="custom-radio">
-                                        <input type="radio" name="price" id="sixtentoeighteen" class="custom-radio__input">
-                                        <label for="sixtentoeighteen" class="custom-radio__label"><span></span> &dollar;16.00 - &dollar;18.00 (3) </label>
-                                    </li>
-                                    <li class="custom-radio">
-                                        <input type="radio" name="price" id="twentyfivetothirtytwo" class="custom-radio__input">
-                                        <label for="twentyfivetothirtytwo" class="custom-radio__label"><span></span> &dollar;25.00 - &dollar;32.00 (3)</label>
-                                    </li>
-                                    <li class="custom-radio">
-                                        <input type="radio" name="price" id="fiftytofiftythree" class="custom-radio__input">
-                                        <label for="fiftytofiftythree" class="custom-radio__label"><span></span> &dollar;50.00 - &dollar;53.00 (3)</label>
-                                    </li>
-                                </ul>
+                                <div class="form-row align-items-center m-3">
+                                <div class="col">
+                                  {{ filter_form.min_price }}
+                                </div>
+                                <div class="col">
+                                  {{ filter_form.max_price }}
+                                </div>
+                                  <button type="submit" class="btn btn-yellow w-100 mx-1" onclick="$('forma');"><i class="fas fa-search"></i></button>
+                              </div>
+
+
                             </div>
                             <!-- Price Search filter End -->
-
-                            <!-- Size Search filter Start -->
-                            <div class="search-filter__single search-filter__size mb--30">
-                                <div class="section-title section-title--3">
-                                    <h2>Size</h2>
-                                </div>
-                                <ul class="search-filter__list">
-                                    <li class="custom-checkbox">
-                                        <input type="checkbox" name="size_s" id="sizesmall" class="custom-checkbox__input">
-                                        <label for="sizesmall" class="custom-checkbox__label">S (4)</label>
-                                    </li>
-                                    <li class="custom-checkbox">
-                                        <input type="checkbox" name="size_l" id="sizelarge" class="custom-checkbox__input">
-                                        <label class="custom-checkbox__label" for="sizelarge">L (4)</label>
-                                    </li>
-                                    <li class="custom-checkbox">
-                                        <input type="checkbox" name="size_m" id="sizemed" class="custom-checkbox__input">
-                                        <label for="sizemed" class="custom-checkbox__label">M (4)</label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Size Search filter End -->
-
-                            <!-- Color Search filter Start -->
-                            <div class="search-filter__single search-filter__color mb--30">
-                                <div class="section-title section-title--3">
-                                    <h2>Color</h2>
-                                </div>
-                                <ul class="search-filter__list">
-                                    <li class="custom-radio__color custom-radio__color--black">
-                                        <input type="radio" name="color" id="sidebar_black" class="custom-radio__color__input">
-                                        <label for="sidebar_black" class="custom-radio__color__label">Black (2)</label>
-                                    </li>
-                                    <li class="custom-radio__color custom-radio__color--orange">
-                                        <input type="radio" name="color" id="sidebar_orange" class="custom-radio__color__input">
-                                        <label for="sidebar_orange" class="custom-radio__color__label">Orange (2)</label>
-                                    </li>
-                                    <li class="custom-radio__color custom-radio__color--blue">
-                                        <input type="radio" name="color" id="sidebar_blue" class="custom-radio__color__input">
-                                        <label for="sidebar_blue" class="custom-radio__color__label">Blue (2)</label>
-                                    </li>
-                                    <li class="custom-radio__color custom-radio__color--green">
-                                        <input type="radio" name="color" id="sidebar_green" class="custom-radio__color__input">
-                                        <label for="sidebar_green" class="custom-radio__color__label">Green (2)</label>
-                                    </li>
-                                    <li class="custom-radio__color custom-radio__color--yellow">
-                                        <input type="radio" name="color" id="sidebar_yellow" class="custom-radio__color__input">
-                                        <label for="sidebar_yellow" class="custom-radio__color__label">Yellow (4)</label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Color Search filter End -->
-
-                            <!-- Compositions Search filter Start -->
-                            <div class="search-filter__single search-filter__compositions mb--30">
-                                <div class="section-title section-title--3">
-                                    <h2>Compositions</h2>
-                                </div>
-                                <ul class="search-filter__list">
-                                    <li class="custom-checkbox">
-                                        <input type="checkbox" name="cotton" id="cotton" class="custom-checkbox__input">
-                                        <label for="cotton" class="custom-checkbox__label">Cotton (5)</label>
-                                    </li>
-                                    <li class="custom-checkbox">
-                                        <input type="checkbox" name="polyester" id="polyester" class="custom-checkbox__input">
-                                        <label for="polyester" class="custom-checkbox__label">Polyester (4)</label>
-                                    </li>
-                                    <li class="custom-checkbox">
-                                        <input type="checkbox" name="viscose" id="viscose" class="custom-checkbox__input">
-                                        <label for="viscose" class="custom-checkbox__label">Viscose (4)</label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Compositions Search filter End -->
-
-                            <!-- Styles Search filter Start -->
-                            <div class="search-filter__single search-filter__styles mb--30">
-                                <div class="section-title section-title--3">
-                                    <h2>Styles</h2>
-                                </div>
-                                <ul class="search-filter__list">
-                                    <li class="custom-checkbox">
-                                        <input type="checkbox" name="casual" id="casual" class="custom-checkbox__input">
-                                        <label for="casual" class="custom-checkbox__label">Casual (5)</label>
-                                    </li>
-                                    <li class="custom-checkbox">
-                                        <input type="checkbox" name="dressy" id="dressy" class="custom-checkbox__input">
-                                        <label for="dressy" class="custom-checkbox__label">Dressy (2)</label>
-                                    </li>
-                                    <li class="custom-checkbox">
-                                        <input type="checkbox" name="girly" id="girly" class="custom-checkbox__input">
-                                        <label for="girly" class="custom-checkbox__label">Girly (4)</label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Styles Search filter End -->
-
-                            <!-- Properties Search filter Start -->
-                            <div class="search-filter__single search-filter__properties mb--30">
-                                <div class="section-title section-title--3">
-                                    <h2>Properties</h2>
-                                </div>
-                                <ul class="search-filter__list">
-                                    <li class="custom-checkbox">
-                                        <input type="checkbox" name="colorfull" id="colorfull" class="custom-checkbox__input">
-                                        <label for="colorfull" class="custom-checkbox__label">Colorfull Dress (5)</label>
-                                    </li>
-                                    <li class="custom-checkbox">
-                                        <input type="checkbox" name="maxi" id="maxi" class="custom-checkbox__input">
-                                        <label for="maxi" class="custom-checkbox__label">Maxi Dress (2)</label>
-                                    </li>
-                                    <li class="custom-checkbox">
-                                        <input type="checkbox" name="midi" id="midi" class="custom-checkbox__input">
-                                        <label for="midi" class="custom-checkbox__label">Midi Dress (4)</label>
-                                    </li>
-                                    <li class="custom-checkbox">
-                                        <input type="checkbox" name="short" id="short" class="custom-checkbox__input">
-                                        <label for="short" class="custom-checkbox__label">Short Dress (4)</label>
-                                    </li>
-                                    <li class="custom-checkbox">
-                                        <input type="checkbox" name="shortsleeve" id="shortsleeve" class="custom-checkbox__input">
-                                        <label for="shortsleeve" class="custom-checkbox__label">Short Sleeve (4)</label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Properties Search filter End -->
                         </div>
                     </aside>
                     <!-- Sidebar End -->
@@ -224,15 +91,10 @@
                 <div class="col-lg-9 order-lg-2 order-1 mb-md--30">
                     <div class="shop-toolbar d-flex flex-md-row flex-column justify-content-between align-items-md-center">
                         <div class="shop-toolbar__shorter">
-                            <label>Short By:</label>
-                            <select class="short-select">
-                                <option value="1">Relevance</option>
-                                <option value="2">Name, A to Z</option>
-                                <option value="3">Name, Z to A</option>
-                                <option value="4">Price, low to high</option>
-                                <option value="5">Price, high to low</option>
-                            </select>
+                            <label>Сортировать:</label>
+                            {{ filter_form.ordering }}
                         </div>
+                        </form>
                     </div>
                     <!-- Shop Layout Start -->
                     <div class="main-shop-wrapper">
@@ -244,7 +106,7 @@
                                 <a href="{{ product.get_absolute_url }}">
                                     <div class="product-box variable-product">
                                         <div class="product-box__image">
-                                            <img src="{% if product.product_image_category %}{{ product.product_image_category.url }}{% else %}{% static 'images/zagluschka.png' %}{% endif %}" alt="{{ product.name }}" class="primary_image">
+                                            <img src="{% if product.product_image_category %}{{ product.product_image_category.url }}{% else %}{% static 'images/zagluschka.png' %}{% endif %}" alt="{{ product.name }}" class="primary_image" height="160">
                                         </div>
                                         <div class="product-box__footer">
                                             <div class="product-box__desc">
@@ -262,6 +124,8 @@
                                 </a>
                                     <!-- Product Box End -->
                                 </div>
+                                {% empty %}
+                                    <div>К сожалению по данным параметрам в категории {{ category.name }} товаров нет. </div>
                                 {% endfor %}
                             </div>
                         </div>

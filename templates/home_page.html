@@ -58,7 +58,7 @@
                     <!-- Category Box Start -->
                     {% for cat in favorites_cat %}
                     <div class="product-box variable-product">
-                    <a href="shop/single_product.html">
+                    <a href="{{ cat.get_absolute_url }}">
                         <div class="product-box__image">
                             <img src="{% if cat.category_image %}{{ cat.category_image.url }}{% endif %}" alt="product image" class="primary_image" height="230">
                         </div>

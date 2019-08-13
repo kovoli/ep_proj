@@ -6,7 +6,6 @@ from .models import Vendor
 
 
 class CommentForm(forms.ModelForm):
-    #captcha = ReCaptchaField(label='Проверка, что вы настоящий человек', attrs={'theme': 'clean', 'callback': "enableBtn"}, required=True)
     captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox(attrs={'theme': 'clean', 'data-callback': "enableBtn"}), label='Проверка, что вы настоящий человек', required=True)
 
     class Meta:
@@ -30,3 +29,18 @@ class CommentForm(forms.ModelForm):
             'positiv': 'Достоинства',
             'negativ': 'Недостатки',
         }
+
+
+class FilterForm(forms.Form):
+    brand = forms.ModelMultipleChoiceField(queryset=Vendor.objects.none(), widget=forms.CheckboxSelectMultiple(attrs={'onchange': "document.getElementById('filter_form').submit()"}), required=False)
+    min_price = forms.IntegerField(label='от', required=False, widget=forms.TextInput(attrs={
+        'type': "text", 'class': "form-control mb-2", "placeholder": "от:"
+    }))
+    max_price = forms.IntegerField(label='до', required=False, widget=forms.TextInput(attrs={
+        'type': "text", 'class': "form-control mb-2", "placeholder": "до:"
+    }))
+    ordering = forms.ChoiceField(label="сортировка", required=False, choices=[
+        ["-views", "ПО ПОПУЛЯРНОСТИ"],
+        ["prices__price", "ДЕШЕВЫЕ СВЕРХУ"],
+        ["-prices__price", "ДОРОГИЕ СВЕРХУ"]
+    ], widget=forms.Select(attrs={'class': 'short-select', 'onchange': "document.getElementById('filter_form').submit()"}))
