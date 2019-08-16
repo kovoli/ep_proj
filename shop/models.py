@@ -1,6 +1,6 @@
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
-
+# from eav.decorators import register_eav
 # for slugfield
 from django.urls import reverse
 from django.template.defaultfilters import slugify
@@ -10,7 +10,6 @@ from ckeditor.fields import RichTextField
 # Images
 from imagekit.models import ImageSpecField, ProcessedImageField
 from imagekit.processors import ResizeToFit
-
 from django.contrib.postgres.fields import JSONField
 
 
@@ -22,6 +21,7 @@ class Category(MPTTModel):
     description = RichTextField(blank=True, null=True)
     short_description = RichTextField(blank=True, null=True)
     favorites = models.BooleanField(default=False)
+    parameter = JSONField(blank=True, null=True)
     category_image = ProcessedImageField(upload_to='category_images/%Y/%m',
                                          processors=[ResizeToFit(None, 250)],
                                          format='JPEG',
@@ -96,6 +96,7 @@ class Vendor(models.Model):
 
 
 # ------------ PRODUCT -------------
+
 class Product(models.Model):
     name = models.CharField(max_length=255)
     offer_id = models.CharField(max_length=255, blank=True, null=True)

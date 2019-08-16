@@ -1,12 +1,12 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import QueryDict
 from .models import Product, Category, Vendor
-from .forms import CommentForm, FilterForm
+from .forms import CommentForm, FilterForm, FilterForm_two
 from django.db.models import Min, Max, Count
 from . import helpers
 from watson import search as watson
 from django.db.models import F
-
+from collections import OrderedDict
 
 def home_page(request):
     favorites_cat = Category.objects.filter(favorites=True)
@@ -64,8 +64,7 @@ def category_catalog(request, slug=None):
 
 
         list_pro = Product.objects.filter(category__in=Category.objects.get(id=category.id).get_descendants(include_self=True)).annotate(min_price=Min('prices__price')).order_by('-views')
-        vendors_ids = list_pro.values_list('vendor_id', flat=True).order_by().distinct()
-        vendors = Vendor.objects.filter(id__in=vendors_ids)
+
         products_list = helpers.pg_records(request, list_pro, 30)
 
         category = get_object_or_404(Category, slug=slug)
@@ -77,10 +76,10 @@ def category_catalog(request, slug=None):
         # -------- Если категория равно уровню два и больше выводяться товары
         if category.get_level() >= 2:
             list_pro = Product.objects.filter(category__in=Category.objects.get(id=category.id) \
-                                              .get_descendants(include_self=True)) \
-                .annotate(min_price=Min('prices__price')).order_by('-views')
+                                                .get_descendants(include_self=True)) \
+                                                .annotate(min_price=Min('prices__price')).order_by('-views')
             vendors_ids = list_pro.values_list('vendor_id', flat=True).order_by().distinct()
-            vendors = Vendor.objects.filter(id__in=vendors_ids)
+
             filter_form.fields['brand'].queryset = Vendor.objects.filter(id__in=vendors_ids)
 
             products_list = helpers.pg_records(request, list_pro, 52)
@@ -107,18 +106,45 @@ def category_catalog(request, slug=None):
                     list_pro = list_pro.order_by(filter_form.cleaned_data['ordering'])
                     products_list = helpers.pg_records(request, list_pro, 100)
 
-            category = get_object_or_404(Category, slug=slug)
-            cat = category.get_descendants(include_self=True).order_by('tree_id', 'id', 'name')
-            last_node = category.get_siblings(include_self=True)
+                context = {'products_list': products_list,
+                           'category': category,
+                           'cat': cat,
+                           'last_node': last_node,
+                           'breadcrumbs': breadcrumbs,
+                           'filter_form': filter_form}
+                cat_attributs = OrderedDict(category.parameter)
+                if category.parameter:
 
+                    print(cat_attributs, '--------------')
+                    filter_form_two = FilterForm_two(request.GET, dyn_fields=cat_attributs)
+                    print(cat_attributs, '2222--------------')
+                    if filter_form_two.is_valid():
+                        field_name = [x for x in cat_attributs.keys()]
+                        print('field_name:', field_name)
 
+                        if filter_form_two.cleaned_data[field_name[0]]:
 
-        return render(request, 'shop/category_product_list.html', {'products_list': products_list,
-                                                                   'category': category,
-                                                                   'vendors': vendors,
-                                                                   'cat': cat,
-                                                                   'last_node': last_node,
-                                                                   'breadcrumbs': breadcrumbs,
-                                                                   'filter_form': filter_form,
-                                                                   })
+                            print('cleaned_data:', filter_form_two.cleaned_data[field_name[0]])
+                            print('data_fieldname:', filter_form_two.data['Установка'])
+                            request_parameter = filter_form_two.data
+                            print('cat_attributs:', cat_attributs)
+                            search_pattern = {}
+
+                            for value in filter_form_two.cleaned_data[field_name[0]]:
+                                print(set(value), 'value')
+                                search_pattern[f'param__{field_name[0]}__0__icontains'] = value
+                            print(search_pattern)
+                            list_pro = list_pro.filter(**search_pattern).order_by('-views')
+
+                            products_list = helpers.pg_records(request, list_pro, 100)
+
+                    context = {'products_list': products_list,
+                               'category': category,
+                               'cat': cat,
+                               'last_node': last_node,
+                               'breadcrumbs': breadcrumbs,
+                               'filter_form': filter_form,
+                               'filter_form_two': filter_form_two}
+
+        return render(request, 'shop/category_product_list.html', context)
 

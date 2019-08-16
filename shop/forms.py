@@ -5,6 +5,7 @@ from captcha.widgets import ReCaptchaV2Checkbox
 from .models import Vendor
 
 
+
 class CommentForm(forms.ModelForm):
     captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox(attrs={'theme': 'clean', 'data-callback': "enableBtn"}), label='Проверка, что вы настоящий человек', required=True)
 
@@ -44,3 +45,21 @@ class FilterForm(forms.Form):
         ["prices__price", "ДЕШЕВЫЕ СВЕРХУ"],
         ["-prices__price", "ДОРОГИЕ СВЕРХУ"]
     ], widget=forms.Select(attrs={'class': 'short-select', 'onchange': "document.getElementById('filter_form').submit()"}))
+
+
+class FilterForm_two(forms.Form):
+
+    def __init__(self, *args, **kwargs):
+        choice = kwargs.pop('dyn_fields')
+        for k, v in choice.items():
+            length = len(v)
+            for i in range(length):
+                choice[k][i] += v[i]
+
+        super(FilterForm_two, self).__init__(*args, **kwargs)
+        for key, value in choice.items():
+            self.fields[key] = forms.MultipleChoiceField(choices=value,
+                                                         widget=forms.CheckboxSelectMultiple(attrs={'onchange': "document.getElementById('filter_form').submit()"}),
+                                                         label=str(key),
+                                                         required=False)
+

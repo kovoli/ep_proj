@@ -33,7 +33,7 @@ class Command(BaseCommand):
                     Category.objects.get_or_create(name=category_name, parent=parent_category_instanz)
                     count_created_cat += 1
             except IntegrityError:
-                Category.objects.get_or_create(name=category_name, parent=parent_category_instanz, slug=f'{unidecode(category_name.lower())}-{unidecode(parent_category.replace(" ", "-").lower())}')
+                Category.objects.get_or_create(name=category_name, parent=parent_category_instanz, slug=f'{unidecode(category_name.replace(" ", "-").lower())}-{unidecode(parent_category.replace(" ", "-").lower())}')
                 count_created_cat += 1
             except Exception as a:
                 self.stdout.write(self.style.ERROR(a))

@@ -125,15 +125,15 @@ class Command(BaseCommand):
                 else:
                     vendor = None
                 video = video_rewiew_param(off.findall('param'))
-                original_picture = check_field_not_none(off.find('picture').text)
-                input_file = BytesIO(urlopen(original_picture, ).read())
+                #original_picture = check_field_not_none(off.find('picture').text)
+                #input_file = BytesIO(urlopen(original_picture, ).read())
                 product_data['offer_id'] = off.attrib['id']
                 product = Product.objects.create(**product_data)
                 product.vendor = vendor
                 product.video = video
                 add_price_to_product(off, product)
 
-                product.product_image.save(product_data['name'] + '.jpg', ContentFile(input_file.getvalue()), save=False)
+                #product.product_image.save(product_data['name'] + '.jpg', ContentFile(input_file.getvalue()), save=False)
                 product.save()
                 succers_writes += 1
 

@@ -1,13 +1,17 @@
 from django.contrib import admin
 from mptt.admin import MPTTModelAdmin
 from .models import Product, Category, Price, Shop, Vendor, Comment
-
+from django.contrib.postgres.fields import JSONField
+from django_json_widget.widgets import JSONEditorWidget
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['name', 'category', 'vendor']
     readonly_fields = ['slug']
     search_fields = ['name', 'barcode', 'vendorCode']
+    formfield_overrides = {
+        JSONField: {'widget': JSONEditorWidget},
+    }
 
 
 @admin.register(Comment)
@@ -38,7 +42,10 @@ class CategoryAdmin(MPTTModelAdmin):
     mptt_level_indent = 20
     readonly_fields = ('slug',)
     search_fields = ['name']
-    list_filter = ['favorites',]
+    list_filter = ['favorites']
+    formfield_overrides = {
+        JSONField: {'widget': JSONEditorWidget},
+    }
 
 
 @admin.register(Vendor)
@@ -46,3 +53,4 @@ class VendorAdmin(admin.ModelAdmin):
     list_display = ['name']
     readonly_fields = ['slug']
     search_fields = ['name']
+
