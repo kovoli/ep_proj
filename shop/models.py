@@ -148,6 +148,24 @@ class Product(models.Model):
         super(Product, self).save(*args, **kwargs)
 
 
+class Attribute(models.Model):
+    name = models.CharField(max_length=250)
+    category = models.ForeignKey('Category', on_delete=models.CASCADE, related_name='attribute')
+
+    def __str__(self):
+        return self.name
+
+
+class Value(models.Model):
+    name = models.CharField(max_length=250)
+    unit = models.CharField(max_length=50)
+    product = models.ManyToManyField('Product', related_name='value', blank=True)
+    attribute = models.ForeignKey('Attribute', on_delete=models.CASCADE, related_name='values')
+
+    def __str__(self):
+        return self.name
+
+
 # ------------ PRICE --------------
 class Price(models.Model):
     price = models.DecimalField(decimal_places=2, max_digits=10)

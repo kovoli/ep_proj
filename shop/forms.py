@@ -46,20 +46,18 @@ class FilterForm(forms.Form):
         ["-prices__price", "ДОРОГИЕ СВЕРХУ"]
     ], widget=forms.Select(attrs={'class': 'short-select', 'onchange': "document.getElementById('filter_form').submit()"}))
 
-
-class FilterForm_two(forms.Form):
-
     def __init__(self, *args, **kwargs):
-        choice = kwargs.pop('dyn_fields')
-        for k, v in choice.items():
-            length = len(v)
-            for i in range(length):
-                choice[k][i] += v[i]
-
-        super(FilterForm_two, self).__init__(*args, **kwargs)
-        for key, value in choice.items():
-            self.fields[key] = forms.MultipleChoiceField(choices=value,
+        attribute = kwargs.pop('attr')
+        super(FilterForm, self).__init__(*args, **kwargs)
+        for attr in attribute:
+            self.fields[attr.name] = forms.ModelMultipleChoiceField(queryset=attr.values.all(),
                                                          widget=forms.CheckboxSelectMultiple(attrs={'onchange': "document.getElementById('filter_form').submit()"}),
-                                                         label=str(key),
                                                          required=False)
+
+
+from .models import Product, Category, Value, Attribute
+from django import forms
+
+
+
 

@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import QueryDict
 from .models import Product, Category, Vendor
-from .forms import CommentForm, FilterForm, FilterForm_two
+from .forms import CommentForm, FilterForm
 from django.db.models import Min, Max, Count
 from . import helpers
 from watson import search as watson
@@ -72,7 +72,7 @@ def category_catalog(request, slug=None):
         last_node = category.get_siblings(include_self=True)
 
         # -------- Форма для фильтрации
-        filter_form = FilterForm(request.GET)
+        filter_form = FilterForm(request.GET, attr=category.attribute.all())
         # -------- Если категория равно уровню два и больше выводяться товары
         if category.get_level() >= 2:
             list_pro = Product.objects.filter(category__in=Category.objects.get(id=category.id) \
@@ -106,45 +106,18 @@ def category_catalog(request, slug=None):
                     list_pro = list_pro.order_by(filter_form.cleaned_data['ordering'])
                     products_list = helpers.pg_records(request, list_pro, 100)
 
-                context = {'products_list': products_list,
-                           'category': category,
-                           'cat': cat,
-                           'last_node': last_node,
-                           'breadcrumbs': breadcrumbs,
-                           'filter_form': filter_form}
-                cat_attributs = OrderedDict(category.parameter)
-                if category.parameter:
+                for form_name in filter_form.fields:
+                    if filter_form.cleaned_data[form_name]:
+                        list_pro = list_pro.filter(value__in=filter_form.cleaned_data[form_name])
+                        products_list = helpers.pg_records(request, list_pro, 100)
 
-                    print(cat_attributs, '--------------')
-                    filter_form_two = FilterForm_two(request.GET, dyn_fields=cat_attributs)
-                    print(cat_attributs, '2222--------------')
-                    if filter_form_two.is_valid():
-                        field_name = [x for x in cat_attributs.keys()]
-                        print('field_name:', field_name)
+            return render(request, 'shop/category_product_list.html', {'products_list': products_list,
+                                                                   'category': category,
 
-                        if filter_form_two.cleaned_data[field_name[0]]:
+                                                                   'cat': cat,
+                                                                   'last_node': last_node,
 
-                            print('cleaned_data:', filter_form_two.cleaned_data[field_name[0]])
-                            print('data_fieldname:', filter_form_two.data['Установка'])
-                            request_parameter = filter_form_two.data
-                            print('cat_attributs:', cat_attributs)
-                            search_pattern = {}
-
-                            for value in filter_form_two.cleaned_data[field_name[0]]:
-                                print(set(value), 'value')
-                                search_pattern[f'param__{field_name[0]}__0__icontains'] = value
-                            print(search_pattern)
-                            list_pro = list_pro.filter(**search_pattern).order_by('-views')
-
-                            products_list = helpers.pg_records(request, list_pro, 100)
-
-                    context = {'products_list': products_list,
-                               'category': category,
-                               'cat': cat,
-                               'last_node': last_node,
-                               'breadcrumbs': breadcrumbs,
-                               'filter_form': filter_form,
-                               'filter_form_two': filter_form_two}
-
-        return render(request, 'shop/category_product_list.html', context)
+                                                                   'breadcrumbs': breadcrumbs,
+                                                                   'filter_form': filter_form,
+                                                                   })
 

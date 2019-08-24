@@ -1,7 +1,14 @@
 from django.contrib import admin
 from mptt.admin import MPTTModelAdmin
-from .models import Product, Category, Price, Shop, Vendor, Comment
+from .models import Product, Category, Price, Shop, Vendor, Comment, Value, Attribute
 from django.contrib.postgres.fields import JSONField
+
+
+class ValueInstanceInline(admin.TabularInline):
+    model = Value
+    exclude = ['product']
+    extra = 1
+
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
@@ -48,3 +55,15 @@ class VendorAdmin(admin.ModelAdmin):
     readonly_fields = ['slug']
     search_fields = ['name']
 
+@admin.register(Value)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ['name']
+    search_fields = ['name']
+    raw_id_fields = ['product']
+
+
+@ admin.register(Attribute)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ['name']
+    search_fields = ['name']
+    inlines = [ValueInstanceInline]
