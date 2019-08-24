@@ -1,15 +1,15 @@
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
-# from eav.decorators import register_eav
 # for slugfield
 from django.urls import reverse
 from django.template.defaultfilters import slugify
 from unidecode import unidecode
-
+# Text-editor
 from ckeditor.fields import RichTextField
 # Images
 from imagekit.models import ImageSpecField, ProcessedImageField
 from imagekit.processors import ResizeToFit
+# JSON Field
 from django.contrib.postgres.fields import JSONField
 
 
@@ -21,7 +21,6 @@ class Category(MPTTModel):
     description = RichTextField(blank=True, null=True)
     short_description = RichTextField(blank=True, null=True)
     favorites = models.BooleanField(default=False)
-    parameter = JSONField(blank=True, null=True)
     category_image = ProcessedImageField(upload_to='category_images/%Y/%m',
                                          processors=[ResizeToFit(None, 250)],
                                          format='JPEG',
@@ -139,9 +138,9 @@ class Product(models.Model):
         ordering = ('name',)
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
-        indexes = [models.Index(fields=['name', 'slug']),
-                   models.Index(fields=['barcode']),
-                   models.Index(fields=['vendorCode'])]
+        #indexes = [models.Index(fields=['name', 'slug']),
+                   #models.Index(fields=['barcode']),
+                   #models.Index(fields=['vendorCode'])]
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -167,7 +166,7 @@ class Price(models.Model):
         verbose_name = 'Цена'
         verbose_name_plural = 'Цены'
         ordering = ['price']
-        indexes = [models.Index(fields=['product', 'shop'])]
+        #indexes = [models.Index(fields=['product', 'shop'])]
 
 
 # ------------ PRODUCT COMMENT -------------

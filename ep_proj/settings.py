@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'captcha',
     'watson',
     'django_cleanup.apps.CleanupConfig',
-    'django_json_widget'
 ]
 
 MIDDLEWARE = [
