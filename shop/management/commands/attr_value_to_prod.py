@@ -13,7 +13,8 @@ class Command(BaseCommand):
 
 
 """products_by_cat = Product.objects.filter(category=category)
-   for prod in 
+   for product in product_by_cat:
+       for attr in category.attribute.all():        
 
 """
 
