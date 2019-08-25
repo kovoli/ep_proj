@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from shop.models import Category, Product
+from shop.models import Category, Product, Value
 from django.db import IntegrityError
 from unidecode import unidecode
 
@@ -12,21 +12,29 @@ class Command(BaseCommand):
         print(category)
 
 
-"""products_by_cat = Product.objects.filter(category=category)
-   for product in product_by_cat:
-       for attr in category.attribute.all():   
-           if attr.name in product.param.keys()
-               prod_attr = product.param.attr.name[0]
-               try:
-                   attr = Value.object.get(name=prod_attr, category=category)
-                   attr.product.add(product)
-               exept Value.DoesNotExist:
-                   attr = Value.object.create(name=prod_attr, category=category)
-                   attr.product.add(product)
-           else:
-               continue     
+        products_by_cat = Product.objects.filter(category=category)
+        print(products_by_cat.count())
+        a = []
+        for i in products_by_cat:
+            if 'Объем' in i.param.keys():
+                a.append(i.param['Объем'][0])
+        print(list(set(a)))
 
+        """
+        for product in products_by_cat:
+            for attr in category.attribute.all():
+                if attr.name in product.param.keys():
+                    prod_attr = product.param[attr.name][0]
+                    try:
+                        val = Value.objects.get(name=prod_attr, attribute=attr)
+                        val.product.add(product)
+                    except Value.DoesNotExist:
+                        val = Value.objects.create(name=prod_attr, attribute=attr)
+                        val.product.add(product)
+                else:
+                    continue
 """
+
 
 
 

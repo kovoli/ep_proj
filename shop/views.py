@@ -65,7 +65,7 @@ def category_catalog(request, slug=None):
 
         list_pro = Product.objects.filter(category__in=Category.objects.get(id=category.id).get_descendants(include_self=True)).annotate(min_price=Min('prices__price')).order_by('-views')
 
-        products_list = helpers.pg_records(request, list_pro, 30)
+        products_list = helpers.pg_records(request, list_pro, 150)
 
         category = get_object_or_404(Category, slug=slug)
         cat = category.get_descendants(include_self=True).order_by('tree_id', 'id', 'name')
@@ -108,7 +108,7 @@ def category_catalog(request, slug=None):
 
                 for form_name in filter_form.fields:
                     if filter_form.cleaned_data[form_name]:
-                        list_pro = list_pro.filter(value__in=filter_form.cleaned_data[form_name])
+                        list_pro = list_pro.filter(value__icontains=filter_form.cleaned_data[form_name])
                         products_list = helpers.pg_records(request, list_pro, 100)
 
             return render(request, 'shop/category_product_list.html', {'products_list': products_list,

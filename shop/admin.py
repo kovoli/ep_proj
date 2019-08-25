@@ -14,7 +14,8 @@ class ValueInstanceInline(admin.TabularInline):
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['name', 'category', 'vendor']
     readonly_fields = ['slug']
-    search_fields = ['name', 'barcode', 'vendorCode']
+    search_fields = ['name', 'barcode', 'vendorCode', 'id']
+    list_filter = ['category']
 
 
 

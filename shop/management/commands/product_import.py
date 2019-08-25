@@ -36,7 +36,11 @@ def param_dict(param):
     param_dict = {}
     for par in param:
         if 'unit' in par.attrib:
-            param_dict[par.attrib['name']] = [par.text, par.attrib['unit']]
+            if isinstance(par.text, int):
+                param_dict[par.attrib['name']] = [int(par.text), par.attrib['unit']]
+            elif isinstance(par.text, float):
+                pass
+
         else:
             param_dict[par.attrib['name']] = [par.text]
     return param_dict
