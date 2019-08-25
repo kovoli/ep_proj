@@ -17,10 +17,14 @@ class Command(BaseCommand):
        for attr in category.attribute.all():   
            if attr.name in product.param.keys()
                prod_attr = product.param.attr.name[0]
-               attr = Value.object.get_or_create(name=prod_attr, category=category)
-               attr.product.add(product)
-       else:
-           continue     
+               try:
+                   attr = Value.object.get(name=prod_attr, category=category)
+                   attr.product.add(product)
+               exept Value.DoesNotExist:
+                   attr = Value.object.create(name=prod_attr, category=category)
+                   attr.product.add(product)
+           else:
+               continue     
 
 """
 
