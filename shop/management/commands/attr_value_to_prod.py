@@ -14,7 +14,13 @@ class Command(BaseCommand):
 
 """products_by_cat = Product.objects.filter(category=category)
    for product in product_by_cat:
-       for attr in category.attribute.all():        
+       for attr in category.attribute.all():   
+           if attr.name in product.param.keys()
+               prod_attr = product.param.attr.name[0]
+               attr = Value.object.get_or_create(name=prod_attr, category=category)
+               attr.product.add(product)
+       else:
+           continue     
 
 """
 
