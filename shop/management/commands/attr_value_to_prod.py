@@ -12,5 +12,11 @@ class Command(BaseCommand):
         print(category)
 
 
+"""products_by_cat = Product.objects.filter(category=category)
+   for prod in 
+
+"""
+
+
 
 # todo Доделать синя
