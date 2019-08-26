@@ -135,7 +135,7 @@
                               <div class="col-sm-12 col-lg-5 my-2">
                               <img src="{% if price_list.shop.image_store %}{{ price_list.shop.image_store.url }}{% endif %}" alt="{{ price_list.name }} - Сравнить цену, характеристики, отзывы" class="primary_image float-left pr-2" width="100">
                                   <p class="title-compare mb-0 font-weight-bolder">{{ price_list.name|truncatechars:60 }}</p>
-                                  <span>в <a href="{{ price_list.url }}" rel="nofollow" target="_blank">{{ price_list.shop.name }}</a></span>
+
                               </div>
 
                               <div class="col-sm-12 col-lg-1 my-2">
@@ -224,7 +224,7 @@
                 <div class="section-title" id="prices">
                     <h2>Видео обзор</h2>
                 </div>
-                <div class="embed-responsive embed-responsive-16by9">
+                <div class="embed-responsive embed-responsive-16by9 w-75">
                     <iframe class="embed-responsive-item" src="{{ product.video }}" allowfullscreen=""></iframe>
                 </div>
             </div>

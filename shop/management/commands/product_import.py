@@ -24,25 +24,26 @@ def check_field_not_none(field):
 # Helper Functions
 def description_beautify(text):
     #print('Описание')
-    if text == None:
-        return 'С подробным описанием товара и ценами можно ознакомиться на сайте продавца.'
-    else:
+    if text:
         regex = r"(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?|\:)\s"
         subst = "</br>"
         return re.sub(regex, subst, text, 0, re.MULTILINE)
+    else:
+        return 'С подробным описанием товара и ценами можно ознакомиться на сайте продавца.'
+
 
 def param_dict(param):
-    #print('Параметры')
     param_dict = {}
     for par in param:
-        if 'unit' in par.attrib:
-            if isinstance(par.text, int):
-                param_dict[par.attrib['name']] = [int(par.text), par.attrib['unit']]
-            elif isinstance(par.text, float):
-                pass
-
+        if par.attrib in []:
+            continue
+        elif 'unit' in par.attrib:
+            param_dict[par.attrib['name']] = [par.text, par.attrib['unit']]
         else:
             param_dict[par.attrib['name']] = [par.text]
+    keys_to_remove = ('ebsmstock', 'crossborder')
+    for k in keys_to_remove:
+        param_dict.pop(k, None)
     return param_dict
 
 

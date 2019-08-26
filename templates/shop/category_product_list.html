@@ -44,6 +44,7 @@
                         <div class="search-filter">
                             <div class="search-filter__single section-title section-title--3 mb--30">
                                 <h2>Сортировка по фильтрам</h2>
+                                {{ request.GET }}
                             </div>
 
                             <div class="search-filter__single search-filter__clear mb--30">
@@ -80,7 +81,7 @@
                                 </div>
                                   <button type="submit" class="btn btn-yellow w-100 mx-1" onclick="$('forma');"><i class="fas fa-search"></i></button>
                               </div>
-                                  {{ filter_form }}
+
                             </div>
                             <!-- Price Search filter End -->
                         </div>
@@ -130,14 +131,31 @@
                         </div>
                     </div>
                     <!-- Shop Layout End -->
-                    <div class="product-pagintaion d-flex flex-column justify-content-between align-items-md-center">
+                    {% if products_list.has_other_pages %}
+                        <div class="product-pagintaion d-flex flex-column justify-content-between align-items-md-center">
                             <ul class="page-list">
-                                <li class="prev"><a href=""><i class="fa fa-angle-left"></i> Previous</a></li>
-                                <li class="current"><a href="">1</a></li>
-                                <li><a href="">2</a></li>
-                                <li class="next"><a href="">Next <i class="fa fa-angle-right"></i> </a></li>
+                                {% if products_list.has_previous %}
+                                    <li><a href="?page=1"><i class="fas fa-angle-double-left"></i></a></li>
+                                    <li><a href="?page={{ products_list.previous_page_number }}"><i class="fas fa-angle-left"></i></a></li>
+                                {% endif %}
+                                {% for i in products_list.paginator.page_range %}
+
+                                    {% if products_list.number == i %}
+                                        <li class="current">
+                                            <a>{{ i }}</a>
+                                        </li>
+                                    {% elif i|add:"-5" <= products_list.number and products_list.number <= i|add:"2" %}
+                                        <li><a href="?page={{ i }}">{{ i }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+
+                                {% if products_list.has_next %}
+                                    <li><a href="?page={{ products_list.next_page_number }}"><i class="fas fa-angle-right"></i></a></li>
+                                    <li><a href="?page={{ products_list.paginator.num_pages }}"><i class="fas fa-angle-double-right"></i></a></li>
+                                {% endif %}
                             </ul>
                         </div>
+                    {% endif %}
                 </div>
             </div>
         </div>

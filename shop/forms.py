@@ -46,13 +46,13 @@ class FilterForm(forms.Form):
         ["-prices__price", "ДОРОГИЕ СВЕРХУ"]
     ], widget=forms.Select(attrs={'class': 'short-select', 'onchange': "document.getElementById('filter_form').submit()"}))
 
-    def __init__(self, *args, **kwargs):
+    """def __init__(self, *args, **kwargs):
         attribute = kwargs.pop('attr')
         super(FilterForm, self).__init__(*args, **kwargs)
         for attr in attribute:
             self.fields[attr.name] = forms.ModelMultipleChoiceField(queryset=attr.values.all(),
                                                          widget=forms.CheckboxSelectMultiple(attrs={'onchange': "document.getElementById('filter_form').submit()"}),
-                                                         required=False)
+                                                         required=False)"""
 
 
 from .models import Product, Category, Value, Attribute

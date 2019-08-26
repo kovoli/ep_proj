@@ -1,0 +1,5970 @@
+Tracking file by folder pattern:  migrations
+[
+{
+  "model": "shop.category",
+  "pk": 1,
+  "fields": {
+    "name": "\u0411\u044b\u0442\u043e\u0432\u0430\u044f \u0442\u0435\u0445\u043d\u0438\u043a\u0430",
+    "slug": "bytovaia-tekhnika",
+    "parent": null,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 1,
+    "rght": 702,
+    "tree_id": 1,
+    "level": 0
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 2,
+  "fields": {
+    "name": "\u041a\u0440\u0443\u043f\u043d\u0430\u044f \u0431\u044b\u0442\u043e\u0432\u0430\u044f \u0442\u0435\u0445\u043d\u0438\u043a\u0430",
+    "slug": "krupnaia-bytovaia-tekhnika",
+    "parent": 1,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 86,
+    "rght": 179,
+    "tree_id": 1,
+    "level": 1
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 3,
+  "fields": {
+    "name": "\u0425\u043e\u043b\u043e\u0434\u0438\u043b\u044c\u043d\u0438\u043a\u0438",
+    "slug": "kholodilniki",
+    "parent": 2,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 95,
+    "rght": 100,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 4,
+  "fields": {
+    "name": "\u0414\u0432\u0443\u0445\u043a\u0430\u043c\u0435\u0440\u043d\u044b\u0435 \u0445\u043e\u043b\u043e\u0434\u0438\u043b\u044c\u043d\u0438\u043a\u0438",
+    "slug": "dvukhkamernye-kholodilniki",
+    "parent": 3,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 98,
+    "rght": 99,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 5,
+  "fields": {
+    "name": "\u041e\u0434\u043d\u043e\u043a\u0430\u043c\u0435\u0440\u043d\u044b\u0435 \u0445\u043e\u043b\u043e\u0434\u0438\u043b\u044c\u043d\u0438\u043a\u0438",
+    "slug": "odnokamernye-kholodilniki",
+    "parent": 3,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 96,
+    "rght": 97,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 6,
+  "fields": {
+    "name": "\u0421\u0442\u0438\u0440\u0430\u043b\u044c\u043d\u044b\u0435 \u043c\u0430\u0448\u0438\u043d\u044b",
+    "slug": "stiralnye-mashiny",
+    "parent": 2,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 107,
+    "rght": 116,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 7,
+  "fields": {
+    "name": "\u0421\u0442\u0438\u0440\u0430\u043b\u044c\u043d\u044b\u0435 \u043c\u0430\u0448\u0438\u043d\u044b \u0430\u0432\u0442\u043e\u043c\u0430\u0442",
+    "slug": "stiralnye-mashiny-avtomat",
+    "parent": 6,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 110,
+    "rght": 111,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 8,
+  "fields": {
+    "name": "\u0421\u0442\u0438\u0440\u0430\u043b\u044c\u043d\u044b\u0435 \u043c\u0430\u0448\u0438\u043d\u044b \u0441 \u0444\u0440\u043e\u043d\u0442\u0430\u043b\u044c\u043d\u043e\u0439 \u0437\u0430\u0433\u0440\u0443\u0437\u043a\u043e\u0439",
+    "slug": "stiralnye-mashiny-s-frontalnoi-zagruzkoi",
+    "parent": 6,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 114,
+    "rght": 115,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 9,
+  "fields": {
+    "name": "\u0421\u0442\u0438\u0440\u0430\u043b\u044c\u043d\u044b\u0435 \u043c\u0430\u0448\u0438\u043d\u044b \u0441 \u0432\u0435\u0440\u0442\u0438\u043a\u0430\u043b\u044c\u043d\u043e\u0439 \u0437\u0430\u0433\u0440\u0443\u0437\u043a\u043e\u0439",
+    "slug": "stiralnye-mashiny-s-vertikalnoi-zagruzkoi",
+    "parent": 6,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 112,
+    "rght": 113,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 10,
+  "fields": {
+    "name": "\u0421\u0442\u0438\u0440\u0430\u043b\u044c\u043d\u044b\u0435 \u043c\u0430\u0448\u0438\u043d\u044b \u0430\u043a\u0442\u0438\u0432\u0430\u0442\u043e\u0440\u043d\u043e\u0433\u043e \u0442\u0438\u043f\u0430",
+    "slug": "stiralnye-mashiny-aktivatornogo-tipa",
+    "parent": 6,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 108,
+    "rght": 109,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 11,
+  "fields": {
+    "name": "\u0412\u0430\u0440\u043e\u0447\u043d\u044b\u0435 \u043f\u0430\u043d\u0435\u043b\u0438",
+    "slug": "varochnye-paneli",
+    "parent": 2,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 141,
+    "rght": 148,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 12,
+  "fields": {
+    "name": "\u0418\u043d\u0434\u0443\u043a\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0432\u0430\u0440\u043e\u0447\u043d\u044b\u0435 \u043f\u0430\u043d\u0435\u043b\u0438",
+    "slug": "induktsionnye-varochnye-paneli",
+    "parent": 11,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 144,
+    "rght": 145,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 13,
+  "fields": {
+    "name": "\u0413\u0430\u0437\u043e\u0432\u044b\u0435 \u0432\u0430\u0440\u043e\u0447\u043d\u044b\u0435 \u043f\u0430\u043d\u0435\u043b\u0438",
+    "slug": "gazovye-varochnye-paneli",
+    "parent": 11,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 146,
+    "rght": 147,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 14,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0432\u0430\u0440\u043e\u0447\u043d\u044b\u0435 \u043f\u0430\u043d\u0435\u043b\u0438",
+    "slug": "elektricheskie-varochnye-paneli",
+    "parent": 11,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 142,
+    "rght": 143,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 15,
+  "fields": {
+    "name": "\u041a\u0443\u0445\u043e\u043d\u043d\u044b\u0435 \u0432\u044b\u0442\u044f\u0436\u043a\u0438",
+    "slug": "kukhonnye-vytiazhki",
+    "parent": 2,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 135,
+    "rght": 140,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 16,
+  "fields": {
+    "name": "\u0412\u044b\u0442\u044f\u0436\u043a\u0438",
+    "slug": "vytiazhki",
+    "parent": 15,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 138,
+    "rght": 139,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 17,
+  "fields": {
+    "name": "\u0424\u0438\u043b\u044c\u0442\u0440\u044b \u0434\u043b\u044f \u0432\u044b\u0442\u044f\u0436\u0435\u043a",
+    "slug": "filtry-dlia-vytiazhek",
+    "parent": 15,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 136,
+    "rght": 137,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 18,
+  "fields": {
+    "name": "\u041f\u043b\u0438\u0442\u044b",
+    "slug": "plity",
+    "parent": 2,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 171,
+    "rght": 178,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 19,
+  "fields": {
+    "name": "\u0413\u0430\u0437\u043e\u0432\u044b\u0435 \u043f\u043b\u0438\u0442\u044b",
+    "slug": "gazovye-plity",
+    "parent": 18,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 176,
+    "rght": 177,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 20,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u043f\u043b\u0438\u0442\u044b",
+    "slug": "elektricheskie-plity",
+    "parent": 18,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 172,
+    "rght": 173,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 21,
+  "fields": {
+    "name": "\u0418\u043d\u0434\u0443\u043a\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u043f\u043b\u0438\u0442\u044b",
+    "slug": "induktsionnye-plity",
+    "parent": 18,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 174,
+    "rght": 175,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 22,
+  "fields": {
+    "name": "\u041f\u043e\u0441\u0443\u0434\u043e\u043c\u043e\u0435\u0447\u043d\u044b\u0435 \u043c\u0430\u0448\u0438\u043d\u044b",
+    "slug": "posudomoechnye-mashiny",
+    "parent": 2,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 87,
+    "rght": 94,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 23,
+  "fields": {
+    "name": "\u0423\u0437\u043a\u0438\u0435 (45 \u0441\u043c)",
+    "slug": "uzkie-45-sm",
+    "parent": 22,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 92,
+    "rght": 93,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 24,
+  "fields": {
+    "name": "\u041f\u043e\u043b\u043d\u043e\u0440\u0430\u0437\u043c\u0435\u0440\u043d\u044b\u0435 (60 \u0441\u043c)",
+    "slug": "polnorazmernye-60-sm",
+    "parent": 22,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 88,
+    "rght": 89,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 25,
+  "fields": {
+    "name": "\u041a\u043e\u043c\u043f\u0430\u043a\u0442\u043d\u044b\u0435 \u043f\u043e\u0441\u0443\u0434\u043e\u043c\u043e\u0435\u0447\u043d\u044b\u0435 \u043c\u0430\u0448\u0438\u043d\u044b",
+    "slug": "kompaktnye-posudomoechnye-mashiny",
+    "parent": 22,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 90,
+    "rght": 91,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 26,
+  "fields": {
+    "name": "\u0414\u0443\u0445\u043e\u0432\u044b\u0435 \u0448\u043a\u0430\u0444\u044b",
+    "slug": "dukhovye-shkafy",
+    "parent": 2,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 151,
+    "rght": 156,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 27,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0434\u0443\u0445\u043e\u0432\u044b\u0435 \u0448\u043a\u0430\u0444\u044b",
+    "slug": "elektricheskie-dukhovye-shkafy",
+    "parent": 26,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 152,
+    "rght": 153,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 28,
+  "fields": {
+    "name": "\u0413\u0430\u0437\u043e\u0432\u044b\u0435 \u0434\u0443\u0445\u043e\u0432\u044b\u0435 \u0448\u043a\u0430\u0444\u044b",
+    "slug": "gazovye-dukhovye-shkafy",
+    "parent": 26,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 154,
+    "rght": 155,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 29,
+  "fields": {
+    "name": "\u0425\u043e\u043b\u043e\u0434\u0438\u043b\u044c\u043d\u044b\u0435 \u0432\u0438\u0442\u0440\u0438\u043d\u044b",
+    "slug": "kholodilnye-vitriny",
+    "parent": 2,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 101,
+    "rght": 102,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 30,
+  "fields": {
+    "name": "\u041c\u043e\u0440\u043e\u0437\u0438\u043b\u044c\u043d\u044b\u0435 \u043a\u0430\u043c\u0435\u0440\u044b",
+    "slug": "morozilnye-kamery",
+    "parent": 2,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 103,
+    "rght": 104,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 31,
+  "fields": {
+    "name": "\u041c\u043e\u0440\u043e\u0437\u0438\u043b\u044c\u043d\u044b\u0435 \u043b\u0430\u0440\u0438",
+    "slug": "morozilnye-lari",
+    "parent": 2,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 105,
+    "rght": 106,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 32,
+  "fields": {
+    "name": "\u0421\u0438\u0433\u0430\u0440\u043d\u044b\u0435 \u0448\u043a\u0430\u0444\u044b",
+    "slug": "sigarnye-shkafy",
+    "parent": 2,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 149,
+    "rght": 150,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 33,
+  "fields": {
+    "name": "\u0412\u0438\u043d\u043d\u044b\u0435 \u0448\u043a\u0430\u0444\u044b",
+    "slug": "vinnye-shkafy",
+    "parent": 2,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 157,
+    "rght": 158,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 34,
+  "fields": {
+    "name": "\u0421\u0443\u0448\u0438\u043b\u044c\u043d\u044b\u0435 \u043c\u0430\u0448\u0438\u043d\u044b",
+    "slug": "sushilnye-mashiny",
+    "parent": 2,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 133,
+    "rght": 134,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 35,
+  "fields": {
+    "name": "\u041a\u0443\u043b\u0435\u0440\u044b \u0434\u043b\u044f \u0432\u043e\u0434\u044b \u0438 \u0430\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b",
+    "slug": "kulery-dlia-vody-i-aksessuary",
+    "parent": 2,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 159,
+    "rght": 170,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 36,
+  "fields": {
+    "name": "\u041a\u0443\u043b\u0435\u0440\u044b \u0434\u043b\u044f \u0432\u043e\u0434\u044b",
+    "slug": "kulery-dlia-vody",
+    "parent": 35,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 164,
+    "rght": 165,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 37,
+  "fields": {
+    "name": "\u041f\u043e\u043c\u043f\u044b \u0434\u043b\u044f \u0432\u043e\u0434\u044b",
+    "slug": "pompy-dlia-vody",
+    "parent": 35,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 168,
+    "rght": 169,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 38,
+  "fields": {
+    "name": "\u0414\u0438\u0441\u043f\u0435\u043d\u0441\u0435\u0440\u044b \u0434\u043b\u044f \u0432\u043e\u0434\u044b",
+    "slug": "dispensery-dlia-vody",
+    "parent": 35,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 162,
+    "rght": 163,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 39,
+  "fields": {
+    "name": "\u0421\u0442\u0430\u043a\u0430\u043d\u043e\u0434\u0435\u0440\u0436\u0430\u0442\u0435\u043b\u0438",
+    "slug": "stakanoderzhateli",
+    "parent": 35,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 160,
+    "rght": 161,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 40,
+  "fields": {
+    "name": "\u0420\u0443\u0447\u043a\u0438 \u0434\u043b\u044f \u043f\u0435\u0440\u0435\u043d\u043e\u0441\u043a\u0438 \u0431\u0443\u0442\u044b\u043b\u0435\u0439",
+    "slug": "ruchki-dlia-perenoski-butylei",
+    "parent": 35,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 166,
+    "rght": 167,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 41,
+  "fields": {
+    "name": "\u0410\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b \u0434\u043b\u044f \u043a\u0440\u0443\u043f\u043d\u043e\u0439 \u0431\u044b\u0442\u043e\u0432\u043e\u0439 \u0442\u0435\u0445\u043d\u0438\u043a\u0438",
+    "slug": "aksessuary-dlia-krupnoi-bytovoi-tekhniki",
+    "parent": 2,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 117,
+    "rght": 132,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 42,
+  "fields": {
+    "name": "\u0427\u0435\u0445\u043b\u044b",
+    "slug": "chekhly",
+    "parent": 41,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 130,
+    "rght": 131,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 43,
+  "fields": {
+    "name": "\u041f\u043e\u0434\u0441\u0442\u0430\u0432\u043a\u0438 \u0434\u043b\u044f \u0441\u0442\u0438\u0440\u0430\u043b\u044c\u043d\u044b\u0445 \u043c\u0430\u0448\u0438\u043d",
+    "slug": "podstavki-dlia-stiralnykh-mashin",
+    "parent": 41,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 124,
+    "rght": 125,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 44,
+  "fields": {
+    "name": "\u0421\u043e\u0435\u0434\u0438\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u043f\u043b\u0430\u043d\u043a\u0438",
+    "slug": "soedinitelnye-planki",
+    "parent": 41,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 118,
+    "rght": 119,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 45,
+  "fields": {
+    "name": "\u0417\u0430\u043f\u0447\u0430\u0441\u0442\u0438 \u0434\u043b\u044f \u0441\u0442\u0438\u0440\u0430\u043b\u044c\u043d\u044b\u0445 \u043c\u0430\u0448\u0438\u043d",
+    "slug": "zapchasti-dlia-stiralnykh-mashin",
+    "parent": 41,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 126,
+    "rght": 127,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 46,
+  "fields": {
+    "name": "\u0410\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b \u0434\u043b\u044f \u043f\u043e\u0441\u0443\u0434\u043e\u043c\u043e\u0435\u0447\u043d\u044b\u0445 \u043c\u0430\u0448\u0438\u043d",
+    "slug": "aksessuary-dlia-posudomoechnykh-mashin",
+    "parent": 41,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 120,
+    "rght": 121,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 47,
+  "fields": {
+    "name": "\u0412\u044b\u0434\u0432\u0438\u0436\u043d\u044b\u0435 \u043f\u043e\u043b\u043a\u0438 \u0434\u043b\u044f \u0441\u0442\u0438\u0440\u0430\u043b\u044c\u043d\u044b\u0445 \u043c\u0430\u0448\u0438\u043d",
+    "slug": "vydvizhnye-polki-dlia-stiralnykh-mashin",
+    "parent": 41,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 122,
+    "rght": 123,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 48,
+  "fields": {
+    "name": "\u041f\u043e\u043b\u043a\u0438 \u043f\u043e\u0434 \u0431\u0443\u0442\u044b\u043b\u043a\u0438 \u0434\u043b\u044f \u0445\u043e\u043b\u043e\u0434\u0438\u043b\u044c\u043d\u0438\u043a\u043e\u0432",
+    "slug": "polki-pod-butylki-dlia-kholodilnikov",
+    "parent": 41,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 128,
+    "rght": 129,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 49,
+  "fields": {
+    "name": "\u0422\u0435\u0445\u043d\u0438\u043a\u0430 \u0434\u043b\u044f \u043a\u0443\u0445\u043d\u0438",
+    "slug": "tekhnika-dlia-kukhni",
+    "parent": 1,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 286,
+    "rght": 579,
+    "tree_id": 1,
+    "level": 1
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 50,
+  "fields": {
+    "name": "\u041a\u043e\u0444\u0435\u0432\u0430\u0440\u043a\u0438 \u0438 \u043a\u043e\u0444\u0435\u043c\u0430\u0448\u0438\u043d\u044b",
+    "slug": "kofevarki-i-kofemashiny",
+    "parent": 49,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 369,
+    "rght": 404,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 51,
+  "fields": {
+    "name": "\u041a\u043e\u0444\u0435\u043c\u0430\u0448\u0438\u043d\u044b",
+    "slug": "kofemashiny",
+    "parent": 50,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 384,
+    "rght": 391,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 52,
+  "fields": {
+    "name": "\u041a\u043e\u0444\u0435\u043c\u0430\u0448\u0438\u043d\u044b \u0434\u043b\u044f \u043c\u043e\u043b\u043e\u0442\u043e\u0433\u043e \u043a\u043e\u0444\u0435",
+    "slug": "kofemashiny-dlia-molotogo-kofe",
+    "parent": 51,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 389,
+    "rght": 390,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 53,
+  "fields": {
+    "name": "\u041a\u043e\u0444\u0435\u043c\u0430\u0448\u0438\u043d\u044b \u0434\u043b\u044f \u0437\u0435\u0440\u043d\u043e\u0432\u043e\u0433\u043e \u043a\u043e\u0444\u0435",
+    "slug": "kofemashiny-dlia-zernovogo-kofe",
+    "parent": 51,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 387,
+    "rght": 388,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 54,
+  "fields": {
+    "name": "\u041a\u0430\u043f\u0441\u0443\u043b\u044c\u043d\u044b\u0435 \u043a\u043e\u0444\u0435\u043c\u0430\u0448\u0438\u043d\u044b",
+    "slug": "kapsulnye-kofemashiny",
+    "parent": 51,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 385,
+    "rght": 386,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 55,
+  "fields": {
+    "name": "\u041a\u043e\u0444\u0435\u0432\u0430\u0440\u043a\u0438",
+    "slug": "kofevarki",
+    "parent": 50,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 394,
+    "rght": 403,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 56,
+  "fields": {
+    "name": "\u041a\u0430\u043f\u0435\u043b\u044c\u043d\u044b\u0435 \u043a\u043e\u0444\u0435\u0432\u0430\u0440\u043a\u0438",
+    "slug": "kapelnye-kofevarki",
+    "parent": 55,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 397,
+    "rght": 398,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 57,
+  "fields": {
+    "name": "\u0420\u043e\u0436\u043a\u043e\u0432\u044b\u0435 \u043a\u043e\u0444\u0435\u0432\u0430\u0440\u043a\u0438",
+    "slug": "rozhkovye-kofevarki",
+    "parent": 55,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 399,
+    "rght": 400,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 58,
+  "fields": {
+    "name": "\u0422\u0443\u0440\u043a\u0430 \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u043a\u0430\u044f",
+    "slug": "turka-elektricheskaia",
+    "parent": 55,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 401,
+    "rght": 402,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 59,
+  "fields": {
+    "name": "\u0413\u0435\u0439\u0437\u0435\u0440\u043d\u044b\u0435 \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u043a\u043e\u0444\u0435\u0432\u0430\u0440\u043a\u0438",
+    "slug": "geizernye-elektricheskie-kofevarki",
+    "parent": 55,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 395,
+    "rght": 396,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 60,
+  "fields": {
+    "name": "\u041a\u043e\u0444\u0435\u043c\u043e\u043b\u043a\u0438",
+    "slug": "kofemolki",
+    "parent": 50,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 392,
+    "rght": 393,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 61,
+  "fields": {
+    "name": "\u0412\u0441\u043f\u0435\u043d\u0438\u0432\u0430\u0442\u0435\u043b\u0438 \u043c\u043e\u043b\u043e\u043a\u0430",
+    "slug": "vspenivateli-moloka",
+    "parent": 50,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 370,
+    "rght": 371,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 62,
+  "fields": {
+    "name": "\u0410\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b \u0434\u043b\u044f \u043a\u043e\u0444\u0435\u043c\u0430\u0448\u0438\u043d \u0438 \u043a\u043e\u0444\u0435\u0432\u0430\u0440\u043e\u043a",
+    "slug": "aksessuary-dlia-kofemashin-i-kofevarok",
+    "parent": 50,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 372,
+    "rght": 383,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 63,
+  "fields": {
+    "name": "\u0424\u0438\u043b\u044c\u0442\u0440\u044b \u0434\u043b\u044f \u0437\u0430\u0432\u0430\u0440\u0438\u0432\u0430\u043d\u0438\u044f \u043a\u043e\u0444\u0435",
+    "slug": "filtry-dlia-zavarivaniia-kofe",
+    "parent": 62,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 377,
+    "rght": 378,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 64,
+  "fields": {
+    "name": "\u0424\u0438\u043b\u044c\u0442\u0440\u044b \u0434\u043b\u044f \u0432\u043e\u0434\u044b",
+    "slug": "filtry-dlia-vody",
+    "parent": 62,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 379,
+    "rght": 380,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 65,
+  "fields": {
+    "name": "\u0421\u0440\u0435\u0434\u0441\u0442\u0432\u0430 \u0434\u043b\u044f \u0447\u0438\u0441\u0442\u043a\u0438 \u043a\u043e\u0444\u0435\u043c\u0430\u0448\u0438\u043d\u044b",
+    "slug": "sredstva-dlia-chistki-kofemashiny",
+    "parent": 62,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 375,
+    "rght": 376,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 66,
+  "fields": {
+    "name": "\u0421\u0435\u0440\u0432\u0438\u0441\u043d\u044b\u0435 \u0434\u0438\u0441\u043a\u0438",
+    "slug": "servisnye-diski",
+    "parent": 62,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 373,
+    "rght": 374,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 67,
+  "fields": {
+    "name": "\u041f\u0440\u043e\u0447\u0438\u0435 \u0430\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b",
+    "slug": "prochie-aksessuary",
+    "parent": 62,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 381,
+    "rght": 382,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 68,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0447\u0430\u0439\u043d\u0438\u043a\u0438 \u0438 \u0442\u0435\u0440\u043c\u043e\u043f\u043e\u0442\u044b",
+    "slug": "elektricheskie-chainiki-i-termopoty",
+    "parent": 49,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 287,
+    "rght": 300,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 69,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0447\u0430\u0439\u043d\u0438\u043a\u0438",
+    "slug": "elektricheskie-chainiki",
+    "parent": 68,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 290,
+    "rght": 291,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 70,
+  "fields": {
+    "name": "\u0422\u0435\u0440\u043c\u043e\u043f\u043e\u0442\u044b",
+    "slug": "termopoty",
+    "parent": 68,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 294,
+    "rght": 295,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 71,
+  "fields": {
+    "name": "\u041a\u0438\u043f\u044f\u0442\u0438\u043b\u044c\u043d\u0438\u043a\u0438",
+    "slug": "kipiatilniki",
+    "parent": 68,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 292,
+    "rght": 293,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 72,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0441\u0430\u043c\u043e\u0432\u0430\u0440\u044b",
+    "slug": "elektricheskie-samovary",
+    "parent": 68,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 288,
+    "rght": 289,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 73,
+  "fields": {
+    "name": "\u0427\u0430\u0439-\u043c\u0430\u0448\u0438\u043d\u044b",
+    "slug": "chai-mashiny",
+    "parent": 68,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 298,
+    "rght": 299,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 74,
+  "fields": {
+    "name": "\u041f\u0438\u0432\u043e\u0432\u0430\u0440\u043d\u0438",
+    "slug": "pivovarni",
+    "parent": 68,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 296,
+    "rght": 297,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 75,
+  "fields": {
+    "name": "\u041c\u0438\u043a\u0441\u0435\u0440\u044b, \u0431\u043b\u0435\u043d\u0434\u0435\u0440\u044b \u0438 \u0438\u0437\u043c\u0435\u043b\u044c\u0447\u0438\u0442\u0435\u043b\u0438",
+    "slug": "miksery-blendery-i-izmelchiteli",
+    "parent": 49,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 421,
+    "rght": 454,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 76,
+  "fields": {
+    "name": "\u0411\u043b\u0435\u043d\u0434\u0435\u0440\u044b",
+    "slug": "blendery",
+    "parent": 75,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 440,
+    "rght": 445,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 77,
+  "fields": {
+    "name": "\u0421\u0442\u0430\u0446\u0438\u043e\u043d\u0430\u0440\u043d\u044b\u0439 \u0431\u043b\u0435\u043d\u0434\u0435\u0440",
+    "slug": "statsionarnyi-blender",
+    "parent": 76,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 441,
+    "rght": 442,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 78,
+  "fields": {
+    "name": "\u041f\u043e\u0433\u0440\u0443\u0436\u043d\u043e\u0439 \u0431\u043b\u0435\u043d\u0434\u0435\u0440",
+    "slug": "pogruzhnoi-blender",
+    "parent": 76,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 443,
+    "rght": 444,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 79,
+  "fields": {
+    "name": "\u0411\u043b\u0435\u043d\u0434\u0435\u0440\u044b-\u043f\u0430\u0440\u043e\u0432\u0430\u0440\u043a\u0438",
+    "slug": "blendery-parovarki",
+    "parent": 75,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 438,
+    "rght": 439,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 80,
+  "fields": {
+    "name": "\u041c\u0438\u043a\u0441\u0435\u0440\u044b",
+    "slug": "miksery",
+    "parent": 75,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 446,
+    "rght": 453,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 81,
+  "fields": {
+    "name": "\u041f\u043b\u0430\u043d\u0435\u0442\u0430\u0440\u043d\u044b\u0435 \u043c\u0438\u043a\u0441\u0435\u0440\u044b",
+    "slug": "planetarnye-miksery",
+    "parent": 80,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 449,
+    "rght": 450,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 82,
+  "fields": {
+    "name": "\u0421\u0442\u0430\u0446\u0438\u043e\u043d\u0430\u0440\u043d\u044b\u0435 \u043c\u0438\u043a\u0441\u0435\u0440\u044b",
+    "slug": "statsionarnye-miksery",
+    "parent": 80,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 447,
+    "rght": 448,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 83,
+  "fields": {
+    "name": "\u041f\u043e\u0433\u0440\u0443\u0436\u043d\u044b\u0435 \u043c\u0438\u043a\u0441\u0435\u0440\u044b",
+    "slug": "pogruzhnye-miksery",
+    "parent": 80,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 451,
+    "rght": 452,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 84,
+  "fields": {
+    "name": "\u0418\u0437\u043c\u0435\u043b\u044c\u0447\u0438\u0442\u0435\u043b\u0438",
+    "slug": "izmelchiteli",
+    "parent": 75,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 424,
+    "rght": 425,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 85,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043c\u0435\u043b\u044c\u043d\u0438\u0447\u043a\u0438",
+    "slug": "elektromelnichki",
+    "parent": 75,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 422,
+    "rght": 423,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 86,
+  "fields": {
+    "name": "\u041e\u0432\u043e\u0449\u0435\u0440\u0435\u0437\u043a\u0438",
+    "slug": "ovoshcherezki",
+    "parent": 75,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 436,
+    "rght": 437,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 87,
+  "fields": {
+    "name": "\u0410\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b \u0434\u043b\u044f \u0431\u043b\u0435\u043d\u0434\u0435\u0440\u043e\u0432 \u0438 \u043c\u0438\u043a\u0441\u0435\u0440\u043e\u0432",
+    "slug": "aksessuary-dlia-blenderov-i-mikserov",
+    "parent": 75,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 426,
+    "rght": 435,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 88,
+  "fields": {
+    "name": "\u041d\u0430\u0441\u0430\u0434\u043a\u0438",
+    "slug": "nasadki",
+    "parent": 87,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 431,
+    "rght": 432,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 89,
+  "fields": {
+    "name": "\u0415\u043c\u043a\u043e\u0441\u0442\u0438",
+    "slug": "emkosti",
+    "parent": 87,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 433,
+    "rght": 434,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 90,
+  "fields": {
+    "name": "\u041f\u043d\u0435\u0432\u043c\u043e\u043a\u043d\u043e\u043f\u043a\u0438 \u0434\u043b\u044f \u0438\u0437\u043c\u0435\u043b\u044c\u0447\u0438\u0442\u0435\u043b\u0435\u0439",
+    "slug": "pnevmoknopki-dlia-izmelchitelei",
+    "parent": 87,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 427,
+    "rght": 428,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 91,
+  "fields": {
+    "name": "\u0410\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b \u0434\u043b\u044f \u0431\u043b\u0435\u043d\u0434\u0435\u0440\u043e\u0432-\u043f\u0430\u0440\u043e\u0432\u0430\u0440\u043e\u043a",
+    "slug": "aksessuary-dlia-blenderov-parovarok",
+    "parent": 87,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 429,
+    "rght": 430,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 92,
+  "fields": {
+    "name": "\u041f\u0435\u0447\u0438 \u0438 \u0433\u0440\u0438\u043b\u0438",
+    "slug": "pechi-i-grili",
+    "parent": 49,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 543,
+    "rght": 578,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 93,
+  "fields": {
+    "name": "\u041c\u0438\u043a\u0440\u043e\u0432\u043e\u043b\u043d\u043e\u0432\u044b\u0435 \u043f\u0435\u0447\u0438",
+    "slug": "mikrovolnovye-pechi",
+    "parent": 92,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 550,
+    "rght": 551,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 94,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u0433\u0440\u0438\u043b\u0438",
+    "slug": "elektrogrili",
+    "parent": 92,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 552,
+    "rght": 553,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 95,
+  "fields": {
+    "name": "\u041c\u0438\u043d\u0438-\u043f\u0435\u0447\u0438",
+    "slug": "mini-pechi",
+    "parent": 92,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 576,
+    "rght": 577,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 96,
+  "fields": {
+    "name": "\u0425\u043b\u0435\u0431\u043e\u043f\u0435\u0447\u043a\u0438",
+    "slug": "khlebopechki",
+    "parent": 92,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 572,
+    "rght": 573,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 97,
+  "fields": {
+    "name": "\u0410\u044d\u0440\u043e\u0433\u0440\u0438\u043b\u0438",
+    "slug": "aerogrili",
+    "parent": 92,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 574,
+    "rght": 575,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 98,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u0448\u0430\u0448\u043b\u044b\u0447\u043d\u0438\u0446\u044b",
+    "slug": "elektroshashlychnitsy",
+    "parent": 92,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 544,
+    "rght": 545,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 99,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u0441\u043a\u043e\u0432\u043e\u0440\u043e\u0434\u043a\u0438",
+    "slug": "elektroskovorodki",
+    "parent": 92,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 546,
+    "rght": 547,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 100,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043a\u043e\u043f\u0442\u0438\u043b\u044c\u043d\u0438",
+    "slug": "elektrokoptilni",
+    "parent": 92,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 548,
+    "rght": 549,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 101,
+  "fields": {
+    "name": "\u041c\u0443\u043b\u044c\u0442\u0438\u043f\u0435\u043a\u0430\u0440\u0438",
+    "slug": "multipekari",
+    "parent": 92,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 554,
+    "rght": 555,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 102,
+  "fields": {
+    "name": "\u0410\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b \u0434\u043b\u044f \u043c\u0438\u043a\u0440\u043e\u0432\u043e\u043b\u043d\u043e\u0432\u044b\u0445 \u043f\u0435\u0447\u0435\u0439 \u0438 \u0433\u0440\u0438\u043b\u0435\u0439",
+    "slug": "aksessuary-dlia-mikrovolnovykh-pechei-i-grilei",
+    "parent": 92,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 556,
+    "rght": 571,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 103,
+  "fields": {
+    "name": "\u0422\u0430\u0440\u0435\u043b\u043a\u0438 \u0434\u043b\u044f \u0434\u043b\u044f \u043c\u0438\u043a\u0440\u043e\u0432\u043e\u043b\u043d\u043e\u0432\u044b\u0445 \u043f\u0435\u0447\u0435\u0439",
+    "slug": "tarelki-dlia-dlia-mikrovolnovykh-pechei",
+    "parent": 102,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 565,
+    "rght": 566,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 104,
+  "fields": {
+    "name": "\u0422\u0435\u0441\u0442\u043e\u043c\u0435\u0448\u0430\u043b\u043a\u0438 \u0434\u043b\u044f \u0445\u043b\u0435\u0431\u043e\u043f\u0435\u0447\u0435\u043a",
+    "slug": "testomeshalki-dlia-khlebopechek",
+    "parent": 102,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 557,
+    "rght": 558,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 105,
+  "fields": {
+    "name": "\u0427\u0430\u0448\u0438 \u0434\u043b\u044f \u0445\u043b\u0435\u0431\u043e\u043f\u0435\u0447\u0435\u043a",
+    "slug": "chashi-dlia-khlebopechek",
+    "parent": 102,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 569,
+    "rght": 570,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 106,
+  "fields": {
+    "name": "\u041a\u0440\u0435\u043f\u043b\u0435\u043d\u0438\u044f \u0434\u043b\u044f \u043c\u0438\u043a\u0440\u043e\u0432\u043e\u043b\u043d\u043e\u0432\u044b\u0445 \u043f\u0435\u0447\u0435\u0439",
+    "slug": "krepleniia-dlia-mikrovolnovykh-pechei",
+    "parent": 102,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 559,
+    "rght": 560,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 107,
+  "fields": {
+    "name": "\u041f\u0440\u043e\u0442\u0438\u0432\u043d\u0438 \u0434\u043b\u044f \u0433\u0440\u0438\u043b\u0435\u0439",
+    "slug": "protivni-dlia-grilei",
+    "parent": 102,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 561,
+    "rght": 562,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 108,
+  "fields": {
+    "name": "\u0420\u0435\u0448\u0435\u0442\u043a\u0438 \u0434\u043b\u044f \u044d\u043b\u0435\u043a\u0442\u0440\u043e\u0433\u0440\u0438\u043b\u0435\u0439",
+    "slug": "reshetki-dlia-elektrogrilei",
+    "parent": 102,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 563,
+    "rght": 564,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 109,
+  "fields": {
+    "name": "\u041a\u043e\u043b\u044c\u0446\u0430 \u0443\u043f\u043b\u043e\u0442\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u043b\u044f \u0430\u044d\u0440\u043e\u0433\u0440\u0438\u043b\u0435\u0439",
+    "slug": "koltsa-uplotnitelnye-dlia-aerogrilei",
+    "parent": 102,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 567,
+    "rght": 568,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 111,
+  "fields": {
+    "name": "\u041f\u043b\u0438\u0442\u044b",
+    "slug": "plity-tekhnika-dlia-kukhni",
+    "parent": 49,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 541,
+    "rght": 542,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 112,
+  "fields": {
+    "name": "\u041c\u0443\u043b\u044c\u0442\u0438\u0432\u0430\u0440\u043a\u0438 \u0438 \u0442\u0435\u0445\u043d\u0438\u043a\u0430 \u0434\u043b\u044f \u0432\u0430\u0440\u043a\u0438",
+    "slug": "multivarki-i-tekhnika-dlia-varki",
+    "parent": 49,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 311,
+    "rght": 342,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 113,
+  "fields": {
+    "name": "\u041c\u0443\u043b\u044c\u0442\u0438\u0432\u0430\u0440\u043a\u0438",
+    "slug": "multivarki",
+    "parent": 112,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 316,
+    "rght": 317,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 114,
+  "fields": {
+    "name": "\u041c\u0443\u043b\u044c\u0442\u0438\u0432\u0430\u0440\u043a\u0438-\u0445\u043b\u0435\u0431\u043e\u043f\u0435\u0447\u043a\u0438",
+    "slug": "multivarki-khlebopechki",
+    "parent": 112,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 312,
+    "rght": 313,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 115,
+  "fields": {
+    "name": "\u041c\u0443\u043b\u044c\u0442\u0438\u0432\u0430\u0440\u043a\u0438-\u0441\u043a\u043e\u0440\u043e\u0432\u0430\u0440\u043a\u0438",
+    "slug": "multivarki-skorovarki",
+    "parent": 112,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 314,
+    "rght": 315,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 116,
+  "fields": {
+    "name": "\u0421\u043a\u043e\u0440\u043e\u0432\u0430\u0440\u043a\u0438",
+    "slug": "skorovarki",
+    "parent": 112,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 332,
+    "rght": 333,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 117,
+  "fields": {
+    "name": "\u041f\u0430\u0440\u043e\u0432\u0430\u0440\u043a\u0438",
+    "slug": "parovarki",
+    "parent": 112,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 338,
+    "rght": 339,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 118,
+  "fields": {
+    "name": "\u0421\u043e\u043a\u043e\u0432\u0430\u0440\u043a\u0438",
+    "slug": "sokovarki",
+    "parent": 112,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 336,
+    "rght": 337,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 119,
+  "fields": {
+    "name": "\u0420\u0438\u0441\u043e\u0432\u0430\u0440\u043a\u0438 \u0438 \u043c\u0430\u043a\u0430\u0440\u043e\u043d\u043e\u0432\u0430\u0440\u043a\u0438",
+    "slug": "risovarki-i-makaronovarki",
+    "parent": 112,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 334,
+    "rght": 335,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 120,
+  "fields": {
+    "name": "\u0421\u0443-\u0432\u0438\u0434",
+    "slug": "su-vid",
+    "parent": 112,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 340,
+    "rght": 341,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 121,
+  "fields": {
+    "name": "\u0410\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b \u0434\u043b\u044f \u043c\u0443\u043b\u044c\u0442\u0438\u0432\u0430\u0440\u043e\u043a \u0438 \u0441\u0443-\u0432\u0438\u0434",
+    "slug": "aksessuary-dlia-multivarok-i-su-vid",
+    "parent": 112,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 318,
+    "rght": 331,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 122,
+  "fields": {
+    "name": "\u0412\u0435\u0442\u0447\u0438\u043d\u043d\u0438\u0446\u044b",
+    "slug": "vetchinnitsy",
+    "parent": 121,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 321,
+    "rght": 322,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 123,
+  "fields": {
+    "name": "\u0427\u0430\u0448\u0438 \u0438 \u043a\u0440\u044b\u0448\u043a\u0438",
+    "slug": "chashi-i-kryshki",
+    "parent": 121,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 329,
+    "rght": 330,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 124,
+  "fields": {
+    "name": "\u041a\u043e\u043b\u044c\u0446\u0430 \u0443\u043f\u043b\u043e\u0442\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435",
+    "slug": "koltsa-uplotnitelnye",
+    "parent": 121,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 327,
+    "rght": 328,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 125,
+  "fields": {
+    "name": "\u041a\u043e\u043d\u0442\u0435\u0439\u043d\u0435\u0440\u044b",
+    "slug": "konteinery",
+    "parent": 121,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 319,
+    "rght": 320,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 126,
+  "fields": {
+    "name": "\u0420\u0435\u0448\u0435\u0442\u043a\u0438 \u0434\u043b\u044f \u043c\u0443\u043b\u044c\u0442\u0438\u0432\u0430\u0440\u043e\u043a",
+    "slug": "reshetki-dlia-multivarok",
+    "parent": 121,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 325,
+    "rght": 326,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 127,
+  "fields": {
+    "name": "\u0421\u044a\u0435\u043c\u043d\u044b\u0435 \u0440\u0443\u0447\u043a\u0438 \u0434\u043b\u044f \u0447\u0430\u0448",
+    "slug": "semnye-ruchki-dlia-chash",
+    "parent": 121,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 323,
+    "rght": 324,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 128,
+  "fields": {
+    "name": "\u0421\u043e\u043a\u043e\u0432\u044b\u0436\u0438\u043c\u0430\u043b\u043a\u0438",
+    "slug": "sokovyzhimalki",
+    "parent": 49,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 301,
+    "rght": 310,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 129,
+  "fields": {
+    "name": "\u0428\u043d\u0435\u043a\u043e\u0432\u044b\u0435 \u0441\u043e\u043a\u043e\u0432\u044b\u0436\u0438\u043c\u0430\u043b\u043a\u0438",
+    "slug": "shnekovye-sokovyzhimalki",
+    "parent": 128,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 308,
+    "rght": 309,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 130,
+  "fields": {
+    "name": "\u0426\u0435\u043d\u0442\u0440\u043e\u0431\u0435\u0436\u043d\u044b\u0435 \u0441\u043e\u043a\u043e\u0432\u044b\u0436\u0438\u043c\u0430\u043b\u043a\u0438",
+    "slug": "tsentrobezhnye-sokovyzhimalki",
+    "parent": 128,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 306,
+    "rght": 307,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 131,
+  "fields": {
+    "name": "\u0421\u043e\u043a\u043e\u0432\u044b\u0436\u0438\u043c\u0430\u043b\u043a\u0430 \u0434\u043b\u044f \u0446\u0438\u0442\u0440\u0443\u0441\u043e\u0432\u044b\u0445",
+    "slug": "sokovyzhimalka-dlia-tsitrusovykh",
+    "parent": 128,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 304,
+    "rght": 305,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 132,
+  "fields": {
+    "name": "\u041a\u043e\u043c\u0431\u0438\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435 \u0441\u043e\u043a\u043e\u0432\u044b\u0436\u0438\u043c\u0430\u043b\u043a\u0438",
+    "slug": "kombinirovannye-sokovyzhimalki",
+    "parent": 128,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 302,
+    "rght": 303,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 133,
+  "fields": {
+    "name": "\u041c\u044f\u0441\u043e\u0440\u0443\u0431\u043a\u0438 \u0438 \u043a\u0443\u0445\u043e\u043d\u043d\u044b\u0435 \u043a\u043e\u043c\u0431\u0430\u0439\u043d\u044b",
+    "slug": "miasorubki-i-kukhonnye-kombainy",
+    "parent": 49,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 405,
+    "rght": 420,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 134,
+  "fields": {
+    "name": "\u041c\u044f\u0441\u043e\u0440\u0443\u0431\u043a\u0438",
+    "slug": "miasorubki",
+    "parent": 133,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 414,
+    "rght": 415,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 135,
+  "fields": {
+    "name": "\u041a\u0443\u0445\u043e\u043d\u043d\u044b\u0435 \u043a\u043e\u043c\u0431\u0430\u0439\u043d\u044b",
+    "slug": "kukhonnye-kombainy",
+    "parent": 133,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 416,
+    "rght": 417,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 136,
+  "fields": {
+    "name": "\u041f\u0430\u0441\u0442\u0430-\u043c\u0430\u0448\u0438\u043d\u044b",
+    "slug": "pasta-mashiny",
+    "parent": 133,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 418,
+    "rght": 419,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 137,
+  "fields": {
+    "name": "\u0410\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b \u0434\u043b\u044f \u043c\u044f\u0441\u043e\u0440\u0443\u0431\u043e\u043a \u0438 \u043a\u043e\u043c\u0431\u0430\u0439\u043d\u043e\u0432",
+    "slug": "aksessuary-dlia-miasorubok-i-kombainov",
+    "parent": 133,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 406,
+    "rght": 413,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 139,
+  "fields": {
+    "name": "\u041d\u0430\u0441\u0430\u0434\u043a\u0438",
+    "slug": "nasadki-aksessuary-dlia-miasorubok-i-kombainov",
+    "parent": 137,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 409,
+    "rght": 410,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 140,
+  "fields": {
+    "name": "\u041d\u043e\u0436\u0438",
+    "slug": "nozhi",
+    "parent": 137,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 411,
+    "rght": 412,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 141,
+  "fields": {
+    "name": "\u0420\u0435\u0448\u0435\u0442\u043a\u0438",
+    "slug": "reshetki",
+    "parent": 137,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 407,
+    "rght": 408,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 142,
+  "fields": {
+    "name": "\u041d\u0430\u0441\u0442\u043e\u043b\u044c\u043d\u044b\u0435 \u043f\u043b\u0438\u0442\u044b",
+    "slug": "nastolnye-plity",
+    "parent": 49,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 343,
+    "rght": 350,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 143,
+  "fields": {
+    "name": "\u041d\u0430\u0441\u0442\u043e\u043b\u044c\u043d\u044b\u0435 \u0433\u0430\u0437\u043e\u0432\u044b\u0435 \u043f\u043b\u0438\u0442\u044b",
+    "slug": "nastolnye-gazovye-plity",
+    "parent": 142,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 348,
+    "rght": 349,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 144,
+  "fields": {
+    "name": "\u041d\u0430\u0441\u0442\u043e\u043b\u044c\u043d\u044b\u0435 \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u043f\u043b\u0438\u0442\u044b",
+    "slug": "nastolnye-elektricheskie-plity",
+    "parent": 142,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 344,
+    "rght": 345,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 145,
+  "fields": {
+    "name": "\u041d\u0430\u0441\u0442\u043e\u043b\u044c\u043d\u044b\u0435 \u0438\u043d\u0434\u0443\u043a\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u043f\u043b\u0438\u0442\u044b",
+    "slug": "nastolnye-induktsionnye-plity",
+    "parent": 142,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 346,
+    "rght": 347,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 146,
+  "fields": {
+    "name": "\u0422\u0435\u0445\u043d\u0438\u043a\u0430 \u0434\u043b\u044f \u043f\u0440\u0438\u0433\u043e\u0442\u043e\u0432\u043b\u0435\u043d\u0438\u044f \u0434\u0435\u0441\u0435\u0440\u0442\u043e\u0432",
+    "slug": "tekhnika-dlia-prigotovleniia-desertov",
+    "parent": 49,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 455,
+    "rght": 482,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 147,
+  "fields": {
+    "name": "\u0412\u0430\u0444\u0435\u043b\u044c\u043d\u0438\u0446\u044b",
+    "slug": "vafelnitsy",
+    "parent": 146,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 470,
+    "rght": 471,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 148,
+  "fields": {
+    "name": "\u0419\u043e\u0433\u0443\u0440\u0442\u043d\u0438\u0446\u044b",
+    "slug": "iogurtnitsy",
+    "parent": 146,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 468,
+    "rght": 469,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 149,
+  "fields": {
+    "name": "\u0411\u043b\u0438\u043d\u043d\u0438\u0446\u044b",
+    "slug": "blinnitsy",
+    "parent": 146,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 478,
+    "rght": 479,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 150,
+  "fields": {
+    "name": "\u041c\u043e\u0440\u043e\u0436\u0435\u043d\u0438\u0446\u044b",
+    "slug": "morozhenitsy",
+    "parent": 146,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 464,
+    "rght": 465,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 151,
+  "fields": {
+    "name": "\u041e\u0440\u0435\u0448\u043d\u0438\u0446\u044b",
+    "slug": "oreshnitsy",
+    "parent": 146,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 474,
+    "rght": 475,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 152,
+  "fields": {
+    "name": "\u0428\u043e\u043a\u043e\u043b\u0430\u0434\u043d\u044b\u0435 \u0444\u043e\u043d\u0442\u0430\u043d\u044b",
+    "slug": "shokoladnye-fontany",
+    "parent": 146,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 462,
+    "rght": 463,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 153,
+  "fields": {
+    "name": "\u0410\u043f\u043f\u0430\u0440\u0430\u0442\u044b \u0434\u043b\u044f \u0441\u0430\u0445\u0430\u0440\u043d\u043e\u0439 \u0432\u0430\u0442\u044b",
+    "slug": "apparaty-dlia-sakharnoi-vaty",
+    "parent": 146,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 472,
+    "rght": 473,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 154,
+  "fields": {
+    "name": "\u041a\u0435\u043a\u0441\u043d\u0438\u0446\u044b",
+    "slug": "keksnitsy",
+    "parent": 146,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 476,
+    "rght": 477,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 155,
+  "fields": {
+    "name": "\u041f\u043e\u043f\u043a\u043e\u0440\u043d-\u043c\u0435\u0439\u043a\u0435\u0440\u044b",
+    "slug": "popkorn-meikery",
+    "parent": 146,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 480,
+    "rght": 481,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 156,
+  "fields": {
+    "name": "\u0422\u0430\u0440\u0442\u0430\u043b\u0435\u0442\u043d\u0438\u0446\u044b",
+    "slug": "tartaletnitsy",
+    "parent": 146,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 460,
+    "rght": 461,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 157,
+  "fields": {
+    "name": "\u041a\u0430\u0440\u0430\u043c\u0435\u043b\u0438\u0437\u0430\u0442\u043e\u0440\u044b",
+    "slug": "karamelizatory",
+    "parent": 146,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 456,
+    "rght": 457,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 158,
+  "fields": {
+    "name": "\u041f\u0440\u0438\u0433\u043e\u0442\u043e\u0432\u043b\u0435\u043d\u0438\u0435 \u043a\u043e\u043d\u0444\u0435\u0442",
+    "slug": "prigotovlenie-konfet",
+    "parent": 146,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 458,
+    "rght": 459,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 159,
+  "fields": {
+    "name": "\u041c\u0430\u0444\u0444\u0438\u043d\u043d\u0438\u0446\u044b",
+    "slug": "maffinnitsy",
+    "parent": 146,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 466,
+    "rght": 467,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 160,
+  "fields": {
+    "name": "\u0422\u0435\u0445\u043d\u0438\u043a\u0430 \u0434\u043b\u044f \u043f\u0440\u0438\u0433\u043e\u0442\u043e\u0432\u043b\u0435\u043d\u0438\u044f \u0431\u043b\u044e\u0434",
+    "slug": "tekhnika-dlia-prigotovleniia-bliud",
+    "parent": 49,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 483,
+    "rght": 500,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 161,
+  "fields": {
+    "name": "\u0422\u043e\u0441\u0442\u0435\u0440\u044b",
+    "slug": "tostery",
+    "parent": 160,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 494,
+    "rght": 495,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 162,
+  "fields": {
+    "name": "\u0424\u0440\u0438\u0442\u044e\u0440\u043d\u0438\u0446\u044b",
+    "slug": "fritiurnitsy",
+    "parent": 160,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 488,
+    "rght": 489,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 163,
+  "fields": {
+    "name": "\u0411\u0443\u0442\u0435\u0440\u0431\u0440\u043e\u0434\u043d\u0438\u0446\u044b",
+    "slug": "buterbrodnitsy",
+    "parent": 160,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 484,
+    "rght": 485,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 164,
+  "fields": {
+    "name": "\u041e\u043c\u043b\u0435\u0442\u043d\u0438\u0446\u044b",
+    "slug": "omletnitsy",
+    "parent": 160,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 490,
+    "rght": 491,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 165,
+  "fields": {
+    "name": "\u041f\u0438\u0446\u0446\u0430-\u043c\u0435\u0439\u043a\u0435\u0440\u044b",
+    "slug": "pitstsa-meikery",
+    "parent": 160,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 498,
+    "rght": 499,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 166,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u0444\u043e\u043d\u0434\u044e",
+    "slug": "elektrofondiu",
+    "parent": 160,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 486,
+    "rght": 487,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 167,
+  "fields": {
+    "name": "\u0425\u043e\u0442\u0434\u043e\u0433-\u043c\u0435\u0439\u043a\u0435\u0440\u044b",
+    "slug": "khotdog-meikery",
+    "parent": 160,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 496,
+    "rght": 497,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 168,
+  "fields": {
+    "name": "\u041f\u0440\u0438\u0431\u043e\u0440\u044b \u0434\u043b\u044f \u043f\u0440\u0438\u0433\u043e\u0442\u043e\u0432\u043b\u0435\u043d\u0438\u044f \u0431\u0443\u0440\u0433\u0435\u0440\u043e\u0432",
+    "slug": "pribory-dlia-prigotovleniia-burgerov",
+    "parent": 160,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 492,
+    "rght": 493,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 169,
+  "fields": {
+    "name": "\u041f\u0440\u043e\u0447\u0430\u044f \u043a\u0443\u0445\u043e\u043d\u043d\u0430\u044f \u0442\u0435\u0445\u043d\u0438\u043a\u0430",
+    "slug": "prochaia-kukhonnaia-tekhnika",
+    "parent": 49,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 501,
+    "rght": 540,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 170,
+  "fields": {
+    "name": "\u041a\u0443\u0445\u043e\u043d\u043d\u044b\u0435 \u0432\u0435\u0441\u044b",
+    "slug": "kukhonnye-vesy",
+    "parent": 169,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 532,
+    "rght": 537,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 171,
+  "fields": {
+    "name": "\u041a\u0443\u0445\u043e\u043d\u043d\u044b\u0435 \u044d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u044b\u0435 \u0432\u0435\u0441\u044b",
+    "slug": "kukhonnye-elektronnye-vesy",
+    "parent": 170,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 535,
+    "rght": 536,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 172,
+  "fields": {
+    "name": "\u041a\u0443\u0445\u043e\u043d\u043d\u044b\u0435 \u043c\u0435\u0445\u0430\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0432\u0435\u0441\u044b",
+    "slug": "kukhonnye-mekhanicheskie-vesy",
+    "parent": 170,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 533,
+    "rght": 534,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 173,
+  "fields": {
+    "name": "\u0412\u0430\u043a\u0443\u0443\u043c\u043d\u044b\u0435 \u0443\u043f\u0430\u043a\u043e\u0432\u0449\u0438\u043a\u0438",
+    "slug": "vakuumnye-upakovshchiki",
+    "parent": 169,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 526,
+    "rght": 527,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 174,
+  "fields": {
+    "name": "\u0421\u0442\u0435\u0440\u0438\u043b\u0438\u0437\u0430\u0442\u043e\u0440\u044b",
+    "slug": "sterilizatory",
+    "parent": 169,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 508,
+    "rght": 509,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 175,
+  "fields": {
+    "name": "\u0414\u0438\u0441\u0442\u0438\u043b\u043b\u044f\u0442\u043e\u0440\u044b",
+    "slug": "distilliatory",
+    "parent": 169,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 512,
+    "rght": 513,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 176,
+  "fields": {
+    "name": "\u0421\u0443\u0448\u0438\u043b\u043a\u0438 \u0434\u043b\u044f \u043e\u0432\u043e\u0449\u0435\u0439 \u0438 \u0444\u0440\u0443\u043a\u0442\u043e\u0432",
+    "slug": "sushilki-dlia-ovoshchei-i-fruktov",
+    "parent": 169,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 538,
+    "rght": 539,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 177,
+  "fields": {
+    "name": "\u041a\u0430\u0440\u0442\u043e\u0444\u0435\u043b\u0435\u0447\u0438\u0441\u0442\u043a\u0438 \u0438 \u0440\u044b\u0431\u043e\u0447\u0438\u0441\u0442\u043a\u0438",
+    "slug": "kartofelechistki-i-rybochistki",
+    "parent": 169,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 504,
+    "rght": 505,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 178,
+  "fields": {
+    "name": "\u041b\u0430\u043d\u0447\u0431\u043e\u043a\u0441\u044b \u0441 \u043f\u043e\u0434\u043e\u0433\u0440\u0435\u0432\u043e\u043c",
+    "slug": "lanchboksy-s-podogrevom",
+    "parent": 169,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 528,
+    "rght": 529,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 179,
+  "fields": {
+    "name": "\u041c\u0430\u0440\u0438\u043d\u0430\u0442\u043e\u0440\u044b",
+    "slug": "marinatory",
+    "parent": 169,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 522,
+    "rght": 523,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 180,
+  "fields": {
+    "name": "\u041d\u043e\u0436\u0435\u0442\u043e\u0447\u043a\u0438 \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0435",
+    "slug": "nozhetochki-elektricheskie",
+    "parent": 169,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 524,
+    "rght": 525,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 181,
+  "fields": {
+    "name": "\u041a\u0443\u043b\u0438\u043d\u0430\u0440\u043d\u044b\u0435 \u0442\u0435\u0440\u043c\u043e\u043c\u0435\u0442\u0440\u044b",
+    "slug": "kulinarnye-termometry",
+    "parent": 169,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 516,
+    "rght": 517,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 182,
+  "fields": {
+    "name": "\u041b\u0435\u0434\u043e\u0433\u0435\u043d\u0435\u0440\u0430\u0442\u043e\u0440\u044b \u0438 \u043e\u0445\u043b\u0430\u0434\u0438\u0442\u0435\u043b\u0438 \u0431\u0443\u0442\u044b\u043b\u043e\u043a",
+    "slug": "ledogeneratory-i-okhladiteli-butylok",
+    "parent": 169,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 506,
+    "rght": 507,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 183,
+  "fields": {
+    "name": "\u042d\u043a\u043e\u0442\u0435\u0441\u0442\u0435\u0440\u044b \u0438 \u0434\u043e\u0437\u0438\u043c\u0435\u0442\u0440\u044b",
+    "slug": "ekotestery-i-dozimetry",
+    "parent": 169,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 520,
+    "rght": 521,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 184,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043e\u0442\u043a\u0440\u044b\u0432\u0430\u043b\u043a\u0438 \u0438 \u0448\u0442\u043e\u043f\u043e\u0440\u044b",
+    "slug": "elektrootkryvalki-i-shtopory",
+    "parent": 169,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 502,
+    "rght": 503,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 185,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043e\u0436\u0438",
+    "slug": "elektronozhi",
+    "parent": 169,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 514,
+    "rght": 515,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 186,
+  "fields": {
+    "name": "\u042f\u0439\u0446\u0435\u0432\u0430\u0440\u043a\u0438",
+    "slug": "iaitsevarki",
+    "parent": 169,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 530,
+    "rght": 531,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 187,
+  "fields": {
+    "name": "\u0418\u0437\u043c\u0435\u043b\u044c\u0447\u0438\u0442\u0435\u043b\u0438 \u0431\u044b\u0442\u043e\u0432\u044b\u0445 \u043e\u0442\u0445\u043e\u0434\u043e\u0432",
+    "slug": "izmelchiteli-bytovykh-otkhodov",
+    "parent": 169,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 510,
+    "rght": 511,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 188,
+  "fields": {
+    "name": "\u041a\u043e\u043f\u0442\u0438\u043b\u044c\u043d\u044b\u0435 \u043f\u0438\u0441\u0442\u043e\u043b\u0435\u0442\u044b",
+    "slug": "koptilnye-pistolety",
+    "parent": 169,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 518,
+    "rght": 519,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 189,
+  "fields": {
+    "name": "\u0410\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b \u0434\u043b\u044f \u043a\u0443\u0445\u043e\u043d\u043d\u043e\u0439 \u0442\u0435\u0445\u043d\u0438\u043a\u0438",
+    "slug": "aksessuary-dlia-kukhonnoi-tekhniki",
+    "parent": 49,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 351,
+    "rght": 368,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 190,
+  "fields": {
+    "name": "\u041f\u043b\u0435\u043d\u043a\u0438 \u0438 \u043a\u043e\u043d\u0442\u0435\u0439\u043d\u0435\u0440\u044b \u0434\u043b\u044f \u0432\u0430\u043a\u0443\u0443\u043c\u043d\u044b\u0445 \u0443\u043f\u0430\u043a\u043e\u0432\u0449\u0438\u043a\u043e\u0432",
+    "slug": "plenki-i-konteinery-dlia-vakuumnykh-upakovshchikov",
+    "parent": 189,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 366,
+    "rght": 367,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 191,
+  "fields": {
+    "name": "\u041a\u0440\u044b\u0448\u043a\u0438 \u0434\u043b\u044f \u0432\u0430\u043a\u0443\u0443\u043c\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f",
+    "slug": "kryshki-dlia-vakuumirovaniia",
+    "parent": 189,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 360,
+    "rght": 361,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 192,
+  "fields": {
+    "name": "\u041f\u0430\u043d\u0435\u043b\u0438 \u0434\u043b\u044f \u043c\u0443\u043b\u044c\u0442\u0438\u043f\u0435\u043a\u0430\u0440\u044f",
+    "slug": "paneli-dlia-multipekaria",
+    "parent": 189,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 364,
+    "rght": 365,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 193,
+  "fields": {
+    "name": "\u041f\u043e\u0441\u0443\u0434\u0430 \u0434\u043b\u044f \u043f\u0440\u0438\u0433\u043e\u0442\u043e\u0432\u043b\u0435\u043d\u0438\u044f \u0439\u043e\u0433\u0443\u0440\u0442\u043e\u0432",
+    "slug": "posuda-dlia-prigotovleniia-iogurtov",
+    "parent": 189,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 362,
+    "rght": 363,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 194,
+  "fields": {
+    "name": "\u041f\u043e\u0434\u0434\u043e\u043d\u044b \u0434\u043b\u044f \u0434\u0435\u0433\u0438\u0434\u0440\u0430\u0442\u043e\u0440\u043e\u0432",
+    "slug": "poddony-dlia-degidratorov",
+    "parent": 189,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 352,
+    "rght": 353,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 195,
+  "fields": {
+    "name": "\u0424\u0438\u043b\u044c\u0442\u0440\u044b \u0434\u043b\u044f \u0444\u0440\u0438\u0442\u044e\u0440\u043d\u0438\u0446",
+    "slug": "filtry-dlia-fritiurnits",
+    "parent": 189,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 354,
+    "rght": 355,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 196,
+  "fields": {
+    "name": "\u0424\u0438\u043b\u044c\u0442\u0440\u044b \u0434\u043b\u044f \u043e\u0447\u0438\u0441\u0442\u043a\u0438 \u0441\u0430\u043c\u043e\u0433\u043e\u043d\u0430",
+    "slug": "filtry-dlia-ochistki-samogona",
+    "parent": 189,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 356,
+    "rght": 357,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 198,
+  "fields": {
+    "name": "\u041d\u0430\u0441\u0430\u0434\u043a\u0438",
+    "slug": "nasadki-aksessuary-dlia-kukhonnoi-tekhniki",
+    "parent": 189,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 358,
+    "rght": 359,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 199,
+  "fields": {
+    "name": "\u0422\u0435\u0445\u043d\u0438\u043a\u0430 \u0434\u043b\u044f \u0434\u043e\u043c\u0430",
+    "slug": "tekhnika-dlia-doma",
+    "parent": 1,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 580,
+    "rght": 701,
+    "tree_id": 1,
+    "level": 1
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 200,
+  "fields": {
+    "name": "\u041f\u044b\u043b\u0435\u0441\u043e\u0441\u044b \u0438 \u0430\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b",
+    "slug": "pylesosy-i-aksessuary",
+    "parent": 199,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 585,
+    "rght": 640,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 201,
+  "fields": {
+    "name": "\u041f\u044b\u043b\u0435\u0441\u043e\u0441\u044b \u0434\u043b\u044f \u0434\u043e\u043c\u0430",
+    "slug": "pylesosy-dlia-doma",
+    "parent": 200,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 632,
+    "rght": 633,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 202,
+  "fields": {
+    "name": "\u0420\u043e\u0431\u043e\u0442\u044b-\u043f\u044b\u043b\u0435\u0441\u043e\u0441\u044b",
+    "slug": "roboty-pylesosy",
+    "parent": 200,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 634,
+    "rght": 635,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 203,
+  "fields": {
+    "name": "\u0412\u0435\u0440\u0442\u0438\u043a\u0430\u043b\u044c\u043d\u044b\u0435 \u043f\u044b\u043b\u0435\u0441\u043e\u0441\u044b",
+    "slug": "vertikalnye-pylesosy",
+    "parent": 200,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 590,
+    "rght": 591,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 204,
+  "fields": {
+    "name": "\u0411\u0435\u0441\u043f\u0440\u043e\u0432\u043e\u0434\u043d\u044b\u0435 \u043f\u044b\u043b\u0435\u0441\u043e\u0441\u044b",
+    "slug": "besprovodnye-pylesosy",
+    "parent": 200,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 592,
+    "rght": 593,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 205,
+  "fields": {
+    "name": "\u041c\u043e\u044e\u0449\u0438\u0435 \u043f\u044b\u043b\u0435\u0441\u043e\u0441\u044b",
+    "slug": "moiushchie-pylesosy",
+    "parent": 200,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 638,
+    "rght": 639,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 206,
+  "fields": {
+    "name": "\u0410\u0432\u0442\u043e\u043c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0435 \u043f\u044b\u043b\u0435\u0441\u043e\u0441\u044b",
+    "slug": "avtomobilnye-pylesosy",
+    "parent": 200,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 586,
+    "rght": 587,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 207,
+  "fields": {
+    "name": "\u0420\u0443\u0447\u043d\u044b\u0435 \u043f\u044b\u043b\u0435\u0441\u043e\u0441\u044b",
+    "slug": "ruchnye-pylesosy",
+    "parent": 200,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 636,
+    "rght": 637,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 208,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u0432\u0435\u043d\u0438\u043a\u0438",
+    "slug": "elektroveniki",
+    "parent": 200,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 588,
+    "rght": 589,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 209,
+  "fields": {
+    "name": "\u0426\u043e\u043a\u043e\u043b\u044c\u043d\u044b\u0435 \u043f\u044b\u043b\u0435\u0441\u043e\u0441\u044b",
+    "slug": "tsokolnye-pylesosy",
+    "parent": 200,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 630,
+    "rght": 631,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 210,
+  "fields": {
+    "name": "\u041f\u0440\u043e\u043c\u044b\u0448\u043b\u0435\u043d\u043d\u044b\u0435 \u0438 \u0441\u0442\u0440\u043e\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u043f\u044b\u043b\u0435\u0441\u043e\u0441\u044b",
+    "slug": "promyshlennye-i-stroitelnye-pylesosy",
+    "parent": 200,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 594,
+    "rght": 595,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 211,
+  "fields": {
+    "name": "\u0410\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b \u0434\u043b\u044f \u043f\u044b\u043b\u0435\u0441\u043e\u0441\u043e\u0432",
+    "slug": "aksessuary-dlia-pylesosov",
+    "parent": 200,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 596,
+    "rght": 629,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 212,
+  "fields": {
+    "name": "\u0424\u0438\u043b\u044c\u0442\u0440\u044b",
+    "slug": "filtry",
+    "parent": 211,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 619,
+    "rght": 620,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 214,
+  "fields": {
+    "name": "\u041d\u0430\u0441\u0430\u0434\u043a\u0438",
+    "slug": "nasadki-aksessuary-dlia-pylesosov",
+    "parent": 211,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 621,
+    "rght": 622,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 215,
+  "fields": {
+    "name": "\u041f\u044b\u043b\u0435\u0441\u0431\u043e\u0440\u043d\u0438\u043a\u0438",
+    "slug": "pylesborniki",
+    "parent": 211,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 601,
+    "rght": 602,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 216,
+  "fields": {
+    "name": "\u041a\u043e\u043c\u043f\u043b\u0435\u043a\u0442\u044b \u043f\u044b\u043b\u0435\u0441\u0431\u043e\u0440\u043d\u0438\u043a\u043e\u0432 \u0438 \u0444\u0438\u043b\u044c\u0442\u0440\u043e\u0432",
+    "slug": "komplekty-pylesbornikov-i-filtrov",
+    "parent": 211,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 607,
+    "rght": 608,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 217,
+  "fields": {
+    "name": "\u0429\u0435\u0442\u043a\u0438",
+    "slug": "shchetki",
+    "parent": 211,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 627,
+    "rght": 628,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 218,
+  "fields": {
+    "name": "\u0428\u043b\u0430\u043d\u0433\u0438",
+    "slug": "shlangi",
+    "parent": 211,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 623,
+    "rght": 624,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 219,
+  "fields": {
+    "name": "\u0422\u0443\u0440\u0431\u043e\u0449\u0435\u0442\u043a\u0438",
+    "slug": "turboshchetki",
+    "parent": 211,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 605,
+    "rght": 606,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 220,
+  "fields": {
+    "name": "\u0410\u043a\u043a\u0443\u043c\u0443\u043b\u044f\u0442\u043e\u0440\u044b",
+    "slug": "akkumuliatory",
+    "parent": 211,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 603,
+    "rght": 604,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 221,
+  "fields": {
+    "name": "\u0422\u0440\u0443\u0431\u043a\u0438",
+    "slug": "trubki",
+    "parent": 211,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 625,
+    "rght": 626,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 222,
+  "fields": {
+    "name": "\u0410\u0440\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0442\u043e\u0440\u044b",
+    "slug": "aromatizatory",
+    "parent": 211,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 597,
+    "rght": 598,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 223,
+  "fields": {
+    "name": "\u0417\u0430\u0440\u044f\u0434\u043d\u044b\u0435 \u0431\u0430\u0437\u044b, \u043f\u0435\u0440\u0435\u0445\u043e\u0434\u043d\u0438\u043a\u0438",
+    "slug": "zariadnye-bazy-perekhodniki",
+    "parent": 211,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 613,
+    "rght": 614,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 224,
+  "fields": {
+    "name": "\u041e\u0433\u0440\u0430\u043d\u0438\u0447\u0438\u0442\u0435\u043b\u0438 \u0434\u0432\u0438\u0436\u0435\u043d\u0438\u044f",
+    "slug": "ogranichiteli-dvizheniia",
+    "parent": 211,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 599,
+    "rght": 600,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 225,
+  "fields": {
+    "name": "\u0427\u0438\u0441\u0442\u044f\u0449\u0438\u0435 \u043c\u043e\u0434\u0443\u043b\u0438, \u0434\u043e\u0437\u0430\u0442\u043e\u0440\u044b",
+    "slug": "chistiashchie-moduli-dozatory",
+    "parent": 211,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 611,
+    "rght": 612,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 226,
+  "fields": {
+    "name": "\u041a\u043e\u043b\u0435\u0441\u0438\u043a\u0438",
+    "slug": "kolesiki",
+    "parent": 211,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 615,
+    "rght": 616,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 227,
+  "fields": {
+    "name": "\u0421\u043c\u0435\u043d\u043d\u044b\u0435 \u043b\u0438\u0446\u0435\u0432\u044b\u0435 \u043f\u0430\u043d\u0435\u043b\u0438",
+    "slug": "smennye-litsevye-paneli",
+    "parent": 211,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 617,
+    "rght": 618,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 228,
+  "fields": {
+    "name": "\u0427\u0438\u0441\u0442\u044f\u0449\u0438\u0435 \u0441\u0430\u043b\u0444\u0435\u0442\u043a\u0438",
+    "slug": "chistiashchie-salfetki",
+    "parent": 211,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 609,
+    "rght": 610,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 229,
+  "fields": {
+    "name": "\u0423\u0442\u044e\u0433\u0438 \u0438 \u043e\u0442\u043f\u0430\u0440\u0438\u0432\u0430\u0442\u0435\u043b\u0438",
+    "slug": "utiugi-i-otparivateli",
+    "parent": 199,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 683,
+    "rght": 700,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 230,
+  "fields": {
+    "name": "\u0423\u0442\u044e\u0433\u0438",
+    "slug": "utiugi",
+    "parent": 229,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 698,
+    "rght": 699,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 231,
+  "fields": {
+    "name": "\u0413\u043b\u0430\u0434\u0438\u043b\u044c\u043d\u044b\u0435 \u0441\u0438\u0441\u0442\u0435\u043c\u044b \u0438 \u043f\u0440\u0435\u0441\u0441\u044b",
+    "slug": "gladilnye-sistemy-i-pressy",
+    "parent": 229,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 688,
+    "rght": 689,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 232,
+  "fields": {
+    "name": "\u0414\u043e\u0440\u043e\u0436\u043d\u044b\u0435 \u0443\u0442\u044e\u0433\u0438",
+    "slug": "dorozhnye-utiugi",
+    "parent": 229,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 692,
+    "rght": 693,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 233,
+  "fields": {
+    "name": "\u041e\u0442\u043f\u0430\u0440\u0438\u0432\u0430\u0442\u0435\u043b\u0438",
+    "slug": "otparivateli",
+    "parent": 229,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 686,
+    "rght": 687,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 234,
+  "fields": {
+    "name": "\u041f\u0430\u0440\u043e\u0433\u0435\u043d\u0435\u0440\u0430\u0442\u043e\u0440\u044b",
+    "slug": "parogeneratory",
+    "parent": 229,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 684,
+    "rght": 685,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 235,
+  "fields": {
+    "name": "\u041d\u0430\u0441\u0430\u0434\u043a\u0438 \u0438 \u043d\u0430\u043a\u043b\u0430\u0434\u043a\u0438",
+    "slug": "nasadki-i-nakladki",
+    "parent": 229,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 696,
+    "rght": 697,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 236,
+  "fields": {
+    "name": "\u0424\u0438\u043b\u044c\u0442\u0440\u044b \u0434\u043b\u044f \u0443\u0442\u044e\u0433\u043e\u0432",
+    "slug": "filtry-dlia-utiugov",
+    "parent": 229,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 694,
+    "rght": 695,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 237,
+  "fields": {
+    "name": "\u0414\u0435\u0440\u0436\u0430\u0442\u0435\u043b\u0438 \u0438 \u043f\u043e\u0434\u0441\u0442\u0430\u0432\u043a\u0438",
+    "slug": "derzhateli-i-podstavki",
+    "parent": 229,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 690,
+    "rght": 691,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 238,
+  "fields": {
+    "name": "\u0428\u0432\u0435\u0439\u043d\u044b\u0435 \u043c\u0430\u0448\u0438\u043d\u044b \u0438 \u0430\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b",
+    "slug": "shveinye-mashiny-i-aksessuary",
+    "parent": 199,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 641,
+    "rght": 678,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 239,
+  "fields": {
+    "name": "\u0428\u0432\u0435\u0439\u043d\u044b\u0435 \u043c\u0430\u0448\u0438\u043d\u044b",
+    "slug": "shveinye-mashiny",
+    "parent": 238,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 672,
+    "rght": 677,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 240,
+  "fields": {
+    "name": "\u0420\u0443\u0447\u043d\u044b\u0435 \u0448\u0432\u0435\u0439\u043d\u044b\u0435 \u043c\u0430\u0448\u0438\u043d\u043a\u0438",
+    "slug": "ruchnye-shveinye-mashinki",
+    "parent": 239,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 675,
+    "rght": 676,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 241,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0448\u0432\u0435\u0439\u043d\u044b\u0435 \u043c\u0430\u0448\u0438\u043d\u043a\u0438",
+    "slug": "elektricheskie-shveinye-mashinki",
+    "parent": 239,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 673,
+    "rght": 674,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 242,
+  "fields": {
+    "name": "\u041a\u043e\u0432\u0435\u0440\u043b\u043e\u043a\u0438",
+    "slug": "koverloki",
+    "parent": 238,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 668,
+    "rght": 669,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 243,
+  "fields": {
+    "name": "\u041e\u0432\u0435\u0440\u043b\u043e\u043a\u0438 \u0438 \u0440\u0430\u0441\u043f\u043e\u0448\u0438\u0432\u0430\u043b\u044c\u043d\u044b\u0435 \u043c\u0430\u0448\u0438\u043d\u044b",
+    "slug": "overloki-i-rasposhivalnye-mashiny",
+    "parent": 238,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 670,
+    "rght": 671,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 244,
+  "fields": {
+    "name": "\u0412\u044b\u0448\u0438\u0432\u0430\u043b\u044c\u043d\u044b\u0435 \u043c\u0430\u0448\u0438\u043d\u044b",
+    "slug": "vyshivalnye-mashiny",
+    "parent": 238,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 644,
+    "rght": 645,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 245,
+  "fields": {
+    "name": "\u0410\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b \u0434\u043b\u044f \u0448\u0432\u0435\u0439\u043d\u044b\u0445 \u043c\u0430\u0448\u0438\u043d",
+    "slug": "aksessuary-dlia-shveinykh-mashin",
+    "parent": 238,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 646,
+    "rght": 667,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 246,
+  "fields": {
+    "name": "\u0418\u0433\u043b\u044b",
+    "slug": "igly",
+    "parent": 245,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 665,
+    "rght": 666,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 247,
+  "fields": {
+    "name": "\u041b\u0430\u043f\u043a\u0438 \u0438 \u0430\u0434\u0430\u043f\u0442\u0435\u0440\u044b",
+    "slug": "lapki-i-adaptery",
+    "parent": 245,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 657,
+    "rght": 658,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 248,
+  "fields": {
+    "name": "\u0428\u043f\u0443\u043b\u044c\u043a\u0438",
+    "slug": "shpulki",
+    "parent": 245,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 651,
+    "rght": 652,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 249,
+  "fields": {
+    "name": "\u041d\u0438\u0442\u0435\u0432\u0434\u0435\u0432\u0430\u0442\u0435\u043b\u0438",
+    "slug": "nitevdevateli",
+    "parent": 245,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 647,
+    "rght": 648,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 250,
+  "fields": {
+    "name": "\u041b\u0430\u043c\u043f\u043e\u0447\u043a\u0438",
+    "slug": "lampochki",
+    "parent": 245,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 649,
+    "rght": 650,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 251,
+  "fields": {
+    "name": "\u041c\u0430\u0441\u043b\u0430",
+    "slug": "masla",
+    "parent": 245,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 663,
+    "rght": 664,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 252,
+  "fields": {
+    "name": "\u0420\u0435\u043c\u043d\u0438",
+    "slug": "remni",
+    "parent": 245,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 661,
+    "rght": 662,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 253,
+  "fields": {
+    "name": "\u0421\u0443\u043c\u043a\u0438 \u0438 \u043a\u043e\u0432\u0440\u0438\u043a\u0438",
+    "slug": "sumki-i-kovriki",
+    "parent": 245,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 659,
+    "rght": 660,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 254,
+  "fields": {
+    "name": "\u041d\u0430\u0431\u043e\u0440\u044b \u0438 \u043e\u0431\u043e\u0440\u0443\u0434\u043e\u0432\u0430\u043d\u0438\u0435",
+    "slug": "nabory-i-oborudovanie",
+    "parent": 245,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 655,
+    "rght": 656,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 256,
+  "fields": {
+    "name": "\u041f\u0440\u043e\u0447\u0438\u0435 \u0430\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b",
+    "slug": "prochie-aksessuary-aksessuary-dlia-shveinykh-mashin",
+    "parent": 245,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 653,
+    "rght": 654,
+    "tree_id": 1,
+    "level": 4
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 257,
+  "fields": {
+    "name": "\u041c\u0435\u0448\u043a\u043e\u0437\u0430\u0448\u0438\u0432\u043e\u0447\u043d\u044b\u0435 \u043c\u0430\u0448\u0438\u043d\u044b",
+    "slug": "meshkozashivochnye-mashiny",
+    "parent": 238,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 642,
+    "rght": 643,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 258,
+  "fields": {
+    "name": "\u041f\u0430\u0440\u043e\u043e\u0447\u0438\u0441\u0442\u0438\u0442\u0435\u043b\u0438",
+    "slug": "paroochistiteli",
+    "parent": 199,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 583,
+    "rght": 584,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 259,
+  "fields": {
+    "name": "\u041f\u0430\u0440\u043e\u0432\u044b\u0435 \u0448\u0432\u0430\u0431\u0440\u044b",
+    "slug": "parovye-shvabry",
+    "parent": 199,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 679,
+    "rght": 680,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 260,
+  "fields": {
+    "name": "\u0421\u0442\u0435\u043a\u043b\u043e\u043e\u0447\u0438\u0441\u0442\u0438\u0442\u0435\u043b\u0438",
+    "slug": "stekloochistiteli",
+    "parent": 199,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 581,
+    "rght": 582,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 261,
+  "fields": {
+    "name": "\u0421\u0443\u0448\u0438\u043b\u043a\u0438 \u0434\u043b\u044f \u0440\u0443\u043a",
+    "slug": "sushilki-dlia-ruk",
+    "parent": 199,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 681,
+    "rght": 682,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 262,
+  "fields": {
+    "name": "\u041a\u043b\u0438\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0442\u0435\u0445\u043d\u0438\u043a\u0430",
+    "slug": "klimaticheskaia-tekhnika",
+    "parent": 1,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 2,
+    "rght": 85,
+    "tree_id": 1,
+    "level": 1
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 263,
+  "fields": {
+    "name": "\u041a\u043e\u043d\u0434\u0438\u0446\u0438\u043e\u043d\u0435\u0440\u044b \u0438 \u0441\u043f\u043b\u0438\u0442-\u0441\u0438\u0441\u0442\u0435\u043c\u044b",
+    "slug": "konditsionery-i-split-sistemy",
+    "parent": 262,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 29,
+    "rght": 44,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 264,
+  "fields": {
+    "name": "\u041a\u043e\u043d\u0434\u0438\u0446\u0438\u043e\u043d\u0435\u0440\u044b",
+    "slug": "konditsionery",
+    "parent": 263,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 30,
+    "rght": 31,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 265,
+  "fields": {
+    "name": "\u0421\u043f\u043b\u0438\u0442-\u0441\u0438\u0441\u0442\u0435\u043c\u044b",
+    "slug": "split-sistemy",
+    "parent": 263,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 42,
+    "rght": 43,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 266,
+  "fields": {
+    "name": "\u041c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0435 \u043a\u043e\u043d\u0434\u0438\u0446\u0438\u043e\u043d\u0435\u0440\u044b",
+    "slug": "mobilnye-konditsionery",
+    "parent": 263,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 36,
+    "rght": 37,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 267,
+  "fields": {
+    "name": "\u0418\u043d\u0432\u0435\u0440\u0442\u043e\u0440\u043d\u044b\u0435 \u043a\u043e\u043d\u0434\u0438\u0446\u0438\u043e\u043d\u0435\u0440\u044b",
+    "slug": "invertornye-konditsionery",
+    "parent": 263,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 32,
+    "rght": 33,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 268,
+  "fields": {
+    "name": "\u0418\u043d\u0432\u0435\u0440\u0442\u043e\u0440\u043d\u044b\u0435 \u0441\u043f\u043b\u0438\u0442-\u0441\u0438\u0441\u0442\u0435\u043c\u044b",
+    "slug": "invertornye-split-sistemy",
+    "parent": 263,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 34,
+    "rght": 35,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 269,
+  "fields": {
+    "name": "\u041e\u043a\u043e\u043d\u043d\u044b\u0435 \u043a\u043e\u043d\u0434\u0438\u0446\u0438\u043e\u043d\u0435\u0440\u044b",
+    "slug": "okonnye-konditsionery",
+    "parent": 263,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 38,
+    "rght": 39,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 270,
+  "fields": {
+    "name": "\u041f\u0443\u043b\u044c\u0442\u044b \u0438 \u044d\u043a\u0440\u0430\u043d\u044b",
+    "slug": "pulty-i-ekrany",
+    "parent": 263,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 40,
+    "rght": 41,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 271,
+  "fields": {
+    "name": "\u0412\u0435\u043d\u0442\u0438\u043b\u044f\u0442\u043e\u0440\u044b",
+    "slug": "ventiliatory",
+    "parent": 262,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 49,
+    "rght": 56,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 272,
+  "fields": {
+    "name": "\u041d\u0430\u043f\u043e\u043b\u044c\u043d\u044b\u0435",
+    "slug": "napolnye",
+    "parent": 271,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 54,
+    "rght": 55,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 273,
+  "fields": {
+    "name": "\u041d\u0430\u0441\u0442\u043e\u043b\u044c\u043d\u044b\u0435",
+    "slug": "nastolnye",
+    "parent": 271,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 50,
+    "rght": 51,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 274,
+  "fields": {
+    "name": "\u041f\u043e\u0434\u0432\u0435\u0441\u043d\u044b\u0435",
+    "slug": "podvesnye",
+    "parent": 271,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 52,
+    "rght": 53,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 275,
+  "fields": {
+    "name": "\u0423\u0432\u043b\u0430\u0436\u043d\u0438\u0442\u0435\u043b\u0438 \u0432\u043e\u0437\u0434\u0443\u0445\u0430 \u0438 \u0430\u0440\u043e\u043c\u0430\u0434\u0438\u0444\u0444\u0443\u0437\u043e\u0440\u044b",
+    "slug": "uvlazhniteli-vozdukha-i-aromadiffuzory",
+    "parent": 262,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 47,
+    "rght": 48,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 276,
+  "fields": {
+    "name": "\u0412\u043e\u0434\u043e\u043d\u0430\u0433\u0440\u0435\u0432\u0430\u0442\u0435\u043b\u0438",
+    "slug": "vodonagrevateli",
+    "parent": 262,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 3,
+    "rght": 14,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 277,
+  "fields": {
+    "name": "\u041d\u0430\u043a\u043e\u043f\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0432\u043e\u0434\u043e\u043d\u0430\u0433\u0440\u0435\u0432\u0430\u0442\u0435\u043b\u0438",
+    "slug": "nakopitelnye-vodonagrevateli",
+    "parent": 276,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 278,
+  "fields": {
+    "name": "\u0413\u0430\u0437\u043e\u0432\u044b\u0435 \u043a\u043e\u043b\u043e\u043d\u043a\u0438",
+    "slug": "gazovye-kolonki",
+    "parent": 276,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 10,
+    "rght": 11,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 279,
+  "fields": {
+    "name": "\u041f\u0440\u043e\u0442\u043e\u0447\u043d\u044b\u0435 \u0432\u043e\u0434\u043e\u043d\u0430\u0433\u0440\u0435\u0432\u0430\u0442\u0435\u043b\u0438",
+    "slug": "protochnye-vodonagrevateli",
+    "parent": 276,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 280,
+  "fields": {
+    "name": "\u0421\u043e\u043b\u043d\u0435\u0447\u043d\u044b\u0435 \u0432\u043e\u0434\u043e\u043d\u0430\u0433\u0440\u0435\u0432\u0430\u0442\u0435\u043b\u0438",
+    "slug": "solnechnye-vodonagrevateli",
+    "parent": 276,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 281,
+  "fields": {
+    "name": "\u0422\u044d\u043d\u044b \u0434\u043b\u044f \u0432\u043e\u0434\u043e\u043d\u0430\u0433\u0440\u0435\u0432\u0430\u0442\u0435\u043b\u0435\u0439",
+    "slug": "teny-dlia-vodonagrevatelei",
+    "parent": 276,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 12,
+    "rght": 13,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 282,
+  "fields": {
+    "name": "\u0412\u0435\u043d\u0442\u0438\u043b\u044f\u0442\u043e\u0440\u044b \u0432\u044b\u0442\u044f\u0436\u043d\u044b\u0435, \u0434\u0435\u0444\u043b\u0435\u043a\u0442\u043e\u0440\u044b \u0438 \u0440\u0435\u0448\u0435\u0442\u043a\u0438",
+    "slug": "ventiliatory-vytiazhnye-deflektory-i-reshetki",
+    "parent": 262,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 45,
+    "rght": 46,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 283,
+  "fields": {
+    "name": "\u041e\u0445\u043b\u0430\u0434\u0438\u0442\u0435\u043b\u0438 \u0432\u043e\u0437\u0434\u0443\u0445\u0430",
+    "slug": "okhladiteli-vozdukha",
+    "parent": 262,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 59,
+    "rght": 60,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 284,
+  "fields": {
+    "name": "\u041e\u0447\u0438\u0441\u0442\u0438\u0442\u0435\u043b\u0438 \u0432\u043e\u0437\u0434\u0443\u0445\u0430",
+    "slug": "ochistiteli-vozdukha",
+    "parent": 262,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 57,
+    "rght": 58,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 285,
+  "fields": {
+    "name": "\u041c\u043e\u0439\u043a\u0438 \u0432\u043e\u0437\u0434\u0443\u0445\u0430",
+    "slug": "moiki-vozdukha",
+    "parent": 262,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 83,
+    "rght": 84,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 286,
+  "fields": {
+    "name": "\u041e\u0441\u0443\u0448\u0438\u0442\u0435\u043b\u0438 \u0432\u043e\u0437\u0434\u0443\u0445\u0430",
+    "slug": "osushiteli-vozdukha",
+    "parent": 262,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 73,
+    "rght": 74,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 287,
+  "fields": {
+    "name": "\u041e\u0431\u043e\u0433\u0440\u0435\u0432\u0430\u0442\u0435\u043b\u0438 \u0438 \u0442\u0435\u043f\u043b\u043e\u0432\u0435\u043d\u0442\u0438\u043b\u044f\u0442\u043e\u0440\u044b",
+    "slug": "obogrevateli-i-teploventiliatory",
+    "parent": 262,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 15,
+    "rght": 28,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 288,
+  "fields": {
+    "name": "\u041e\u0431\u043e\u0433\u0440\u0435\u0432\u0430\u0442\u0435\u043b\u0438",
+    "slug": "obogrevateli",
+    "parent": 287,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 20,
+    "rght": 21,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 289,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043a\u0430\u043c\u0438\u043d\u044b",
+    "slug": "elektrokaminy",
+    "parent": 287,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 18,
+    "rght": 19,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 290,
+  "fields": {
+    "name": "\u0422\u0435\u043f\u043b\u043e\u0432\u0435\u043d\u0442\u0438\u043b\u044f\u0442\u043e\u0440\u044b",
+    "slug": "teploventiliatory",
+    "parent": 287,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 16,
+    "rght": 17,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 291,
+  "fields": {
+    "name": "\u0422\u0435\u043f\u043b\u043e\u0432\u044b\u0435 \u043f\u0443\u0448\u043a\u0438",
+    "slug": "teplovye-pushki",
+    "parent": 287,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 26,
+    "rght": 27,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 292,
+  "fields": {
+    "name": "\u0412\u043e\u0437\u0434\u0443\u0448\u043d\u044b\u0435 \u0437\u0430\u0432\u0435\u0441\u044b",
+    "slug": "vozdushnye-zavesy",
+    "parent": 287,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 24,
+    "rght": 25,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 293,
+  "fields": {
+    "name": "\u0410\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b \u0434\u043b\u044f \u043e\u0431\u043e\u0433\u0440\u0435\u0432\u0430\u0442\u0435\u043b\u0435\u0439",
+    "slug": "aksessuary-dlia-obogrevatelei",
+    "parent": 287,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 22,
+    "rght": 23,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 294,
+  "fields": {
+    "name": "\u041f\u043e\u0433\u043e\u0434\u043d\u044b\u0435 \u0441\u0442\u0430\u043d\u0446\u0438\u0438 \u0438 \u0434\u0430\u0442\u0447\u0438\u043a\u0438",
+    "slug": "pogodnye-stantsii-i-datchiki",
+    "parent": 262,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 75,
+    "rght": 82,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 295,
+  "fields": {
+    "name": "\u041f\u043e\u0433\u043e\u0434\u043d\u044b\u0435 \u0441\u0442\u0430\u043d\u0446\u0438\u0438",
+    "slug": "pogodnye-stantsii",
+    "parent": 294,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 76,
+    "rght": 77,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 296,
+  "fields": {
+    "name": "\u0414\u0430\u0442\u0447\u0438\u043a\u0438 \u043f\u043e\u0433\u043e\u0434\u043d\u043e\u0439 \u0441\u0442\u0430\u043d\u0446\u0438\u0438",
+    "slug": "datchiki-pogodnoi-stantsii",
+    "parent": 294,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 80,
+    "rght": 81,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 297,
+  "fields": {
+    "name": "\u0414\u0430\u0442\u0447\u0438\u043a\u0438 \u043c\u0438\u043a\u0440\u043e\u043a\u043b\u0438\u043c\u0430\u0442\u0430",
+    "slug": "datchiki-mikroklimata",
+    "parent": 294,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 78,
+    "rght": 79,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 298,
+  "fields": {
+    "name": "\u0420\u0430\u0441\u0445\u043e\u0434\u043d\u044b\u0435 \u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u044b",
+    "slug": "raskhodnye-materialy",
+    "parent": 262,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 61,
+    "rght": 72,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 299,
+  "fields": {
+    "name": "\u0424\u0438\u043b\u044c\u0442\u0440\u044b \u0434\u043b\u044f \u0443\u0432\u043b\u0430\u0436\u043d\u0438\u0442\u0435\u043b\u0435\u0439",
+    "slug": "filtry-dlia-uvlazhnitelei",
+    "parent": 298,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 70,
+    "rght": 71,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 300,
+  "fields": {
+    "name": "\u0424\u0438\u043b\u044c\u0442\u0440\u044b \u0434\u043b\u044f \u0432\u043e\u0437\u0434\u0443\u0445\u043e\u043e\u0447\u0438\u0441\u0442\u0438\u0442\u0435\u043b\u0435\u0439",
+    "slug": "filtry-dlia-vozdukhoochistitelei",
+    "parent": 298,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 68,
+    "rght": 69,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 301,
+  "fields": {
+    "name": "\u0421\u043c\u0435\u043d\u043d\u044b\u0435 \u0444\u0438\u043b\u044c\u0442\u0440\u044b, \u043c\u0430\u0441\u043b\u0430 \u0438 \u0447\u0438\u0441\u0442\u044f\u0449\u0438\u0435 \u0441\u0440\u0435\u0434\u0441\u0442\u0432\u0430",
+    "slug": "smennye-filtry-masla-i-chistiashchie-sredstva",
+    "parent": 298,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 66,
+    "rght": 67,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 302,
+  "fields": {
+    "name": "\u0416\u0438\u0434\u043a\u043e\u0441\u0442\u0438 \u0434\u043b\u044f \u0441\u0443\u0445\u043e\u0433\u043e \u0442\u0443\u043c\u0430\u043d\u0430",
+    "slug": "zhidkosti-dlia-sukhogo-tumana",
+    "parent": 298,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 64,
+    "rght": 65,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 303,
+  "fields": {
+    "name": "\u0424\u0438\u0442\u043e\u043a\u043e\u043d\u0446\u0435\u043d\u0442\u0440\u0430\u0442\u044b \u0434\u043b\u044f \u0443\u043b\u044c\u0442\u0440\u0430\u0437\u0432\u0443\u043a\u043e\u0432\u044b\u0445 \u0430\u0440\u043e\u043c\u0430\u0434\u0438\u0444\u0444\u0443\u0437\u0435\u0440\u043e\u0432",
+    "slug": "fitokontsentraty-dlia-ultrazvukovykh-aromadiffuzerov",
+    "parent": 298,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 62,
+    "rght": 63,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 304,
+  "fields": {
+    "name": "\u0422\u0435\u0445\u043d\u0438\u043a\u0430 \u0434\u043b\u044f \u043a\u0440\u0430\u0441\u043e\u0442\u044b \u0438 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f",
+    "slug": "tekhnika-dlia-krasoty-i-zdorovia",
+    "parent": 1,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 180,
+    "rght": 285,
+    "tree_id": 1,
+    "level": 1
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 305,
+  "fields": {
+    "name": "\u0424\u0435\u043d\u044b \u0438 \u0442\u0435\u0440\u043c\u043e\u0449\u0435\u0442\u043a\u0438",
+    "slug": "feny-i-termoshchetki",
+    "parent": 304,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 275,
+    "rght": 284,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 306,
+  "fields": {
+    "name": "\u0424\u0435\u043d\u044b",
+    "slug": "feny",
+    "parent": 305,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 282,
+    "rght": 283,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 307,
+  "fields": {
+    "name": "\u0424\u0435\u043d\u044b-\u0449\u0435\u0442\u043a\u0438",
+    "slug": "feny-shchetki",
+    "parent": 305,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 280,
+    "rght": 281,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 308,
+  "fields": {
+    "name": "\u0422\u0435\u0440\u043c\u043e\u0449\u0435\u0442\u043a\u0438",
+    "slug": "termoshchetki",
+    "parent": 305,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 276,
+    "rght": 277,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 309,
+  "fields": {
+    "name": "\u041d\u0430\u0441\u0430\u0434\u043a\u0438 \u0434\u043b\u044f \u0444\u0435\u043d\u043e\u0432",
+    "slug": "nasadki-dlia-fenov",
+    "parent": 305,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 278,
+    "rght": 279,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 310,
+  "fields": {
+    "name": "\u042d\u043f\u0438\u043b\u044f\u0442\u043e\u0440\u044b \u0438 \u0430\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b",
+    "slug": "epiliatory-i-aksessuary",
+    "parent": 304,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 235,
+    "rght": 242,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 311,
+  "fields": {
+    "name": "\u042d\u043f\u0438\u043b\u044f\u0442\u043e\u0440\u044b",
+    "slug": "epiliatory",
+    "parent": 310,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 238,
+    "rght": 239,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 313,
+  "fields": {
+    "name": "\u041d\u0430\u0441\u0430\u0434\u043a\u0438",
+    "slug": "nasadki-epiliatory-i-aksessuary",
+    "parent": 310,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 240,
+    "rght": 241,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 314,
+  "fields": {
+    "name": "\u041a\u0430\u0440\u0442\u0440\u0438\u0434\u0436\u0438 \u0434\u043b\u044f \u0444\u043e\u0442\u043e\u044d\u043f\u0438\u043b\u044f\u0442\u043e\u0440\u043e\u0432",
+    "slug": "kartridzhi-dlia-fotoepiliatorov",
+    "parent": 310,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 236,
+    "rght": 237,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 315,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0437\u0443\u0431\u043d\u044b\u0435 \u0449\u0435\u0442\u043a\u0438 \u0438 \u0430\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b",
+    "slug": "elektricheskie-zubnye-shchetki-i-aksessuary",
+    "parent": 304,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 181,
+    "rght": 190,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 316,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0437\u0443\u0431\u043d\u044b\u0435 \u0449\u0435\u0442\u043a\u0438",
+    "slug": "elektricheskie-zubnye-shchetki",
+    "parent": 315,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 182,
+    "rght": 183,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 317,
+  "fields": {
+    "name": "\u0418\u0440\u0440\u0438\u0433\u0430\u0442\u043e\u0440\u044b",
+    "slug": "irrigatory",
+    "parent": 315,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 186,
+    "rght": 187,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 319,
+  "fields": {
+    "name": "\u041d\u0430\u0441\u0430\u0434\u043a\u0438",
+    "slug": "nasadki-elektricheskie-zubnye-shchetki-i-aksessuary",
+    "parent": 315,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 188,
+    "rght": 189,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 320,
+  "fields": {
+    "name": "\u0421\u0442\u0435\u0440\u0438\u043b\u0438\u0437\u0430\u0442\u043e\u0440\u044b \u0437\u0443\u0431\u043d\u044b\u0445 \u0449\u0435\u0442\u043e\u043a",
+    "slug": "sterilizatory-zubnykh-shchetok",
+    "parent": 315,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 184,
+    "rght": 185,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 321,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u0431\u0440\u0438\u0442\u0432\u044b \u0438 \u0430\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b",
+    "slug": "elektrobritvy-i-aksessuary",
+    "parent": 304,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 191,
+    "rght": 202,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 322,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u0431\u0440\u0438\u0442\u0432\u044b",
+    "slug": "elektrobritvy",
+    "parent": 321,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 192,
+    "rght": 193,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 323,
+  "fields": {
+    "name": "\u0411\u0440\u0438\u0442\u0432\u0435\u043d\u043d\u044b\u0435 \u0433\u043e\u043b\u043e\u0432\u043a\u0438 \u0438 \u0441\u0435\u0442\u043a\u0438",
+    "slug": "britvennye-golovki-i-setki",
+    "parent": 321,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 194,
+    "rght": 195,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 325,
+  "fields": {
+    "name": "\u0427\u0435\u0445\u043b\u044b",
+    "slug": "chekhly-elektrobritvy-i-aksessuary",
+    "parent": 321,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 200,
+    "rght": 201,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 326,
+  "fields": {
+    "name": "\u0421\u043c\u0435\u043d\u043d\u044b\u0435 \u043a\u0430\u0440\u0442\u0440\u0438\u0434\u0436\u0438 \u0434\u043b\u044f \u043e\u0447\u0438\u0441\u0442\u043a\u0438",
+    "slug": "smennye-kartridzhi-dlia-ochistki",
+    "parent": 321,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 198,
+    "rght": 199,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 327,
+  "fields": {
+    "name": "\u0421\u0440\u0435\u0434\u0441\u0442\u0432\u0430 \u0434\u043b\u044f \u0441\u0438\u0441\u0442\u0435\u043c\u044b \u043e\u0447\u0438\u0441\u0442\u043a\u0438",
+    "slug": "sredstva-dlia-sistemy-ochistki",
+    "parent": 321,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 196,
+    "rght": 197,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 328,
+  "fields": {
+    "name": "\u0423\u0442\u044e\u0436\u043a\u0438 \u0438 \u0432\u044b\u043f\u0440\u044f\u043c\u0438\u0442\u0435\u043b\u0438 \u0434\u043b\u044f \u0432\u043e\u043b\u043e\u0441",
+    "slug": "utiuzhki-i-vypriamiteli-dlia-volos",
+    "parent": 304,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 263,
+    "rght": 264,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 329,
+  "fields": {
+    "name": "\u0412\u044b\u043f\u0440\u044f\u043c\u0438\u0442\u0435\u043b\u0438 \u0434\u043b\u044f \u0432\u043e\u043b\u043e\u0441",
+    "slug": "vypriamiteli-dlia-volos",
+    "parent": 304,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 205,
+    "rght": 206,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 330,
+  "fields": {
+    "name": "\u0429\u0438\u043f\u0446\u044b \u0434\u043b\u044f \u0437\u0430\u0432\u0438\u0432\u043a\u0438 \u0438 \u0430\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b",
+    "slug": "shchiptsy-dlia-zavivki-i-aksessuary",
+    "parent": 304,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 265,
+    "rght": 274,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 331,
+  "fields": {
+    "name": "\u0429\u0438\u043f\u0446\u044b \u0434\u043b\u044f \u0437\u0430\u0432\u0438\u0432\u043a\u0438",
+    "slug": "shchiptsy-dlia-zavivki",
+    "parent": 330,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 272,
+    "rght": 273,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 332,
+  "fields": {
+    "name": "\u041c\u0443\u043b\u044c\u0442\u0438\u0441\u0442\u0430\u0439\u043b\u0435\u0440\u044b",
+    "slug": "multistailery",
+    "parent": 330,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 266,
+    "rght": 267,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 333,
+  "fields": {
+    "name": "\u041f\u0440\u0438\u0431\u043e\u0440\u044b \u0434\u043b\u044f \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0437\u0430\u0432\u0438\u0432\u043a\u0438",
+    "slug": "pribory-dlia-avtomaticheskoi-zavivki",
+    "parent": 330,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 268,
+    "rght": 269,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 334,
+  "fields": {
+    "name": "\u041d\u0430\u0441\u0430\u0434\u043a\u0438 \u0434\u043b\u044f \u0449\u0438\u043f\u0446\u043e\u0432",
+    "slug": "nasadki-dlia-shchiptsov",
+    "parent": 330,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 270,
+    "rght": 271,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 335,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u0431\u0438\u0433\u0443\u0434\u0438",
+    "slug": "elektrobigudi",
+    "parent": 304,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 203,
+    "rght": 204,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 336,
+  "fields": {
+    "name": "\u041c\u0430\u0448\u0438\u043d\u043a\u0438 \u0434\u043b\u044f \u0441\u0442\u0440\u0438\u0436\u043a\u0438 \u0432\u043e\u043b\u043e\u0441 \u0438 \u0430\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b",
+    "slug": "mashinki-dlia-strizhki-volos-i-aksessuary",
+    "parent": 304,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 255,
+    "rght": 262,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 337,
+  "fields": {
+    "name": "\u041c\u0430\u0448\u0438\u043d\u043a\u0438 \u0434\u043b\u044f \u0441\u0442\u0440\u0438\u0436\u043a\u0438",
+    "slug": "mashinki-dlia-strizhki",
+    "parent": 336,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 256,
+    "rght": 257,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 339,
+  "fields": {
+    "name": "\u041d\u0430\u0441\u0430\u0434\u043a\u0438",
+    "slug": "nasadki-mashinki-dlia-strizhki-volos-i-aksessuary",
+    "parent": 336,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 258,
+    "rght": 259,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 340,
+  "fields": {
+    "name": "\u041c\u0430\u0441\u043b\u0430 \u0434\u043b\u044f \u0443\u0445\u043e\u0434\u0430",
+    "slug": "masla-dlia-ukhoda",
+    "parent": 336,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 260,
+    "rght": 261,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 341,
+  "fields": {
+    "name": "\u0422\u0440\u0438\u043c\u043c\u0435\u0440\u044b \u0434\u043b\u044f \u0432\u043e\u043b\u043e\u0441",
+    "slug": "trimmery-dlia-volos",
+    "parent": 304,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 243,
+    "rght": 254,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 342,
+  "fields": {
+    "name": "\u0422\u0440\u0438\u043c\u043c\u0435\u0440\u044b",
+    "slug": "trimmery",
+    "parent": 341,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 248,
+    "rght": 249,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 343,
+  "fields": {
+    "name": "\u0422\u0440\u0438\u043c\u043c\u0435\u0440\u044b \u0434\u043b\u044f \u0431\u043e\u0440\u043e\u0434\u044b \u0438 \u0443\u0441\u043e\u0432",
+    "slug": "trimmery-dlia-borody-i-usov",
+    "parent": 341,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 244,
+    "rght": 245,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 344,
+  "fields": {
+    "name": "\u0422\u0440\u0438\u043c\u043c\u0435\u0440\u044b \u0434\u043b\u044f \u043d\u043e\u0441\u0430 \u0438 \u0443\u0448\u0435\u0439",
+    "slug": "trimmery-dlia-nosa-i-ushei",
+    "parent": 341,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 246,
+    "rght": 247,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 345,
+  "fields": {
+    "name": "\u0416\u0435\u043d\u0441\u043a\u0438\u0435 \u0442\u0440\u0438\u043c\u043c\u0435\u0440\u044b",
+    "slug": "zhenskie-trimmery",
+    "parent": 341,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 250,
+    "rght": 251,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 346,
+  "fields": {
+    "name": "\u0421\u043c\u0435\u043d\u043d\u044b\u0435 \u043b\u0435\u0437\u0432\u0438\u044f \u0434\u043b\u044f \u0442\u0440\u0438\u043c\u043c\u0435\u0440\u043e\u0432",
+    "slug": "smennye-lezviia-dlia-trimmerov",
+    "parent": 341,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 252,
+    "rght": 253,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 347,
+  "fields": {
+    "name": "\u041c\u0430\u0441\u0441\u0430\u0436\u043d\u043e\u0435 \u043e\u0431\u043e\u0440\u0443\u0434\u043e\u0432\u0430\u043d\u0438\u0435 \u0438 \u0430\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b",
+    "slug": "massazhnoe-oborudovanie-i-aksessuary",
+    "parent": 304,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 207,
+    "rght": 228,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 348,
+  "fields": {
+    "name": "\u041c\u0430\u0441\u0441\u0430\u0436\u0435\u0440\u044b",
+    "slug": "massazhery",
+    "parent": 347,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 226,
+    "rght": 227,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 349,
+  "fields": {
+    "name": "\u041c\u0430\u0441\u0441\u0430\u0436\u043d\u044b\u0435 \u043d\u0430\u043a\u0438\u0434\u043a\u0438",
+    "slug": "massazhnye-nakidki",
+    "parent": 347,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 214,
+    "rght": 215,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 350,
+  "fields": {
+    "name": "\u041c\u0430\u0441\u0441\u0430\u0436\u043d\u044b\u0435 \u043f\u043e\u0434\u0443\u0448\u043a\u0438",
+    "slug": "massazhnye-podushki",
+    "parent": 347,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 212,
+    "rght": 213,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 351,
+  "fields": {
+    "name": "\u041c\u0430\u0441\u0441\u0430\u0436\u043d\u044b\u0435 \u0441\u0442\u043e\u043b\u044b",
+    "slug": "massazhnye-stoly",
+    "parent": 347,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 222,
+    "rght": 223,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 352,
+  "fields": {
+    "name": "\u041c\u0430\u0441\u0441\u0430\u0436\u043d\u044b\u0435 \u043f\u043e\u0434\u0443\u0448\u043a\u0438 \u0434\u043b\u044f \u0430\u0432\u0442\u043e",
+    "slug": "massazhnye-podushki-dlia-avto",
+    "parent": 347,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 210,
+    "rght": 211,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 353,
+  "fields": {
+    "name": "\u041c\u0430\u0441\u0441\u0430\u0436\u043d\u044b\u0435 \u043a\u0440\u0435\u0441\u043b\u0430",
+    "slug": "massazhnye-kresla",
+    "parent": 347,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 220,
+    "rght": 221,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 354,
+  "fields": {
+    "name": "\u041c\u0430\u0441\u0441\u0430\u0436\u043d\u044b\u0435 \u043c\u0430\u0442\u0440\u0430\u0441\u044b",
+    "slug": "massazhnye-matrasy",
+    "parent": 347,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 216,
+    "rght": 217,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 355,
+  "fields": {
+    "name": "\u041c\u0430\u0441\u0441\u0430\u0436\u043d\u044b\u0435 \u043a\u0440\u043e\u0432\u0430\u0442\u0438",
+    "slug": "massazhnye-krovati",
+    "parent": 347,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 218,
+    "rght": 219,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 356,
+  "fields": {
+    "name": "\u041c\u0430\u0441\u0441\u0430\u0436\u0435\u0440\u044b \u0434\u043b\u044f \u043b\u0438\u0446\u0430",
+    "slug": "massazhery-dlia-litsa",
+    "parent": 347,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 224,
+    "rght": 225,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 357,
+  "fields": {
+    "name": "\u0413\u0438\u0434\u0440\u043e\u043c\u0430\u0441\u0441\u0430\u0436\u043d\u044b\u0435 \u0432\u0430\u043d\u043d\u044b",
+    "slug": "gidromassazhnye-vanny",
+    "parent": 347,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 208,
+    "rght": 209,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 358,
+  "fields": {
+    "name": "\u041d\u0430\u043f\u043e\u043b\u044c\u043d\u044b\u0435 \u0432\u0435\u0441\u044b",
+    "slug": "napolnye-vesy",
+    "parent": 304,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 229,
+    "rght": 234,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 359,
+  "fields": {
+    "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u044b\u0435 \u043d\u0430\u043f\u043e\u043b\u044c\u043d\u044b\u0435 \u0432\u0435\u0441\u044b",
+    "slug": "elektronnye-napolnye-vesy",
+    "parent": 358,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 232,
+    "rght": 233,
+    "tree_id": 1,
+    "level": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 360,
+  "fields": {
+    "name": "\u041c\u0435\u0445\u0430\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u043d\u0430\u043f\u043e\u043b\u044c\u043d\u044b\u0435 \u0432\u0435\u0441\u044b",
+    "slug": "mekhanicheskie-napolnye-vesy",
+    "parent": 358,
+    "description": null,
+    "short_description": null,
+    "favorites": false,
+    "category_image": "",
+    "lft": 230,
+    "rght": 231,
+    "tree_id": 1,
+    "level": 3
+  }
+}
+]

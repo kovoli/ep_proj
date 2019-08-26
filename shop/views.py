@@ -18,7 +18,7 @@ def home_page(request):
 
 def product_detail(request, slug):
     product = get_object_or_404(Product, slug=slug)
-    breadcrumbs = Category.get_ancestors(product.category)
+    breadcrumbs = Category.get_ancestors(product.category, include_self=True)
     product.views = F('views') + 1
     product.save()
     product.refresh_from_db(fields=['views'])
@@ -62,61 +62,54 @@ def category_catalog(request, slug=None):
 
     if category.get_level() >= 2:
 
-
-        list_pro = Product.objects.filter(category__in=Category.objects.get(id=category.id).get_descendants(include_self=True)).annotate(min_price=Min('prices__price')).order_by('-views')
-
-        products_list = helpers.pg_records(request, list_pro, 150)
-
         category = get_object_or_404(Category, slug=slug)
         cat = category.get_descendants(include_self=True).order_by('tree_id', 'id', 'name')
         last_node = category.get_siblings(include_self=True)
 
-        # -------- Форма для фильтрации
-        filter_form = FilterForm(request.GET, attr=category.attribute.all())
         # -------- Если категория равно уровню два и больше выводяться товары
-        if category.get_level() >= 2:
-            list_pro = Product.objects.filter(category__in=Category.objects.get(id=category.id) \
-                                                .get_descendants(include_self=True)) \
-                                                .annotate(min_price=Min('prices__price')).order_by('-views')
-            vendors_ids = list_pro.values_list('vendor_id', flat=True).order_by().distinct()
 
-            filter_form.fields['brand'].queryset = Vendor.objects.filter(id__in=vendors_ids)
+        list_pro = Product.objects.filter(category__in=Category.objects.get(id=category.id)
+                                          .get_descendants(include_self=True))\
+                                          .annotate(min_price=Min('prices__price')).order_by('-views')
 
-            products_list = helpers.pg_records(request, list_pro, 52)
-            # ------- Фильтрация по брендам
-            if filter_form.is_valid():
-                if filter_form.cleaned_data['brand']:
-                    list_pro = Product.objects.filter(category__in=Category.objects.get(id=category.id) \
-                                                      .get_descendants(include_self=True)) \
-                        .annotate(min_price=Min('prices__price')) \
-                        .filter(vendor__in=filter_form.cleaned_data['brand']).order_by('-views')
-                    products_list = helpers.pg_records(request, list_pro, 100)
-                # ------- Цена от и больше
-                if filter_form.cleaned_data['min_price']:
-                    list_pro = list_pro.filter(prices__price__gte=filter_form.cleaned_data['min_price']).order_by(
-                        '-views')
-                    products_list = helpers.pg_records(request, list_pro, 100)
-                # ------- Цена до и меньше
-                if filter_form.cleaned_data['max_price']:
-                    list_pro = list_pro.filter(prices__price__lte=filter_form.cleaned_data['max_price']).order_by(
-                        '-views')
-                    products_list = helpers.pg_records(request, list_pro, 100)
-                # ------- Фильтр по цене вверх и вниз и популярность
-                if filter_form.cleaned_data['ordering']:
-                    list_pro = list_pro.order_by(filter_form.cleaned_data['ordering'])
-                    products_list = helpers.pg_records(request, list_pro, 100)
+        vendors_ids = list_pro.values_list('vendor_id', flat=True).order_by().distinct()
+        # -------- Форма для фильтрации
+        filter_form = FilterForm(request.GET)  # , attr=category.attribute.all()
+        filter_form.fields['brand'].queryset = Vendor.objects.filter(id__in=vendors_ids)
 
+        products_list = helpers.pg_records(request, list_pro, 52)
+        # ------- Фильтрация по брендам
+        if filter_form.is_valid():
+            if filter_form.cleaned_data['brand']:
+                list_pro = Product.objects.filter(category__in=Category.objects.get(id=category.id) \
+                                                  .get_descendants(include_self=True)) \
+                    .annotate(min_price=Min('prices__price')) \
+                    .filter(vendor__in=filter_form.cleaned_data['brand']).order_by('-views')
+                products_list = helpers.pg_records(request, list_pro, 100)
+            # ------- Цена от и больше
+            if filter_form.cleaned_data['min_price']:
+                list_pro = list_pro.filter(prices__price__gte=filter_form.cleaned_data['min_price']).order_by(
+                    '-views')
+                products_list = helpers.pg_records(request, list_pro, 100)
+            # ------- Цена до и меньше
+            if filter_form.cleaned_data['max_price']:
+                list_pro = list_pro.filter(prices__price__lte=filter_form.cleaned_data['max_price']).order_by(
+                    '-views')
+                products_list = helpers.pg_records(request, list_pro, 100)
+            # ------- Фильтр по цене вверх и вниз и популярность
+            if filter_form.cleaned_data['ordering']:
+                list_pro = list_pro.order_by(filter_form.cleaned_data['ordering'])
+                products_list = helpers.pg_records(request, list_pro, 100)
+            """if category.attribute:
                 for form_name in filter_form.fields:
                     if filter_form.cleaned_data[form_name]:
                         list_pro = list_pro.filter(value__icontains=filter_form.cleaned_data[form_name])
-                        products_list = helpers.pg_records(request, list_pro, 100)
+                        products_list = helpers.pg_records(request, list_pro, 100)"""
 
             return render(request, 'shop/category_product_list.html', {'products_list': products_list,
                                                                    'category': category,
-
                                                                    'cat': cat,
                                                                    'last_node': last_node,
-
                                                                    'breadcrumbs': breadcrumbs,
                                                                    'filter_form': filter_form,
                                                                    })
