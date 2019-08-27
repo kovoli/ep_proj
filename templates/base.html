@@ -65,17 +65,14 @@
                                         {% endif %}
                                     {% endfor %}
                                     </ul>
-
                                 </div>
                                 <!-- Category Nav End -->
-
                             </div>
                         </div>
                         <div class="col-xl-8 col-lg-7 order-3 order-lg-2">
                             <!-- Search Form Start -->
-                            <form action="#" class="search-form search-form--1">
-                                <input type="text" class="search-form__input" placeholder="Что вы ищете?">
-
+                            <form action="{% url 'shop:search_products' %}" method="get" class="search-form search-form--1">
+                                <input type="text" name="q" class="search-form__input" placeholder="Что вы ищете?">
                                 <button class="search-form__submit form-btn">
                                     <i class="fa fa-search"></i>
                                 </button>

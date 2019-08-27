@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="main-shop-wrapper">
+    <div class="product-grid-view">
+        <div class="row no-gutters">
+            {% for product in products_list %}
+            <div class="col-xl-3 col-md-6">
+                        <!-- Product Box Start -->
+            <a href="{{ product.get_absolute_url }}">
+                <div class="product-box variable-product">
+                    <div class="product-box__image">
+                        <img src="{% if product.product_image_category %}{{ product.product_image_category.url }}{% else %}{% static 'images/zagluschka.png' %}{% endif %}" alt="{{ product.name }}" class="primary_image" height="160">
+                    </div>
+                    <div class="product-box__footer">
+                        <div class="product-box__desc">
+                            <p class="product-box__title">{{ product.name }}</p>
+                            <p class="product-box__price">
+                                <p class="product-box__price">
+                                    <span class="sale-price">от {{ product.min_price }} &#8381;</span>
+                                </p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+                <!-- Product Box End -->
+            </div>
+            {% empty %}
+                <div>К сожалению по данным параметрам в категории {{ category.name }} товаров нет. </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

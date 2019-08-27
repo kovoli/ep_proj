@@ -58,6 +58,7 @@ INDEX:
 
 */
 @import url("https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,500,600,700,800,900");
+
 /*****************************
 00. Global CSS
 *****************************/
@@ -2671,8 +2672,9 @@ Category Navigation
         right: 2rem;
         top: 50%;
         color: #2c2e3d;
-        font-family: fontAwesome;
+        font-family: Font Awesome\ 5 Free;
         font-size: 1.6rem;
+        font-weight: 900;
         -webkit-transform: translateY(-50%);
         -moz-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
