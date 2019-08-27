@@ -2,35 +2,67 @@
 {% load static %}
 
 {% block content %}
-<div class="main-shop-wrapper">
-    <div class="product-grid-view">
-        <div class="row no-gutters">
-        Поиск
-            {% for product in products_list %}
-            <div class="col-xl-3 col-md-6">
-                        <!-- Product Box Start -->
-            <a href="{{ product.get_absolute_url }}">
-                <div class="product-box variable-product">
-                    <div class="product-box__image">
-                        <img src="{% if product.product_image_category %}{{ product.product_image_category.url }}{% else %}{% static 'images/zagluschka.png' %}{% endif %}" alt="{{ product.name }}" class="primary_image" height="160">
-                    </div>
-                    <div class="product-box__footer">
-                        <div class="product-box__desc">
-                            <p class="product-box__title">{{ product.name }}</p>
-                            <p class="product-box__price">
-                                <p class="product-box__price">
-                                    <span class="sale-price">от {{ product.min_price }} &#8381;</span>
-                                </p>
-                            </p>
+<div class="main-content-wrapper">
+    <div class="shop-area section-padding">
+        <div class="container-fluid">
+        <h2 class="my-4 text-center">"{{ search_list.count }}" совпадений по запросу - "{{ q|upper }}"</h2>
+        <div class="main-shop-wrapper">
+            <div class="product-grid-view">
+                <div class="row no-gutters">
+                    {% for product in products_list %}
+                    <div class="col-xl-2 col-md-6">
+                                <!-- Product Box Start -->
+                    <a href="{{ product.get_absolute_url }}">
+                        <div class="product-box variable-product">
+                            <div class="product-box__image">
+                                <img src="{% if product.product_image_category %}{{ product.product_image_category.url }}{% else %}{% static 'images/zagluschka.png' %}{% endif %}" alt="{{ product.name }}" class="primary_image" height="160">
+                            </div>
+                            <div class="product-box__footer">
+                                <div class="product-box__desc">
+                                    <p class="product-box__title">{{ product.name }}</p>
+                                    <p class="product-box__price">
+                                        <p class="product-box__price">
+                                            <span class="sale-price">от {{ product.min_price }} &#8381;</span>
+                                        </p>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
+                    </a>
+                        <!-- Product Box End -->
                     </div>
+                    {% empty %}
+                        <div>К сожалению поиск не дал результатов, попробуйте подобрать другое ключевое слово!</div>
+                    {% endfor %}
                 </div>
-            </a>
-                <!-- Product Box End -->
             </div>
-            {% empty %}
-                <div>К сожалению по данным параметрам в категории {{ category.name }} товаров нет. </div>
-            {% endfor %}
+        </div>
+        <!-- Pagination -->
+        {% if products_list.has_other_pages %}
+            <div class="product-pagintaion d-flex flex-column justify-content-between align-items-md-center">
+                <ul class="page-list">
+                    {% if products_list.has_previous %}
+                        <li><a href="?page=1{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"><i class="fas fa-angle-double-left"></i></a></li>
+                        <li><a href="?page={{ products_list.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"><i class="fas fa-angle-left"></i></a></li>
+                    {% endif %}
+                    {% for i in products_list.paginator.page_range %}
+
+                        {% if products_list.number == i %}
+                            <li class="current">
+                                <a>{{ i }}</a>
+                            </li>
+                        {% elif i|add:"-5" <= products_list.number and products_list.number <= i|add:"2" %}
+                            <li><a href="?page={{ i }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{ i }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if products_list.has_next %}
+                        <li><a href="?page={{ products_list.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"><i class="fas fa-angle-right"></i></a></li>
+                        <li><a href="?page={{ products_list.paginator.num_pages }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"><i class="fas fa-angle-double-right"></i></a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        {% endif %}
         </div>
     </div>
 </div>

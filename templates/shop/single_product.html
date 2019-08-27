@@ -61,13 +61,13 @@
                         <!-- Single Product Content Start -->
                         <div class="single-product__content">
                             <h1 class="single-product__name">{{ product.name }}</h1>
-                            <p class="single-product__referance">Категория: <a href="#">{{ product.category.name }}</a>
+                            <p class="single-product__referance">Категория: <a href="{{ product.category.get_absolute_url }}">{{ product.category.name }}</a>
                                 {% if product.category.short_description %}
                                     <i class="far fa-question-circle cat_short_description ml-2" data-container="body" data-toggle="popover" data-placement="top" data-content="{{ product.category.short_description }}"></i>
                                 {% endif %}
                             </p>
                             <p class="single-product__referance">Бренд: <a href="#">{{ product.vendor.name|upper }}</a></p>
-                            <a class="single-product__review-btn" href="#reviews"><i class="fa fa-pencil"></i> Оставить отзыв</a>
+                            <a class="single-product__review-btn" href="#reviews"><i class="fas fa-pencil-alt"></i> Оставить отзыв</a>
                             <p class="single-product__short-desc">Long printed dress with thin adjustable straps. V-neckline and wiring under the bust with ruffles at the bottom of the dress.</p>
                         </div>
                         <!-- Single Product Content End -->
@@ -319,11 +319,11 @@
                               <form action="." method="post" id="demo-form">
                                 {{ comment_form.as_p }}
                                 {% csrf_token %}
-                                <button type="submit" class="btn btn-yellow" id="button1">Оставить отзыв</button>
+                                <button type="submit" class="btn btn-yellow" id="capcha_enable">Оставить отзыв</button>
                                 <script type="application/javascript">
-                                    document.getElementById("button1").disabled = true;
+                                    document.getElementById("capcha_enable").disabled = true;
                                     function enableBtn(){
-                                        document.getElementById("button1").disabled = false;
+                                        document.getElementById("capcha_enable").disabled = false;
                                         }
                                 </script>
                               </form>

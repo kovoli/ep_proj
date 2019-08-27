@@ -6662,14 +6662,14 @@ a {
   color: #003c7b;
 }
 .form-btn {
-  background: #FFA200;
+  background: #ff6414;
   color: #FFFFFF;
 }
 .form-btn:hover {
   background: #e89109;
 }
 .btn {
-  background: #FFA200;
+  background: #ff6414;
 }
 .btn:hover {
   background: #e89109;
@@ -6738,6 +6738,7 @@ background-color: #F5F5F5; }
   max-height: 300px;
   overflow-y: scroll;
   position: relative;
+  font-size: 2rem;
 }
 .sidebar-brand ul {
   margin: 1rem;
@@ -6751,4 +6752,16 @@ background-color: #F5F5F5; }
 }
 .sidebar-brand li label input{
   margin-right: 1rem;
+  vertical-align: sub;
+}
+input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:25px;
+    height:25px;
+    background:white;
+    border-radius:5px;
+    border:2px solid #555;
+}
+input[type='checkbox']:checked {
+    background: #ff6414;
 }

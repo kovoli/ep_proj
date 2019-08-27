@@ -118,7 +118,7 @@ def search_products(request):
     if 'q' in request.GET:
         q = request.GET['q']
         search_list = watson.filter(Product, q).annotate(min_price=Min('prices__price'))
-        products_list = helpers.pg_records(request, search_list, 20)
+        products_list = helpers.pg_records(request, search_list, 54)
     return render(request, 'shop/search_products.html', {'q': q,
                                                          'products_list': products_list,
                                                          'search_list': search_list})
