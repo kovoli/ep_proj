@@ -6738,7 +6738,7 @@ background-color: #F5F5F5; }
   max-height: 300px;
   overflow-y: scroll;
   position: relative;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 .sidebar-brand ul {
   margin: 1rem;
@@ -6764,4 +6764,12 @@ input[type='checkbox'] {
 }
 input[type='checkbox']:checked {
     background: #ff6414;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+  font-family: "Font Awesome\ 5 Free";
+  font-weight: 900;
+  content: "\f30b";
+  display: inline-block;
+  padding-right: .5rem;
+  color: #6c757d;
 }

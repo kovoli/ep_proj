@@ -21,7 +21,7 @@
                     <div class="product-box variable-product">
                     <a href="{{ prod.get_absolute_url }}">
                         <div class="product-box__image">
-                            <img src="{% if prod.product_image_grid %}{{ prod.product_image_grid.url }}{% endif %}" alt="{{ prod.name }} - Сравнить цену, характеристики, отзывы" class="primary_image" height="160">
+                            <img src="{% if product.product_image_category %}{{ product.product_image_category.url }}{% else %}{% static 'images/zagluschka.png' %}{% endif %}" alt="{{ prod.name }} - Сравнить цену, характеристики, отзывы" class="primary_image" height="160">
                         </div>
                         <div class="product-box__footer">
                             <div class="product-box__desc">
@@ -60,7 +60,7 @@
                     <div class="product-box variable-product">
                     <a href="{{ cat.get_absolute_url }}">
                         <div class="product-box__image">
-                            <img src="{% if cat.category_image %}{{ cat.category_image.url }}{% endif %}" alt="product image" class="primary_image" height="230">
+                            <img src="{% if product.product_image_category %}{{ product.product_image_category.url }}{% else %}{% static 'images/zagluschka.png' %}{% endif %}" alt="product image" class="primary_image" height="230">
                         </div>
                         <div class="product-box__footer">
                             <div class="product-box__desc">

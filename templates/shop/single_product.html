@@ -47,11 +47,7 @@
                         <div class="tab-content product-thumb-large" id="myTabContent-3">
                             <div class="tab-pane fade show active" id="product-large-one">
                                 <div class="single-product__img">
-                                    <img src="{% if product.product_image %}
-                                                                     {{ product.product_image.url }}
-                                                                     {% else %}
-                                                                     {% static 'images/zaglushka_big.png' %}
-                                                                     {% endif %}" alt="{{ product.name }}">
+                                    <img src="{% if product.product_image %}{{ product.product_image.url }}{% else %}{% static 'images/zaglushka_big.png' %}{% endif %}" alt="{{ product.name }}">
                                 </div>
                             </div>
                         </div>
