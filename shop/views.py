@@ -1,12 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.http import QueryDict
 from .models import Product, Category, Vendor
 from .forms import CommentForm, FilterForm
 from django.db.models import Min, Max, Count
 from . import helpers
 from watson import search as watson
 from django.db.models import F
-from collections import OrderedDict
+
 
 def home_page(request):
     favorites_cat = Category.objects.filter(favorites=True)
@@ -114,6 +113,7 @@ def category_catalog(request, slug=None):
                                                                    'filter_form': filter_form,
                                                                    })
 
+
 def search_products(request):
     if 'q' in request.GET:
         q = request.GET['q']
@@ -122,3 +122,31 @@ def search_products(request):
     return render(request, 'shop/search_products.html', {'q': q,
                                                          'products_list': products_list,
                                                          'search_list': search_list})
+
+
+# ------------------- VENDOR VIEWS ------------------
+def vendor_list(request):
+    all_vendors = Vendor.objects.all()
+    return render(request, 'vendors/vendor_list.html', {'all_vendors': all_vendors})
+
+
+def vendor_category_list(request, slug_vendor):
+    vendor = get_object_or_404(Vendor, slug=slug_vendor)
+    list_pro = Product.objects.filter(vendor=vendor)
+    categories_id_list = list_pro.values_list('category_id', flat=True).order_by().distinct()
+    categories = Category.objects.filter(id__in=categories_id_list)
+
+    return render(request, 'vendors/vendor_category_list.html', {'categories': categories,
+                                                                 'vendor': vendor})
+
+
+def vendor_product_list(request, slug_vendore, slug_category):
+    vendor = get_object_or_404(Vendor, slug=slug_vendore)
+    category = Category.objects.get(slug=slug_category)
+    list_pro = Product.objects.filter(category__slug=slug_category)\
+                              .filter(vendor=vendor)\
+                              .annotate(min_price=Min('prices__price'))
+
+    return render(request, 'vendors/vendor_product_list.html', {'vendor': vendor,
+                                                                'category': category,
+                                                                'list_pro': list_pro})

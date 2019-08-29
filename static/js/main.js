@@ -11,9 +11,9 @@
 	***********************/ 
 
 	$('#js-cat-nav').slicknav({
-		label: '',
+		/*label: '',*/
 		duration: 500,
-		label: 'Category',
+		label: 'Категории',
 		showChildren: 'false',
 		prependTo:'.category-moble-menu'
 	});

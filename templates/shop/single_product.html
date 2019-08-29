@@ -62,9 +62,8 @@
                                     <i class="far fa-question-circle cat_short_description ml-2" data-container="body" data-toggle="popover" data-placement="top" data-content="{{ product.category.short_description }}"></i>
                                 {% endif %}
                             </p>
-                            <p class="single-product__referance">Бренд: <a href="#">{{ product.vendor.name|upper }}</a></p>
+                            <p class="single-product__referance">Бренд: <a href="{{ product.vendor.get_absolute_url }}">{{ product.vendor.name|title }}</a></p>
                             <a class="single-product__review-btn" href="#reviews"><i class="fas fa-pencil-alt"></i> Оставить отзыв</a>
-                            <p class="single-product__short-desc">Long printed dress with thin adjustable straps. V-neckline and wiring under the bust with ruffles at the bottom of the dress.</p>
                         </div>
                         <!-- Single Product Content End -->
                     </div>

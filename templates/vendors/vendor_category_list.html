@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load mptt_tags %}
+{% load static %}
+{% block title %}
+    Купить товары [{{ vendor.name|upper }}] - сравнивайте цены, читайте отзывы
+{% endblock title %}
+
+{% block description %}
+    Интересуют товары компании {{ vendor.name|upper }}? В вашем распоряжение все категории где можно сравнить цены, читать отзывы и смотреть видеообзоры.
+{% endblock description %}
+
+
+{% block content %}
+<div class="main-content-wrapper">
+    <div class="shop-area section-padding">
+        <div class="container-fluid">
+        <div class="section-title" id="prices">
+            <h2>Все категории товаров бренда [{{ vendor.name|upper }}]</h2>
+        </div>
+            <div class="row">
+                <div class="col-12">
+                    <!-- Shop Layout Start -->
+                    <div class="main-shop-wrapper">
+                        <div class="product-grid-view">
+                            <div class="row no-gutters d-flex justify-content-center">
+                                {% for cat in categories %}
+                                <div class="col-xl-2 col-lg-4 col-md-6">
+                                    <!-- Product Box Start -->
+                                    <a href="{% url 'shop:vendor_product_list' vendor.slug cat.slug %}">
+                                    <div class="product-box variable-product">
+                                        {% with cat.products.all|first as first_pro %}
+                                        <div class="product-box__image">
+                                            <img src="{% if cat.category_image %}{{ cat.category_image.url }}{% elif first_pro.product_image_category %}{{ first_pro.product_image_category.url }}{% else %}{% static 'images/zaglushka_cat.png' %}{% endif %}" alt="Сравнение цен на {{ cat.name }}" class="primary_image">
+                                        </div>
+                                        {% endwith %}
+                                        <div class="product-box__footer">
+                                            <div class="product-box__desc">
+                                                <p class="product-box__title font-weight-bolder">{{ cat.name }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <!-- Product Box End -->
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Shop Layout End -->
+                </div>
+            </div>
+            {% if vendor.description %}
+            <div class="my-5">
+                {{ vendor.description|safe}}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock content %}
