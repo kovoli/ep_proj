@@ -1,10 +1,46 @@
 {% extends 'base.html' %}
-{% load tagshelper %}
+
 
 {% block title %}Выберите бренд, найдите нужный вам товар и сравнивайте цену{% endblock title %}
 {% block description %}У вас есть любимый бренд? Найдите его на сайте, там все товарные категории, цены из разных интернет-магазинов, видеообзоры и отзывы на товары.{% endblock description %}
 
 {% block content %}
+<div class="main-content-wrapper">
+    <div class="shop-area section-padding">
+        <div class="container-fluid">
+        <div class="section-title" id="prices">
+            <h2>Поиск Бренда по Алфавиту</h2>
+        </div>
+        <div class="row">
+        <form method="get" action="." id="testing">
+            <div class="btn-toolbar btn-group-toggle mt--20" data-toggle="buttons">
+                {% for i in vandor_alphabet %}
+                    <label class="btn btn-primary {% if request.GET.ven == i %}active{% endif %}">
+                        <input type="radio"  name="ven" id="option1" autocomplete="off" value="{{ i }}" onchange="document.getElementById('testing').submit()"> {{ i }}
+                    </label>
+                {% endfor %}
+            </div>
+            <div class="btn-group btn-group-toggle flex-wrap mt--20" data-toggle="buttons">
+                {% for i in digits %}
+                    <label class="btn btn-primary {% if request.GET.ven == i %}active{% endif %}">
+                        <input type="radio"  name="ven" id="option1" autocomplete="off" value="{{ i }}" onchange="document.getElementById('testing').submit()"> {{ i }}
+                    </label>
+                {% endfor %}
+            </div>
+        </form>
+        </div>
+        <div class="row">
+        <form method="get" action="." id="testing">
 
+        </form>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+    {% for p in list_prod %}
+        <li>{{ p.name }}</li>
+    {% endfor %}
 
 {% endblock %}

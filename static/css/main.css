@@ -6670,6 +6670,7 @@ a {
 }
 .btn {
   background: #ff6414;
+  border-radius: 0;
 }
 .btn:hover {
   background: #e89109;

@@ -59,5 +59,3 @@ from .models import Product, Category, Value, Attribute
 from django import forms
 
 
-
-

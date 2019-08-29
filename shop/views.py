@@ -126,8 +126,26 @@ def search_products(request):
 
 # ------------------- VENDOR VIEWS ------------------
 def vendor_list(request):
-    all_vendors = Vendor.objects.all()
-    return render(request, 'vendors/vendor_list.html', {'all_vendors': all_vendors})
+    vandor_alphabet = [ "a","b","c","d","e","f","g","h","i","k",
+                        "l","m","n","o","p","q","r","s","t","u",
+                        "v","w","x","y","z",]
+    digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    if 'ven' in request.GET:
+        ven = request.GET['ven']
+
+        list_prod = Vendor.objects.filter(name__istartswith=ven)
+
+
+        return render(request, 'vendors/vendor_list.html', {
+                                                        'vandor_alphabet': vandor_alphabet,
+                                                        'digits': digits,
+                                                        'list_prod': list_prod,
+                                                        })
+
+    return render(request, 'vendors/vendor_list.html', {
+        'vandor_alphabet': vandor_alphabet,
+        'digits': digits,
+    })
 
 
 def vendor_category_list(request, slug_vendor):
