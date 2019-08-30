@@ -19,7 +19,7 @@
                     <li class="breadcrumb-item px-1"><a href="{% url 'shop:home' %}">Главная</a></li>
                     {% for bc in breadcrumbs %}
                         <li class="breadcrumb-item dropdown"><a  href="{{ bc.get_absolute_url }}">{{ bc.name }}</a>
-                              <a class=" dropdown-toggle mx-1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <a class="dropdown-toggle mx-1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               </a>
                               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
                                 {% for bc_siblings in bc.get_siblings %}
@@ -220,7 +220,7 @@
                     <h2>Видео обзор</h2>
                 </div>
                 <div class="embed-responsive embed-responsive-16by9 w-75">
-                    <iframe class="embed-responsive-item" src="{{ product.video }}" allowfullscreen=""></iframe>
+                    <iframe class="embed-responsive-item" src="{{ product.video }}" allowfullscreen="" title="{{ product.name }}"></iframe>
                 </div>
             </div>
         </section>
@@ -246,7 +246,7 @@
                             <div class="product-box variable-product">
                                 <a href="{{ semilar_pro.get_absolute_url }}">
                                 <div class="product-box__image">
-                                    <img src="{% if semilar_pro.product_image %}{{ semilar_pro.product_image_grid.url }}{% endif %}" alt="{{ semilar_pro.name }}" alt="{{ semilar_pro.name }}" class="primary_image">
+                                    <img src="{% if product.product_image_grid %}{{ product.product_image_grid.url }}{% else %}{% static 'images/zagluschka.png' %}{% endif %}" alt="{{ semilar_pro.name }}" alt="{{ semilar_pro.name }}" class="primary_image" height="160">
                                 </div>
                                 <div class="product-box__footer">
                                     <div class="product-box__desc">

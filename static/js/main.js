@@ -12,7 +12,7 @@
 
 	$('#js-cat-nav').slicknav({
 		/*label: '',*/
-		duration: 500,
+		duration: 100,
 		label: 'Категории',
 		showChildren: 'false',
 		prependTo:'.category-moble-menu'
@@ -54,13 +54,13 @@
 		$(".hidden-in-default").hide();
 
 		$("#js-cat-nav-title").on('click',function(){
-			$("#js-cat-nav").slideToggle(200);
+			$("#js-cat-nav").slideToggle(100);
 		});
 
 		$(".hidden-menu-item").hide();
 		$(".js-expand-hidden-menu").on('click',function(e){
 			e.preventDefault();
-			$(".hidden-menu-item").toggle(200);
+			$(".hidden-menu-item").toggle(100);
 			var htmlAfter = "Close Categories";
 			var htmlBefore = "More Categories";
 			

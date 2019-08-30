@@ -133,13 +133,12 @@ def vendor_list(request):
     if 'ven' in request.GET:
         ven = request.GET['ven']
 
-        list_prod = Vendor.objects.filter(name__istartswith=ven)
-
+        list_vendor = Vendor.objects.filter(name__istartswith=ven)
 
         return render(request, 'vendors/vendor_list.html', {
                                                         'vandor_alphabet': vandor_alphabet,
                                                         'digits': digits,
-                                                        'list_prod': list_prod,
+                                                        'list_vendor': list_vendor,
                                                         })
 
     return render(request, 'vendors/vendor_list.html', {
