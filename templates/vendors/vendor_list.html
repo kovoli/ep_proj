@@ -20,6 +20,13 @@
                         </label>
                     {% endfor %}
                 </div>
+                <div class="btn-toolbar btn-group-toggle mt--20" data-toggle="buttons">
+                    {% for i in vendor_alphabet_rus %}
+                        <label class="btn btn-primary {% if request.GET.ven == i %}active{% endif %}">
+                            <input type="radio"  name="ven" id="option1" autocomplete="off" value="{{ i }}" onchange="document.getElementById('testing').submit()"> {{ i }}
+                        </label>
+                    {% endfor %}
+                </div>
                 <div class="btn-group btn-group-toggle flex-wrap mt--20" data-toggle="buttons">
                     {% for i in digits %}
                         <label class="btn btn-primary {% if request.GET.ven == i %}active{% endif %}">
@@ -29,17 +36,15 @@
                 </div>
             </form>
             </div>
-
             <div class="row mt--60">
-
                     {% for vendor in list_vendor %}
                         <div class="col-1 py-4 text-uppercase">
                             <a href="{{ vendor.get_absolute_url }}">{{ vendor.name }}</a>
                         </div>
+                    {% empty %}
+                        <p class="display-4">Бренды пока отсутсвуют в базе данных</p>
                     {% endfor %}
-
             </div>
-
         </div>
     </div>
 </div>

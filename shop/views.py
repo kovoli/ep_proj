@@ -129,6 +129,9 @@ def vendor_list(request):
     vandor_alphabet = [ "a","b","c","d","e","f","g","h","i","k",
                         "l","m","n","o","p","q","r","s","t","u",
                         "v","w","x","y","z",]
+    vendor_alphabet_rus = ['а', ' б', ' в', ' г', ' д', ' е', ' ё', ' ж', ' з', ' и', ' й', ' к', ' л',
+                           ' м', ' н', ' о', ' п', ' р', ' с', ' т', ' у', ' ф', ' х', ' ц', ' ч', ' ш',
+                           ' щ', ' ъ', ' ы', ' ь', ' э', ' ю', ' я']
     digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     if 'ven' in request.GET:
         ven = request.GET['ven']
@@ -137,6 +140,7 @@ def vendor_list(request):
 
         return render(request, 'vendors/vendor_list.html', {
                                                         'vandor_alphabet': vandor_alphabet,
+                                                        'vendor_alphabet_rus': vendor_alphabet_rus,
                                                         'digits': digits,
                                                         'list_vendor': list_vendor,
                                                         })
