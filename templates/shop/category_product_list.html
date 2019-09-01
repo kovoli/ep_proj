@@ -42,9 +42,31 @@
                     <!-- Sidebar Start -->
                     <aside class="sidebar shop-sidebar">
                         <div class="search-filter">
+                            <div class="search-filter__single search-filter__category mb--30">
+                                <div class="section-title section-title--3">
+                                    <h2>Категории</h2>
+                                </div>
+                                {% recursetree cat %}
+                                <ul class="sidebar-category">
+                                    {% if node.is_leaf_node %}
+                                        {% with request.path as url_name %}
+                                        {% for j in last_node %}
+                                                <li class="{% if url_name == '/catalog/'|add:j.slug|add:'/' %}active{% endif %}"><a href="{{ j.get_absolute_url }}" >{{ j.name }}</a></li>
+                                        {% endfor %}
+                                        {% endwith %}
+                                        {% else %}
+                                                <ul class="">
+                                                    {% for i in node.get_children %}
+                                                        <li><a href="{{ i.get_absolute_url }}" >{{ i.name }}</a></li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </li>
+                                    {% endif %}
+                                </ul>
+                            {% endrecursetree %}
+                            </div>
                             <div class="search-filter__single section-title section-title--3 mb--30">
                                 <h2>Сортировка по фильтрам</h2>
-                                {{ request.GET }}
                             </div>
 
                             <div class="search-filter__single search-filter__clear mb--30">

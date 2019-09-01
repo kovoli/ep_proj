@@ -15,21 +15,21 @@
             <form method="get" action="." id="testing">
                 <div class="btn-toolbar btn-group-toggle mt--20" data-toggle="buttons">
                     {% for i in vandor_alphabet %}
-                        <label class="btn btn-primary {% if request.GET.ven == i %}active{% endif %}">
+                        <label class="btn alphabet btn-primary {% if request.GET.ven == i %}active{% endif %}">
                             <input type="radio"  name="ven" id="option1" autocomplete="off" value="{{ i }}" onchange="document.getElementById('testing').submit()"> {{ i }}
                         </label>
                     {% endfor %}
                 </div>
                 <div class="btn-toolbar btn-group-toggle mt--20" data-toggle="buttons">
                     {% for i in vendor_alphabet_rus %}
-                        <label class="btn btn-primary {% if request.GET.ven == i %}active{% endif %}">
+                        <label class="btn alphabet btn-primary {% if request.GET.ven == i %}active{% endif %}">
                             <input type="radio"  name="ven" id="option1" autocomplete="off" value="{{ i }}" onchange="document.getElementById('testing').submit()"> {{ i }}
                         </label>
                     {% endfor %}
                 </div>
                 <div class="btn-group btn-group-toggle flex-wrap mt--20" data-toggle="buttons">
                     {% for i in digits %}
-                        <label class="btn btn-primary {% if request.GET.ven == i %}active{% endif %}">
+                        <label class="btn alphabet btn-primary {% if request.GET.ven == i %}active{% endif %}">
                             <input type="radio"  name="ven" id="option1" autocomplete="off" value="{{ i }}" onchange="document.getElementById('testing').submit()"> {{ i }}
                         </label>
                     {% endfor %}
@@ -38,7 +38,7 @@
             </div>
             <div class="row mt--60">
                     {% for vendor in list_vendor %}
-                        <div class="col-1 py-4 text-uppercase">
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6 py-4 text-uppercase d-block">
                             <a href="{{ vendor.get_absolute_url }}">{{ vendor.name }}</a>
                         </div>
                     {% empty %}

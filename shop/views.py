@@ -133,22 +133,19 @@ def vendor_list(request):
                            ' м', ' н', ' о', ' п', ' р', ' с', ' т', ' у', ' ф', ' х', ' ц', ' ч', ' ш',
                            ' щ', ' ъ', ' ы', ' ь', ' э', ' ю', ' я']
     digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+    context = {'vandor_alphabet': vandor_alphabet,
+               'vendor_alphabet_rus': vendor_alphabet_rus,
+               'digits': digits}
+
     if 'ven' in request.GET:
         ven = request.GET['ven']
 
         list_vendor = Vendor.objects.filter(name__istartswith=ven)
+        context['list_vendor'] = list_vendor
+        return render(request, 'vendors/vendor_list.html', context)
 
-        return render(request, 'vendors/vendor_list.html', {
-                                                        'vandor_alphabet': vandor_alphabet,
-                                                        'vendor_alphabet_rus': vendor_alphabet_rus,
-                                                        'digits': digits,
-                                                        'list_vendor': list_vendor,
-                                                        })
-
-    return render(request, 'vendors/vendor_list.html', {
-        'vandor_alphabet': vandor_alphabet,
-        'digits': digits,
-    })
+    return render(request, 'vendors/vendor_list.html', context)
 
 
 def vendor_category_list(request, slug_vendor):
