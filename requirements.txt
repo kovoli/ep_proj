@@ -8,7 +8,7 @@ django-mptt==0.10.0
 django-recaptcha==2.0.4
 django-watson==1.5.2
 pilkit==2.0
-Pillow==6.1.0
+Pillow==6.2.0
 psycopg2-binary==2.8.3
 pytz==2019.2
 six==1.12.0
